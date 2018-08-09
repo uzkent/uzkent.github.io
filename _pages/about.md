@@ -19,7 +19,7 @@ I am currently working in the [Stanford AI Lab](http://ai.stanford.edu) at Stanf
     - **Thesis Topic** : "Autonomous Parallel Parking of non-holonomic Vehicles"
 
 ## Work Experience
-- *Postdoctoral Fellow*, Stanford University, July 2018 -
+- *Research Associate*, Stanford University, July 2018 -
     * **Topic** - Weakly supervised learning in aerial images
 - *Computer Vision Engineer*, Planet Labs, June 2017 - July 2018
     * **Topic** - Object detection in low resolution aerial images

@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Academic Personal Website"
+title                    : "Burak Uzkent - Academic Personal Website"
 title_separator          : "-"
 name                     : &name "Burak Uzkent"
 description              : &description "Postdoctoral Fellow in Stanford AI Lab."

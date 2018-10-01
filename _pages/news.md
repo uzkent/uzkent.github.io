@@ -8,7 +8,7 @@ redirect_from:
 
 {% include base_path %}
 
-- I submitted my first paper in Stanford to the AAAI 2019 conference. Our work is on large scale pre-training using weak labels on overhead images.
+- I submitted my first paper in Stanford to the AAAI 2019 conference. Our work is on large scale pre-training using weak labels on overhead images. [arxiv](https://arxiv.org/abs/1809.10236)
 
 - Our paper on "Deep Hyperspectral Kernelized Correlation Filter (DeepHKCF) Tracking in Aerial Images" has been accepted by the IEEE Transactions on Geoscience and Remote Sensing. [arxiv](https://arxiv.org/abs/1711.07235)
 

@@ -8,7 +8,7 @@ redirect_from:
 
 {% include base_path %}
 
-- I submitted my first paper in Stanford to the AAAI 2019 conference. Our work is on large scale pre-training using weak labels on overhead images. [arxiv](https://arxiv.org/abs/1809.10236)
+- I am currently working on large scale pre-training using weak labels on overhead images. [arxiv](https://arxiv.org/abs/1809.10236)
 
 	![wiki_satellite_workflow](../images/workflow_wiki.png)
 

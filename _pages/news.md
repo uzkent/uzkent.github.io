@@ -8,7 +8,9 @@ redirect_from:
 
 {% include base_path %}
 
-- I am currently working on large scale pre-training using weak labels on overhead images. [arxiv](https://arxiv.org/abs/1809.10236)
+- We have submitted our work on Predicting Economic Development using Textual Information to the KDD 2019 conference. More details soon!
+
+- I am currently working on large scale pre-training using weakly supervised and unsupervised learning on overhead images. [arxiv](https://arxiv.org/abs/1809.10236)
 
 	![wiki_satellite_workflow](../images/workflow_wiki.png)
 

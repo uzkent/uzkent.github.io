@@ -8,11 +8,11 @@ redirect_from:
 
 {% include base_path %}
 
-- We have submitted our work on Predicting Economic Development using Textual Information to the KDD 2019 conference. More details soon!
+- We have submitted our work on Predicting Economic Development using Textual Information to the KDD 2019 conference.
+	![wiki_ppi_workflow](../images/workflow_wikippi.png)
 
-- I am currently working on large scale pre-training using weakly supervised and unsupervised learning on overhead images. [arxiv](https://arxiv.org/abs/1809.10236)
-
-	![wiki_satellite_workflow](../images/workflow_wiki.png)
+- We have submitted our work large scale pre-training using weakly supervised and unsupervised learning on overhead images to the IJCAI 2019 conference. [arxiv](https://arxiv.org/abs/1809.10236)
+	![wiki_satellite_workflow](../images/combined_workflow_wikisatnet.png)
 
 - Our paper on "Deep Hyperspectral Kernelized Correlation Filter (DeepHKCF) Tracking in Aerial Images" has been accepted by the IEEE Transactions on Geoscience and Remote Sensing. [arxiv](https://arxiv.org/abs/1711.07235)
 

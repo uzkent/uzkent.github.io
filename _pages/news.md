@@ -8,6 +8,8 @@ redirect_from:
 
 {% include base_path %}
 
+- We have submitted one paper to ICCV 2019!
+
 - We have submitted our work on Predicting Economic Development using Textual Information to the KDD 2019 conference.
 	![wiki_ppi_workflow](../images/workflow_wikippi.png)
 

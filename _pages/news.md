@@ -7,6 +7,7 @@ redirect_from:
 ---
 
 {% include base_path %}
+- Our paper on predicting economic development using Wikipedia Articles is accepted to KKD 2019 conference!
 
 - We have submitted one paper to ICCV 2019!
 

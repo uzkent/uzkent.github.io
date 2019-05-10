@@ -7,7 +7,9 @@ redirect_from:
 ---
 
 {% include base_path %}
-- Our paper on Predicting Economic Development using Wikipedia Articles is accepted to KDD 2019 conference!
+- Our Paper on Large-Scale Pre-training with Image to Text Matching has been accepted to IJCAI 2019 conference! [arxiv](https://arxiv.org/pdf/1905.02506.pdf)
+
+- Our paper on Predicting Economic Development using Wikipedia Articles is accepted to KDD 2019 conference! [arxiv](https://arxiv.org/pdf/1905.01627.pdf)
 
 - We have submitted one paper to ICCV 2019!
 

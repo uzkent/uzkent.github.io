@@ -7,6 +7,8 @@ redirect_from:
 ---
 
 {% include base_path %}
+- We have submitted one paper to NeurIPS 2019!
+
 - Our paper on Predicting Economic Development using Wikipedia Articles is accepted to KDD 2019 conference!
 
 - We have submitted one paper to ICCV 2019!

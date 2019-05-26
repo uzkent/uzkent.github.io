@@ -26,9 +26,9 @@ Peer-Reviewed Journal Papers
 
 Peer-Reviewed Conference Papers
 ===
-1. B. Uzkent, E. Sheehan, C. Meng, Z. Tang, D. Lobell, M. Burke, S. Ermon, "Learning How to Interpret Satellite Images using Wikipedia," *International Joint Conference on Artificial Intelligence (IJCAI) 2019* (Under Review)
+1. B. Uzkent, E. Sheehan, C. Meng, Z. Tang, D. Lobell, M. Burke, S. Ermon, "Learning How to Interpret Satellite Images using Wikipedia," *International Joint Conference on Artificial Intelligence 2019
 
-2. E. Sheehan, C. Meng, M. Tan, B. Uzkent, N. Jean, D. Lobell, M. Burke, S. Ermon, "Predicting Economic Development using Geolocated Wikipedia Articles," *25TH ACM SIGKDD Conference on Knowledge Discovery and Data Mining 2019* (Under Review)
+2. E. Sheehan*, C. Meng*, M. Tan, B. Uzkent, N. Jean, D. Lobell, M. Burke, S. Ermon, "Predicting Economic Development using Geolocated Wikipedia Articles," 25TH ACM SIGKDD Conference on Knowledge Discovery and Data Mining 2019
 
 3. B. Uzkent, Y. Seo, "EnKCF: Ensemble of Kernelized Correlation Filters for High-Speed Object Tracking," In *Proceedings IEEE Winter Conference on Applications of Computer Vision (WACV)*, pp. 1133-1141, March 2018. [arxiv](https://arxiv.org/pdf/1801.06729.pdf) [code](https://github.com/buzkent86/EnKCF_Tracking_WACV18)
 

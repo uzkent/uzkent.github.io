@@ -7,6 +7,8 @@ redirect_from:
 ---
 
 {% include base_path %}
+- We have submitted one paper on Dynamic Data Sampling using Deep Reinforcement Learning to NeurIPS 2019!
+
 - Our Paper on Large-Scale Pre-training with Image to Text Matching is accepted to IJCAI 2019 conference! [arxiv](https://arxiv.org/pdf/1905.02506.pdf)
 
 - Our paper on Predicting Economic Development using Wikipedia Articles is accepted to KDD 2019 conference! [arxiv](https://arxiv.org/pdf/1905.01627.pdf)

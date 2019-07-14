@@ -7,6 +7,10 @@ redirect_from:
 ---
 
 {% include base_path %}
+- We have submitted one paper on Efficient Object Detection on Large Images using Deep Reinforcement Learning to WACV 2020.
+
+- Five papers reviewed for the NeurIPS 2019.
+
 - We have submitted one paper on Dynamic Data Sampling using Deep Reinforcement Learning to NeurIPS 2019!
 
 - Our Paper on Large-Scale Pre-training with Image to Text Matching is accepted to IJCAI 2019 conference! [arxiv](https://arxiv.org/pdf/1905.02506.pdf)

@@ -17,6 +17,8 @@ redirect_from:
 
 - Our paper on Predicting Economic Development using Wikipedia Articles is accepted to KDD 2019 conference! [arxiv](https://arxiv.org/pdf/1905.01627.pdf)
 
+- I have given a seminar at Orbital Insight.
+
 - We have submitted one paper to ICCV 2019!
 
 - We have submitted our work on Predicting Economic Development using Textual Information to the KDD 2019 conference.

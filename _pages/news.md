@@ -15,7 +15,7 @@ redirect_from:
 
 - Our Paper on Large-Scale Pre-training with Image to Text Matching is accepted to IJCAI 2019 conference! [arxiv](https://arxiv.org/pdf/1905.02506.pdf)
 
-- Our paper on Predicting Economic Development using Wikipedia Articles is accepted to KDD 2019 conference! [arxiv](https://arxiv.org/pdf/1905.01627.pdf)
+- Our paper on Predicting Economic Development using Wikipedia Articles is accepted to KDD 2019 conference! [arxiv](https://arxiv.org/pdf/1905.01627.pdf) [code](https://github.com/buzkent86/WikipediaPovertyMapping)
 
 - I have given a seminar at Orbital Insight.
 
@@ -28,7 +28,6 @@ redirect_from:
 	![wiki_satellite_workflow](../images/combined_workflow_wikisatnet.png)
 
 - Our paper on "Deep Hyperspectral Kernelized Correlation Filter (DeepHKCF) Tracking in Aerial Images" has been accepted by the IEEE Transactions on Geoscience and Remote Sensing. [arxiv](https://arxiv.org/abs/1711.07235)
-
 	![Tracking_Framework_FastDeepHCKF](../images/FastDeepHKCF_Framework.png)
 
 - I have presented my recent works on object detection and tracking in aerial images in the Vision and Autonomous System Center Seminar at Carnegie Mellon University. 

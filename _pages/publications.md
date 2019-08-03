@@ -26,11 +26,11 @@ Peer-Reviewed Journal Papers
 
 Peer-Reviewed Conference Papers
 ===
-1. B. Uzkent, E. Sheehan, C. Meng, Z. Tang, D. Lobell, M. Burke, S. Ermon, "Learning How to Interpret Satellite Images using Wikipedia," *International Joint Conference on Artificial Intelligence* 2019. [arxiv](https://arxiv.org/abs/1905.02506)
+1. B. Uzkent, E. Sheehan, C. Meng, Z. Tang, D. Lobell, M. Burke, S. Ermon, "Learning How to Interpret Satellite Images using Wikipedia," *International Joint Conference on Artificial Intelligence*, 2019. [arxiv](https://arxiv.org/abs/1905.02506)
 
-2. E. Sheehan, C. Meng, M. Tan, B. Uzkent, N. Jean, D. Lobell, M. Burke, S. Ermon, "Predicting Economic Development using Geolocated Wikipedia Articles," *25TH ACM SIGKDD Conference on Knowledge Discovery and Data Mining* 2019 [code](https://github.com/buzkent86/WikipediaPovertyMapping) [arxiv](https://arxiv.org/pdf/1905.01627.pdf)
+2. E. Sheehan, C. Meng, M. Tan, B. Uzkent, N. Jean, D. Lobell, M. Burke, S. Ermon, "Predicting Economic Development using Geolocated Wikipedia Articles," *25TH ACM SIGKDD Conference on Knowledge Discovery and Data Mining*, 2019. [PDF](https://dl.acm.org/citation.cfm?id=3330784) [code](https://github.com/buzkent86/WikipediaPovertyMapping)
 
-3. B. Uzkent, Y. Seo, "EnKCF: Ensemble of Kernelized Correlation Filters for High-Speed Object Tracking," In *Proceedings IEEE Winter Conference on Applications of Computer Vision (WACV)*, pp. 1133-1141, March 2018. [arxiv](https://arxiv.org/pdf/1801.06729.pdf) [code](https://github.com/buzkent86/EnKCF_Tracking_WACV18)
+3. B. Uzkent, Y. Seo, "EnKCF: Ensemble of Kernelized Correlation Filters for High-Speed Object Tracking," In *Proceedings IEEE Winter Conference on Applications of Computer Vision (WACV)*, pp. 1133-1141, March 2018. [PDF](https://ieeexplore.ieee.org/document/8354233) [code](https://github.com/buzkent86/EnKCF_Tracking_WACV18)
 
 4. B. Uzkent, A. Rangnekar, M. J. Hoffman, A. Vodacek, ''Aerial Vehicle Tracking by Adaptive Fusion of Likelihood Maps'', In *Proceedings of the 13th IEEE Workshop on Perception Beyond the Visible Spectrum*, In conjunction with Computer Vision and Pattern Recognition 2017. [PDF](https://ieeexplore.ieee.org/document/8014769/) [code](https://github.com/buzkent86/CVPRW17_Paper_code)
 

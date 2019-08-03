@@ -10,7 +10,7 @@ redirect_from:
 
 Peer-Reviewed Journal Papers
 ===
-1. B. Uzkent, A. Rangnekar, M.J. Hoffman, ''Tracking in Aerial Hyperspectral Videos using Deep Kernelized Correlation Filters'', In *IEEE Transactions on Geoscience and Remote Sensing*, 2019 [arxiv](https://ieeexplore.ieee.org/document/8435971) [code](https://github.com/buzkent86/HKCF_Tracker)
+1. B. Uzkent, A. Rangnekar, M.J. Hoffman, ''Tracking in Aerial Hyperspectral Videos using Deep Kernelized Correlation Filters'', In *IEEE Transactions on Geoscience and Remote Sensing*, 2019 [PDF](https://ieeexplore.ieee.org/document/8435971) [arxiv](https://arxiv.org/pdf/1711.07235.pdf) [code](https://github.com/buzkent86/HKCF_Tracker)
 
 2. B. Uzkent, M. J. Hoffman, A. Vodacek, ''Integrating Hyperspectral Likelihoods in a Multi-dimensional Assignment Algorithm for Aerial Vehicle Tracking'', *IEEE Journal of Selected Topics in Remote Sensing and Observation*, 9(9): 4325--4333, May 2016. [code](https://github.com/buzkent86/CVPRW17_Paper_code)
 

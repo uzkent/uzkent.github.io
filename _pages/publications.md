@@ -26,7 +26,7 @@ Peer-Reviewed Journal Papers
 
 Peer-Reviewed Conference Papers
 ===
-1. B. Uzkent, E. Sheehan, C. Meng, Z. Tang, D. Lobell, M. Burke, S. Ermon, "Learning How to Interpret Satellite Images using Wikipedia," *International Joint Conference on Artificial Intelligence*, 2019. [arxiv](https://arxiv.org/abs/1905.02506)
+1. B. Uzkent, E. Sheehan, C. Meng, Z. Tang, D. Lobell, M. Burke, S. Ermon, "Learning How to Interpret Satellite Images using Wikipedia," *International Joint Conference on Artificial Intelligence*, 2019. [arxiv](https://arxiv.org/abs/1905.02506) [PDF](https://www.ijcai.org/proceedings/2019/0502.pdf) [Code](https://github.com/buzkent86/WikiSatNet)
 
 2. E. Sheehan, C. Meng, M. Tan, B. Uzkent, N. Jean, D. Lobell, M. Burke, S. Ermon, "Predicting Economic Development using Geolocated Wikipedia Articles," *25TH ACM SIGKDD Conference on Knowledge Discovery and Data Mining*, 2019. [PDF](https://dl.acm.org/citation.cfm?id=3330784) [code](https://github.com/buzkent86/WikipediaPovertyMapping)
 

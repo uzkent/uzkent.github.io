@@ -7,19 +7,21 @@ redirect_from:
 ---
 
 {% include base_path %}
+- We have submitted one paper on Domain Adaptation to Improve Analysis on Low Quality Input to AAAI 2020.
+
+- We have submitted one paper on Dynamic Data Sampling using Deep Reinforcement Learning to AAAI 2020.
+
 - We have submitted one paper on Efficient Object Detection on Large Images using Deep Reinforcement Learning to WACV 2020.
 
-- Five papers reviewed for the NeurIPS 2019.
+- We have submitted one paper on Cloud Removal from Satellite Images Using Spatiotemporal GANs to WACV2020.
 
-- We have submitted one paper on Dynamic Data Sampling using Deep Reinforcement Learning to NeurIPS 2019!
+- Five papers reviewed for the NeurIPS 2019.
 
 - Our Paper on Large-Scale Pre-training with Image to Text Matching is accepted to IJCAI 2019 conference! [arxiv](https://arxiv.org/pdf/1905.02506.pdf)
 
 - Our paper on Predicting Economic Development using Wikipedia Articles is accepted to KDD 2019 conference! [arxiv](https://arxiv.org/pdf/1905.01627.pdf) [code](https://github.com/buzkent86/WikipediaPovertyMapping)
 
 - I have given a seminar at Orbital Insight.
-
-- We have submitted one paper to ICCV 2019!
 
 - We have submitted our work on Predicting Economic Development using Textual Information to the KDD 2019 conference.
 	![wiki_ppi_workflow](../images/workflow_wikippi.png)

@@ -17,7 +17,7 @@ redirect_from:
 
 - Five papers reviewed for the NeurIPS 2019.
 
-- Our Paper on `Large-Scale Unsupervised Pre-training of CNNs with Image to Text Matching` is accepted to IJCAI 2019 conference! [arxiv](https://arxiv.org/pdf/1905.02506.pdf)[code](https://github.com/buzkent86/WikiSatNet)
+- Our Paper on `Large-Scale Unsupervised Pre-training of CNNs with Image to Text Matching` is accepted to IJCAI 2019 conference! [arxiv](https://arxiv.org/pdf/1905.02506.pdf) [code](https://github.com/buzkent86/WikiSatNet)
 
 - Our paper on `Predicting Economic Development using Wikipedia Articles` is accepted to KDD 2019 conference! [arxiv](https://arxiv.org/pdf/1905.01627.pdf) [code](https://github.com/buzkent86/WikipediaPovertyMapping)
 

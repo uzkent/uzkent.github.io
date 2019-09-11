@@ -17,26 +17,22 @@ redirect_from:
 
 - Five papers reviewed for the NeurIPS 2019.
 
-- Our Paper on `Large-Scale Unsupervised Pre-training of CNNs with Image to Text Matching` is accepted to IJCAI 2019 conference! [arxiv](https://arxiv.org/pdf/1905.02506.pdf)
+- Our Paper on `Large-Scale Unsupervised Pre-training of CNNs with Image to Text Matching` is accepted to IJCAI 2019 conference! [arxiv](https://arxiv.org/pdf/1905.02506.pdf)[code](https://github.com/buzkent86/WikiSatNet)
 
 - Our paper on `Predicting Economic Development using Wikipedia Articles` is accepted to KDD 2019 conference! [arxiv](https://arxiv.org/pdf/1905.01627.pdf) [code](https://github.com/buzkent86/WikipediaPovertyMapping)
 
 - I have given a seminar at Orbital Insight.
 
-- We have submitted our work on Predicting Economic Development using Textual Information to the KDD 2019 conference.
+- We have submitted our work on `Predicting Economic Development using Textual Information` to the KDD 2019 conference.
 	![wiki_ppi_workflow](../images/workflow_wikippi.png)
 
-- We have submitted our work on large scale pre-training using weakly supervised and unsupervised learning on overhead images to the IJCAI 2019 conference. [arxiv](https://arxiv.org/abs/1809.10236)
+- We have submitted our work on `Large Scale Pre-training Using Weakly Supervised and Unsupervised Learning on Overhead Images` to the IJCAI 2019 conference. [arxiv](https://arxiv.org/abs/1809.10236)
 	![wiki_satellite_workflow](../images/combined_workflow_wikisatnet.png)
 
-- Our paper on "Deep Hyperspectral Kernelized Correlation Filter (DeepHKCF) Tracking in Aerial Images" has been accepted by the IEEE Transactions on Geoscience and Remote Sensing. [arxiv](https://arxiv.org/abs/1711.07235)
+- Our paper on `Deep Hyperspectral Kernelized Correlation Filter (DeepHKCF) Tracking in Aerial Images` has been accepted by the IEEE Transactions on Geoscience and Remote Sensing. [arxiv](https://arxiv.org/abs/1711.07235)
 	![Tracking_Framework_FastDeepHCKF](../images/FastDeepHKCF_Framework.png)
 
 - I have presented my recent works on object detection and tracking in aerial images in the Vision and Autonomous System Center Seminar at Carnegie Mellon University. 
-
-- Currently, I am working on designing an end-to-end deep learning driven vehicle tracker (WAMI) trained on a non-WAMI dataset. More to come soon!
-
-- Integrating a Bayes Filter into our DeepHKCF tracker to improve tracking through mild-to-severe occlusions is the next goal of our IEEETGRS paper. More to come soon!
 
 - I presented our paper on high-speed scale adaptive object tracking in WACV18 conference in South Lake Tahoe. [Presentation](../files/WACV18_Presentation.pdf) [Poster](../files/WACV18_Poster.pdf) [Video](https://www.youtube.com/watch?v=xLjLc0eVqLU)
 

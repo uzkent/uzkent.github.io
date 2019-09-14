@@ -47,7 +47,7 @@ redirect_from:
 	- Uzkent, Burak, and Seo, YoungWoo "EnKCF : Ensemble of Kernelized Correlation Filters for Object Tracking in High Speed" [Abstract](abstract_wacv18.pdf)
 
 - Our paper is accepted to the *Perception Beyond the Visible Spectrum Workshop in conjunction with the Computer Vision and Pattern Recognition Conference 2017*
-	
+
 	- Uzkent, Burak, Aneesh Rangnekar, Matthew J. Hoffman, and Anthony Vodacek. "Aerial Vehicle Tracking by Adaptive Fusion of Hyperspectral Likelihoods Maps"
 
 	![Tracking_Framework](../images/CVPRW17_Tracking.png)
@@ -58,7 +58,7 @@ redirect_from:
 
 	![Tracking_Framework](../images/CVPRW16_Tracking.png)
 
-- I defended my Ph.D. thesis on "Aerial Vehicle Tracking using a Multi-modal Optical Sensor" as of May 16, 2016. I would like to thank my thesis committee and my advisor Dr. Hoffman and co-adviser Dr. Vodacek for their supervision throughout my Ph.D. You can download my presentation [here](../files/Thesis.Defense.pdf)
+- I defended my Ph.D. thesis on "Aerial Vehicle Tracking using a Multi-modal Optical Sensor" as of May 16, 2016. I would like to thank my thesis committee and my advisor Dr. Hoffman and co-adviser Dr. Vodacek for their supervision throughout my Ph.D. [Presentation](../files/Thesis.Defense.pdf)
 
 - I finished my internship at *Huawei R&D* where I worked on representing people with face-only and contextual features to classify individuals in a photo album as strangers and family members. The second part of my work included designing an album-specific classifier to assign sematic roles to family `members. My work also includes designing a general conditional random field graph based approach where several attributes about the individuals, and pairs are utilized to assign semantic roles. You can find an experiment on a family picture with strangers in the figure below. To learn contextual features, the ZFNet (Improved AlexNet) is fine-tuned on the People in Photo Album Dataset on three different areas including context. You can find the Caffe fine-tuning prototxt files in this [link](https://github.com/buzkent86/AlexNet_FineTuned_PersonRecognition). For the face-only area, the pre-trained *FaceNet* model, an end-to-end face verification model, is used.
 

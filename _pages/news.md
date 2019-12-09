@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-- Our paper on `Efficient Object Detection in Large Images using Deep Reinforcement Learning` is accepted to WACV 2020 Conference.
+- Our paper on `Efficient Object Detection in Large Images using Deep Reinforcement Learning` is accepted to WACV 2020 Conference.[RGATE](https://www.researchgate.net/publication/337831606_Efficient_Object_Detection_in_Large_Images_using_Deep_Reinforcement_Learning)
 
 - I presented one of my recent research projects in University of California at San Diego.
 

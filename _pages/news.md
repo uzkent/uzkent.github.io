@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-- Our paper on `Removing Cloud from Satellite Images Using Spatiotemporal Generator Networks` is accepted to WACV 2020 Conference.
+- Our paper on `Removing Cloud from Satellite Images Using Spatiotemporal Generator Networks` is accepted to WACV 2020 Conference.[RGATE](https://www.researchgate.net/publication/337858363_Cloud_Removal_in_Satellite_Images_Using_Spatiotemporal_Generative_Networks)
 
 - Our paper on `Efficient Object Detection in Large Images using Deep Reinforcement Learning` is accepted to WACV 2020 Conference.[RGATE](https://www.researchgate.net/publication/337831606_Efficient_Object_Detection_in_Large_Images_using_Deep_Reinforcement_Learning)
 

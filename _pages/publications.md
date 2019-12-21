@@ -26,32 +26,40 @@ Peer-Reviewed Journal Papers
 
 Peer-Reviewed Conference Papers
 ===
-1. V. Sarukkai, A. Jain, B. Uzkent, S. Ermon, "Cloud Removal from Satellite Images Using Spatiotemporal Generator Networks", In *Proceedings of IEEE Winter Conference of Applications of Computer Vision (WACV)*, March 2020.
+1. B. Uzkent, S. Ermon, "Learning When and Where to Zoom Using Deep Reinforcement Learning", IEEE Computer Vision and Pattern Recognition, July 2020, (Under Review).[RGATE](https://www.researchgate.net/publication/336778211_Learning_When_and_Where_to_Zoom_With_Deep_Reinforcement_Learning)
 
-2. B. Uzkent, C. Yeh, S. Ermon, "Efficient Object Detection in Large Images Using Deep Reinforcement Learning", In *Proceedings of IEEE Winter Conference of Applications of Computer Vision (WACV)*, March 2020.
+2. V. Sarukkai, A. Jain, B. Uzkent, S. Ermon, "Cloud Removal from Satellite Images Using Spatiotemporal Generator Networks", In *Proceedings of IEEE Winter Conference of Applications of Computer Vision (WACV)*, March 2020.
 
-3. B. Uzkent, E. Sheehan, C. Meng, Z. Tang, D. Lobell, M. Burke, S. Ermon, "Learning How to Interpret Satellite Images using Wikipedia," *International Joint Conference on Artificial Intelligence*, 2019. [arxiv](https://arxiv.org/abs/1905.02506) [PDF](https://www.ijcai.org/proceedings/2019/0502.pdf) [Code](https://github.com/buzkent86/WikiSatNet)
+3. B. Uzkent, C. Yeh, S. Ermon, "Efficient Object Detection in Large Images Using Deep Reinforcement Learning", In *Proceedings of IEEE Winter Conference of Applications of Computer Vision (WACV)*, March 2020.
 
-4. E. Sheehan, C. Meng, M. Tan, B. Uzkent, N. Jean, D. Lobell, M. Burke, S. Ermon, "Predicting Economic Development using Geolocated Wikipedia Articles," *25TH ACM SIGKDD Conference on Knowledge Discovery and Data Mining*, 2019. [PDF](https://dl.acm.org/citation.cfm?id=3330784) [code](https://github.com/buzkent86/WikipediaPovertyMapping)
+4. B. Uzkent, E. Sheehan, C. Meng, Z. Tang, D. Lobell, M. Burke, S. Ermon, "Learning How to Interpret Satellite Images using Wikipedia," *International Joint Conference on Artificial Intelligence*, 2019. [arxiv](https://arxiv.org/abs/1905.02506) [PDF](https://www.ijcai.org/proceedings/2019/0502.pdf) [Code](https://github.com/buzkent86/WikiSatNet)
 
-5. B. Uzkent, Y. Seo, "EnKCF: Ensemble of Kernelized Correlation Filters for High-Speed Object Tracking," In *Proceedings of IEEE Winter Conference on Applications of Computer Vision (WACV)*, pp. 1133-1141, March 2018. [PDF](https://ieeexplore.ieee.org/document/8354233) [code](https://github.com/buzkent86/EnKCF_Tracking_WACV18)
+5. E. Sheehan, C. Meng, M. Tan, B. Uzkent, N. Jean, D. Lobell, M. Burke, S. Ermon, "Predicting Economic Development using Geolocated Wikipedia Articles," *25TH ACM SIGKDD Conference on Knowledge Discovery and Data Mining*, 2019. [PDF](https://dl.acm.org/citation.cfm?id=3330784) [code](https://github.com/buzkent86/WikipediaPovertyMapping)
 
-6. B. Uzkent, A. Rangnekar, M. J. Hoffman, A. Vodacek, ''Aerial Vehicle Tracking by Adaptive Fusion of Likelihood Maps'', In *Proceedings of the 13th IEEE Workshop on Perception Beyond the Visible Spectrum*, In conjunction with Computer Vision and Pattern Recognition 2017. [PDF](https://ieeexplore.ieee.org/document/8014769/) [code](https://github.com/buzkent86/CVPRW17_Paper_code)
+6. B. Uzkent, Y. Seo, "EnKCF: Ensemble of Kernelized Correlation Filters for High-Speed Object Tracking," In *Proceedings of IEEE Winter Conference on Applications of Computer Vision (WACV)*, pp. 1133-1141, March 2018. [PDF](https://ieeexplore.ieee.org/document/8354233) [code](https://github.com/buzkent86/EnKCF_Tracking_WACV18)
 
-7. B. Uzkent, M. J. Hoffman, A. Vodacek, ''Real-time Target Detection and Tracking in Aerial Video using Hyperspectral Features," In *Proceedings of the 1st IEEE Workshop on Moving Cameras Meet Video Surveillance: From Body Cameras to Drones, In conjunction with Computer Vision and Pattern Recognition 2016*, pp. 36--44. June 2016. [PDF](https://ieeexplore.ieee.org/document/7789671) [code](https://github.com/buzkent86/CVPRW17_Paper_code) 
+7. B. Uzkent, A. Rangnekar, M. J. Hoffman, A. Vodacek, ''Aerial Vehicle Tracking by Adaptive Fusion of Likelihood Maps'', In *Proceedings of the 13th IEEE Workshop on Perception Beyond the Visible Spectrum*, In conjunction with Computer Vision and Pattern Recognition 2017. [PDF](https://ieeexplore.ieee.org/document/8014769/) [code](https://github.com/buzkent86/CVPRW17_Paper_code)
+
+8. B. Uzkent, M. J. Hoffman, A. Vodacek, ''Real-time Target Detection and Tracking in Aerial Video using Hyperspectral Features," In *Proceedings of the 1st IEEE Workshop on Moving Cameras Meet Video Surveillance: From Body Cameras to Drones, In conjunction with Computer Vision and Pattern Recognition 2016*, pp. 36--44. June 2016. [PDF](https://ieeexplore.ieee.org/document/7789671) [code](https://github.com/buzkent86/CVPRW17_Paper_code) 
       
-8. B. Uzkent, M. J. Hoffman, A. Vodacek, ''Spectral Validation of Measurements in a Vehicle Tracking DDDAS'', In *Proceedings of International Conference on Computational Science*, Volume 51, pp. 2493--2502, June 2015. [PDF](https://www.sciencedirect.com/science/article/pii/S1877050915011667)
+9. B. Uzkent, M. J. Hoffman, A. Vodacek, ''Spectral Validation of Measurements in a Vehicle Tracking DDDAS'', In *Proceedings of International Conference on Computational Science*, Volume 51, pp. 2493--2502, June 2015. [PDF](https://www.sciencedirect.com/science/article/pii/S1877050915011667)
 
-9. B. Uzkent, M. J. Hoffman, A. Vodacek, ''Background Image Understanding and Adaptive Imaging for Vehicle Tracking'', In *Proceedings of the  SPIE 9460, Airborne Intelligence, Surveillance, Reconnaissance (ISR) Systems and Applications XII*, pp. -94600F--94600F-7, April 2015. [PDF](https://www.google.com/search?q=background+image+understanding+and+adaptive+imaging+for+vehicle+tracking&oq=background+image+understanding+and+adaptive+imaging+for+vehicle+tracking&aqs=chrome..69i57.12082j1j4&sourceid=chrome&ie=UTF-8)
+10. B. Uzkent, M. J. Hoffman, A. Vodacek, ''Background Image Understanding and Adaptive Imaging for Vehicle Tracking'', In *Proceedings of the  SPIE 9460, Airborne Intelligence, Surveillance, Reconnaissance (ISR) Systems and Applications XII*, pp. -94600F--94600F-7, April 2015. [PDF](https://www.google.com/search?q=background+image+understanding+and+adaptive+imaging+for+vehicle+tracking&oq=background+image+understanding+and+adaptive+imaging+for+vehicle+tracking&aqs=chrome..69i57.12082j1j4&sourceid=chrome&ie=UTF-8)
 
-10. B. Uzkent, M. J. Hoffman, A. Vodacek, ''Efficient Integration of Spectral Features for Vehicle Tracking utilizing an Adaptive Sensor'', In *Proceedings of the SPIE 9407, Video Surveillance and Transportation Imaging Applications*, pp. 940707--940707-10, February 2015. [PDF](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/9407/1/Efficient-integration-of-spectral-features-for-vehicle-tracking-utilizing-an/10.1117/12.2082266.short)
+11. B. Uzkent, M. J. Hoffman, A. Vodacek, ''Efficient Integration of Spectral Features for Vehicle Tracking utilizing an Adaptive Sensor'', In *Proceedings of the SPIE 9407, Video Surveillance and Transportation Imaging Applications*, pp. 940707--940707-10, February 2015. [PDF](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/9407/1/Efficient-integration-of-spectral-features-for-vehicle-tracking-utilizing-an/10.1117/12.2082266.short)
        
-11. B. Uzkent, M. J. Hoffman, A. Vodacek, '. B. Uzkent, M. J. Hoffman, E. Cherry, N. Cahill, ''3-D MRI Cardiac Segmentation using Graph Cuts'', In *Proceedings of the IEEE Western NY Image Processing Workshop*, pp. 47--51, Rochester, NY, November 2014. [PDF](https://ieeexplore.ieee.org/document/6999484) [code](https://github.com/buzkent86/3D_MRI_Segmentation)  
+12. B. Uzkent, M. J. Hoffman, A. Vodacek, '. B. Uzkent, M. J. Hoffman, E. Cherry, N. Cahill, ''3-D MRI Cardiac Segmentation using Graph Cuts'', In *Proceedings of the IEEE Western NY Image Processing Workshop*, pp. 47--51, Rochester, NY, November 2014. [PDF](https://ieeexplore.ieee.org/document/6999484) [code](https://github.com/buzkent86/3D_MRI_Segmentation)  
 
-12. B. Uzkent, M. J. Hoffman, A. Vodacek, J. P. Kerekes, B. Chen, ''Feature matching and adaptive prediction models in an object tracking DDDAS'', In *Procedia Computer Science*, Volume 18, pp. 1939-1948, 2013. [PDF](https://www.sciencedirect.com/science/article/pii/S1877050913005061)
+13. B. Uzkent, M. J. Hoffman, A. Vodacek, J. P. Kerekes, B. Chen, ''Feature matching and adaptive prediction models in an object tracking DDDAS'', In *Procedia Computer Science*, Volume 18, pp. 1939-1948, 2013. [PDF](https://www.sciencedirect.com/science/article/pii/S1877050913005061)
 
-13. B. Uzkent, B.D. Barkana, ''Pitch range-based feature extraction for audio surveillance systems'', In *Proceedings of IEEE International Conference on Information Technology: New Generations (ITNG)*, pp. 476--480, April 11-13, 2011. [PDF](https://www.researchgate.net/profile/Buket_Barkana/publication/224245542_Pitch-Range_Based_Feature_Extraction_for_Audio_Surveillance_Systems/links/5654aa9808ae4988a7b055f7/Pitch-Range-Based-Feature-Extraction-for-Audio-Surveillance-Systems.pdf)
+14. B. Uzkent, B.D. Barkana, ''Pitch range-based feature extraction for audio surveillance systems'', In *Proceedings of IEEE International Conference on Information Technology: New Generations (ITNG)*, pp. 476--480, April 11-13, 2011. [PDF](https://www.researchgate.net/profile/Buket_Barkana/publication/224245542_Pitch-Range_Based_Feature_Extraction_for_Audio_Surveillance_Systems/links/5654aa9808ae4988a7b055f7/Pitch-Range-Based-Feature-Extraction-for-Audio-Surveillance-Systems.pdf)
 
-14. B.D. Barkana, I. Saricicek, B. Uzkent, ''Performances of the ANN, SVM, and K-means clustering methods recognizing different environmental sounds'', In *Proceedings of the 24th European Conference on Operational Research*, Lisbon, Portugal, July 11-14, 2010. 
+15. B.D. Barkana, I. Saricicek, B. Uzkent, ''Performances of the ANN, SVM, and K-means clustering methods recognizing different environmental sounds'', In *Proceedings of the 24th European Conference on Operational Research*, Lisbon, Portugal, July 11-14, 2010. 
 
-15. B. Uzkent, O. Parlaktuna, ''Autonomous parallel parking of non-holonomic vehicles'', In *Proceedings of the 13th National Conference in Middle East Technical University*, Ankara, Turkey, 2009.
+16. B. Uzkent, O. Parlaktuna, ''Autonomous parallel parking of non-holonomic vehicles'', In *Proceedings of the 13th National Conference in Middle East Technical University*, Ankara, Turkey, 2009.
+
+Preprints
+===
+1. B. Uzkent, E. Sheehan, C. Meng, Z. Tang, M. Burke, D. Lobell, S. Ermon, ''Learning to Interpret Satellite Images in Global Scale Using Wikipedia''. [Arxiv](https://arxiv.org/pdf/1905.02506.pdf)
+
+2. E. Sheehan, B. Uzkent, C. Meng, Z. Tang, M. Burke, D. Lobell, S. Ermon, ''Learning to interpret satellite images using wikipedia''. [Arxiv](https://arxiv.org/pdf/1809.10236.pdf)

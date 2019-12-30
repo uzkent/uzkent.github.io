@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-- I gave a seminar at Sabanci University, Turkey.[Abstract](https://mfg.sabanciuniv.edu/tr/events-detail/21371)[PDF](../files/Sabanci_Seminar.pdf)
+- I gave a seminar at Sabanci University, Turkey.[Abstract](https://mfg.sabanciuniv.edu/tr/events-detail/21371) [PDF](../files/Sabanci_Seminar.pdf)
 
 - Our paper on `Removing Cloud from Satellite Images Using Spatiotemporal Generator Networks` is accepted to WACV 2020 Conference.[RGATE](https://www.researchgate.net/publication/337858363_Cloud_Removal_in_Satellite_Images_Using_Spatiotemporal_Generative_Networks)
 

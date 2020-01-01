@@ -29,7 +29,7 @@ redirect_from:
 
 - Our paper on `Predicting Economic Development using Wikipedia Articles` is accepted to KDD 2019 conference! [arxiv](https://arxiv.org/pdf/1905.01627.pdf) [code](https://github.com/buzkent86/WikipediaPovertyMapping)
 
-- I have given a seminar at Orbital Insight.
+- I have given a seminar at Orbital Insight. [PDF](../files/Orbital_Insight_Presentation.pdf)
 
 - We have submitted our work on `Predicting Economic Development using Textual Information` to the KDD 2019 conference.
 	![wiki_ppi_workflow](../images/workflow_wikippi.png)

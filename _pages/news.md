@@ -7,7 +7,9 @@ redirect_from:
 ---
 
 {% include base_path %}
-- We have submitted 3 papers to IJCAI20!
+- I gave a presentation at Planet Labs HQ in San Francisco.[PDF](../files/Planet_Presentation.pdf)
+
+- We submitted 3 papers to IJCAI20!
 
 - I gave a seminar at Sabanci University, Turkey.[Abstract](https://mfg.sabanciuniv.edu/tr/events-detail/21371) [PDF](../files/Sabanci_Seminar.pdf)
 
@@ -17,13 +19,13 @@ redirect_from:
 
 - I presented one of my recent research projects in University of California at San Diego.
 
-- We have submitted one paper on `Dynamic Data Sampling using Deep Reinforcement Learning` to CVPR 2020.[RGATE](https://www.researchgate.net/publication/336778211_Learning_When_and_Where_to_Zoom_With_Deep_Reinforcement_Learning)
+- We submitted one paper on `Dynamic Data Sampling using Deep Reinforcement Learning` to CVPR 2020.[RGATE](https://www.researchgate.net/publication/336778211_Learning_When_and_Where_to_Zoom_With_Deep_Reinforcement_Learning)
 
-- We have submitted one paper on `Adversarial Domain Adaptation for Improving Deep Convolutional Neural Network's Performance on Low Resolution Images` to AAAI 2020.
+- We submitted one paper on `Adversarial Domain Adaptation for Improving Deep Convolutional Neural Network's Performance on Low Resolution Images` to AAAI 2020.
 
-- We have submitted one paper on `Efficient Object Detection on Large Images using Deep Reinforcement Learning` to WACV 2020.
+- We submitted one paper on `Efficient Object Detection on Large Images using Deep Reinforcement Learning` to WACV 2020.
 
-- We have submitted one paper on `Cloud Removal from Satellite Images Using Spatiotemporal GANs` to WACV2020.
+- We submitted one paper on `Cloud Removal from Satellite Images Using Spatiotemporal GANs` to WACV2020.
 
 - Five papers reviewed for the NeurIPS 2019.
 
@@ -31,18 +33,18 @@ redirect_from:
 
 - Our paper on `Predicting Economic Development using Wikipedia Articles` is accepted to KDD 2019 conference! [arxiv](https://arxiv.org/pdf/1905.01627.pdf) [code](https://github.com/buzkent86/WikipediaPovertyMapping)
 
-- I have given a seminar at Orbital Insight. [PDF](../files/Orbital_Insight_Presentation.pdf)
+- I gave a presentation at Orbital Insight. [PDF](../files/Orbital_Insight_Presentation.pdf)
 
-- We have submitted our work on `Predicting Economic Development using Textual Information` to the KDD 2019 conference.
+- We submitted our work on `Predicting Economic Development using Textual Information` to the KDD 2019 conference.
 	![wiki_ppi_workflow](../images/workflow_wikippi.png)
 
-- We have submitted our work on `Large Scale Pre-training Using Weakly Supervised and Unsupervised Learning on Overhead Images` to the IJCAI 2019 conference. [arxiv](https://arxiv.org/abs/1809.10236)
+- We submitted our work on `Large Scale Pre-training Using Weakly Supervised and Unsupervised Learning on Overhead Images` to the IJCAI 2019 conference. [arxiv](https://arxiv.org/abs/1809.10236)
 	![wiki_satellite_workflow](../images/combined_workflow_wikisatnet.png)
 
 - Our paper on `Deep Hyperspectral Kernelized Correlation Filter (DeepHKCF) Tracking in Aerial Images` is accepted to the IEEE Transactions on Geoscience and Remote Sensing. [arxiv](https://arxiv.org/abs/1711.07235) [code](https://github.com/buzkent86/HKCF_Tracker)
 	![Tracking_Framework_FastDeepHCKF](../images/FastDeepHKCF_Framework.png)
 
-- I have presented my recent works on object detection and tracking in aerial images in the Vision and Autonomous System Center Seminar at Carnegie Mellon University.[Abstract](https://www.ri.cmu.edu/event/object-detection-and-tracking-on-low-resolution-aerial-images/) [PDF](../files/CMU_VSAR_Seminar.pdf)
+- I presented my recent works on object detection and tracking in aerial images in the Vision and Autonomous System Center Seminar at Carnegie Mellon University.[Abstract](https://www.ri.cmu.edu/event/object-detection-and-tracking-on-low-resolution-aerial-images/) [PDF](../files/CMU_VSAR_Seminar.pdf)
 - I presented our paper on high-speed scale adaptive object tracking in WACV18 conference in South Lake Tahoe. [Presentation](../files/WACV18_Presentation.pdf) [Poster](../files/WACV18_Poster.pdf) [Video](https://www.youtube.com/watch?v=xLjLc0eVqLU)
 
 - Our paper on high-speed scale-adaptive object tracking (>300fps) is accepted to the *IEEE Winter Conference on Applications ofa Computer Vision (WACV18) 2018*. [arxiv](https://arxiv.org/pdf/1801.06729.pdf) [code](https://github.com/buzkent86/EnKCF_Tracker)

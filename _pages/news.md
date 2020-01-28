@@ -9,7 +9,11 @@ redirect_from:
 {% include base_path %}
 - I gave a presentation at Planet Labs HQ in San Francisco.[PDF](../files/Planet_Presentation.pdf)
 
-- We submitted 3 papers to IJCAI20!
+- We submitted our paper on `Sequential Adversarial Domain Adaptation for Analyzing Low Resolution Images` to IJCAI20.
+
+- We submitted our paper on `Generating Interpretable Poverty Maps with a Convolutional Object Detector using High Resolution Images` to IJCAI20.
+
+- We submitted our paper on `Predicting Geo-attributes using Publicly Available Street-level Images` to IJCAI20.
 
 - I gave a seminar at Sabanci University, Turkey.[Abstract](https://mfg.sabanciuniv.edu/tr/events-detail/21371) [PDF](../files/Sabanci_Seminar.pdf)
 

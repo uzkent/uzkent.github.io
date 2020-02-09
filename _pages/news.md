@@ -17,7 +17,7 @@ redirect_from:
 
 - I gave a seminar at Sabanci University, Turkey.[Abstract](https://mfg.sabanciuniv.edu/tr/events-detail/21371) [PDF](../files/Sabanci_Seminar.pdf)
 
-- Our paper on `Removing Cloud from Satellite Images Using Spatiotemporal Generator Networks` is accepted to WACV 2020 Conference.[arxiv](https://arxiv.org/pdf/1912.06838.pdf)
+- Our paper on `Removing Cloud from Satellite Images Using Spatiotemporal Generator Networks` is accepted to WACV 2020 Conference.[arxiv](https://arxiv.org/pdf/1912.06838.pdf) [code](https://github.com/VSAnimator/stgan)
 
 - Our paper on `Efficient Object Detection in Large Images using Deep Reinforcement Learning` is accepted to WACV 2020 Conference.[arxiv](https://arxiv.org/pdf/1912.03966.pdf)
 

@@ -33,9 +33,9 @@ redirect_from:
 
 - Five papers reviewed for the NeurIPS 2019.
 
-- Our Paper on `Large-Scale Unsupervised Pre-training of CNNs with Image to Text Matching` is accepted to IJCAI 2019 conference! [arxiv](https://arxiv.org/pdf/1905.02506.pdf) [code](https://github.com/buzkent86/WikiSatNet)
+- Our Paper on `Large-Scale Unsupervised Pre-training of CNNs with Image to Text Matching` is accepted to IJCAI 2019 conference! [arxiv](https://arxiv.org/pdf/1905.02506.pdf) [code](https://github.com/uzkent/WikiSatNet)
 
-- Our paper on `Predicting Economic Development using Wikipedia Articles` is accepted to KDD 2019 conference! [arxiv](https://arxiv.org/pdf/1905.01627.pdf) [code](https://github.com/buzkent86/WikipediaPovertyMapping)
+- Our paper on `Predicting Economic Development using Wikipedia Articles` is accepted to KDD 2019 conference! [arxiv](https://arxiv.org/pdf/1905.01627.pdf) [code](https://github.com/uzkent/WikipediaPovertyMapping)
 
 - I gave a presentation at Orbital Insight. [PDF](../files/Orbital_Insight_Presentation.pdf)
 
@@ -45,13 +45,13 @@ redirect_from:
 - We submitted our work on `Large Scale Pre-training Using Weakly Supervised and Unsupervised Learning on Overhead Images` to the IJCAI 2019 conference. [arxiv](https://arxiv.org/abs/1809.10236)
 	![wiki_satellite_workflow](../images/combined_workflow_wikisatnet.png)
 
-- Our paper on `Deep Hyperspectral Kernelized Correlation Filter (DeepHKCF) Tracking in Aerial Images` is accepted to the IEEE Transactions on Geoscience and Remote Sensing. [arxiv](https://arxiv.org/abs/1711.07235) [code](https://github.com/buzkent86/HKCF_Tracker)
+- Our paper on `Deep Hyperspectral Kernelized Correlation Filter (DeepHKCF) Tracking in Aerial Images` is accepted to the IEEE Transactions on Geoscience and Remote Sensing. [arxiv](https://arxiv.org/abs/1711.07235) [code](https://github.com/uzkent/HKCF_Tracker)
 	![Tracking_Framework_FastDeepHCKF](../images/FastDeepHKCF_Framework.png)
 
 - I presented my recent works on object detection and tracking in aerial images in the Vision and Autonomous System Center Seminar at Carnegie Mellon University.[Abstract](https://www.ri.cmu.edu/event/object-detection-and-tracking-on-low-resolution-aerial-images/) [PDF](../files/CMU_VSAR_Seminar.pdf)
 - I presented our paper on high-speed scale adaptive object tracking in WACV18 conference in South Lake Tahoe. [Presentation](../files/WACV18_Presentation.pdf) [Poster](../files/WACV18_Poster.pdf) [Video](https://www.youtube.com/watch?v=xLjLc0eVqLU)
 
-- Our paper on high-speed scale-adaptive object tracking (>300fps) is accepted to the *IEEE Winter Conference on Applications ofa Computer Vision (WACV18) 2018*. [arxiv](https://arxiv.org/pdf/1801.06729.pdf) [code](https://github.com/buzkent86/EnKCF_Tracker)
+- Our paper on high-speed scale-adaptive object tracking (>300fps) is accepted to the *IEEE Winter Conference on Applications ofa Computer Vision (WACV18) 2018*. [arxiv](https://arxiv.org/pdf/1801.06729.pdf) [code](https://github.com/uzkent/EnKCF_Tracker)
 
   - [Demo Video 1](https://www.youtube.com/embed/dWeIbECiVkY?ecver=1), [Demo Video 2](https://www.youtube.com/embed/ZCnAjxJkseY?ecver=1), [Demo Video 3](https://www.youtube.com/embed/hAxA903YH2Y?ecver=1), [Demo Video 4](https://www.youtube.com/embed/h-yXx1A2dL0?ecver=1)
 
@@ -67,7 +67,7 @@ redirect_from:
 
 	![Tracking_Framework](../images/CVPRW17_Tracking.png)
 
-- Our [Hyperspectral Aerial Video Set](https://buzkent86.github.io/datasets/) for vehicle tracking is uploaded. Please cite the paper listed below if you use this dataset in your research. Our dataset also contains the ground truth files of the vehicles in the scene. You can download the C detection module coupled to MATLAB tracking module in this [link](https://github.com/buzkent86/CVPRW17_Paper_Code).
+- Our [Hyperspectral Aerial Video Set](https://uzkent.github.io/datasets/) for vehicle tracking is uploaded. Please cite the paper listed below if you use this dataset in your research. Our dataset also contains the ground truth files of the vehicles in the scene. You can download the C detection module coupled to MATLAB tracking module in this [link](https://github.com/uzkent/CVPRW17_Paper_Code).
 
 	- Uzkent, Burak, Matthew J. Hoffman, and Anthony Vodacek. "Real-Time Vehicle Tracking in Aerial Video Using Hyperspectral Features." In *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops*, pp. 36-44. 2016.
 
@@ -75,13 +75,13 @@ redirect_from:
 
 - I defended my Ph.D. thesis on "Aerial Vehicle Tracking using a Multi-modal Optical Sensor" as of May 16, 2016. I would like to thank my thesis committee and my advisor Dr. Hoffman and co-adviser Dr. Vodacek for their supervision throughout my Ph.D. [Presentation](../files/Thesis.Defense.pdf)
 
-- I finished my internship at *Huawei R&D* where I worked on representing people with face-only and contextual features to classify individuals in a photo album as strangers and family members. The second part of my work included designing an album-specific classifier to assign sematic roles to family members. My work also includes designing a general conditional random field graph based approach where several attributes about the individuals, and pairs are utilized to assign semantic roles. You can find an experiment on a family picture with strangers in the figure below. To learn contextual features, the ZFNet (Improved AlexNet) is fine-tuned on the People in Photo Album Dataset on three different areas including context. You can find the Caffe fine-tuning prototxt files in this [link](https://github.com/buzkent86/AlexNet_FineTuned_PersonRecognition). For the face-only area, the pre-trained *FaceNet* model, an end-to-end face verification model, is used.
+- I finished my internship at *Huawei R&D* where I worked on representing people with face-only and contextual features to classify individuals in a photo album as strangers and family members. The second part of my work included designing an album-specific classifier to assign sematic roles to family members. My work also includes designing a general conditional random field graph based approach where several attributes about the individuals, and pairs are utilized to assign semantic roles. You can find an experiment on a family picture with strangers in the figure below. To learn contextual features, the ZFNet (Improved AlexNet) is fine-tuned on the People in Photo Album Dataset on three different areas including context. You can find the Caffe fine-tuning prototxt files in this [link](https://github.com/uzkent/AlexNet_FineTuned_PersonRecognition). For the face-only area, the pre-trained *FaceNet* model, an end-to-end face verification model, is used.
 
 	![obama_family](../images/Obama_Family.jpg)
 
 - Our journal paper titled "Integrating Hyperspectral Likelihoods in a Multi-dimensional Assignment Algorithm for Aerial Vehicle Tracking" is accepted by the *IEEE Journal of Selected Topics in Remote Sensing and Observation*. In this [link](https://www.youtube.com/watch?v=scRQjEMGSRE), you can find an example of single target tracking from a fixed aerial platform.
 
-- For short term (2014 Summer), I worked on *3-D Cardiac segmentation using MRI slices*. I presented our paper in the IEEE Western New York Image Processing Workshop. Below, you can visualize some results on canine (left) and sheep (right) heart segmentation. C++ implementation can be found in this [link](https://github.com/buzkent86/3D_MRI_Segmentation).
+- For short term (2014 Summer), I worked on *3-D Cardiac segmentation using MRI slices*. I presented our paper in the IEEE Western New York Image Processing Workshop. Below, you can visualize some results on canine (left) and sheep (right) heart segmentation. C++ implementation can be found in this [link](https://github.com/uzkent/3D_MRI_Segmentation).
 
 	- Uzkent, Burak, Matthew J. Hoffman, Elizabeth Cherry, and Nathan Cahill. "3-D MRI cardiac segmentation using graph cuts." In *Image and Signal Processing Workshop (WNYISPW)*, 2014 IEEE Western New York, pp. 47-51. IEEE, 2014.
 

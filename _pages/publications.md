@@ -28,9 +28,9 @@ Peer-Reviewed Conference Papers
 ===
 1. B. Uzkent, S. Ermon, "Learning When and Where to Zoom Using Deep Reinforcement Learning", IEEE Computer Vision and Pattern Recognition, July 2020, (Under Review).[RGATE](https://www.researchgate.net/publication/336778211_Learning_When_and_Where_to_Zoom_With_Deep_Reinforcement_Learning)
 
-2. V. Sarukkai, A. Jain, B. Uzkent, S. Ermon, "Cloud Removal from Satellite Images Using Spatiotemporal Generator Networks", In *Proceedings of IEEE Winter Conference of Applications of Computer Vision (WACV)*, March 2020.[arxiv](https://arxiv.org/pdf/1912.06838.pdf)
+2. V. Sarukkai, A. Jain, B. Uzkent, S. Ermon, "Cloud Removal from Satellite Images Using Spatiotemporal Generator Networks", In *Proceedings of IEEE Winter Conference of Applications of Computer Vision (WACV)*, March 2020.[arxiv](https://arxiv.org/pdf/1912.06838.pdf) [code](https://github.com/VSAnimator/stgan)
 
-3. B. Uzkent, C. Yeh, S. Ermon, "Efficient Object Detection in Large Images Using Deep Reinforcement Learning", In *Proceedings of IEEE Winter Conference of Applications of Computer Vision (WACV)*, March 2020.[arxiv](https://arxiv.org/pdf/1912.03966.pdf)
+3. B. Uzkent, C. Yeh, S. Ermon, "Efficient Object Detection in Large Images Using Deep Reinforcement Learning", In *Proceedings of IEEE Winter Conference of Applications of Computer Vision (WACV)*, March 2020.[arxiv](https://arxiv.org/pdf/1912.03966.pdf) [code](https://github.com/uzkent/EfficientObjectDetection)
 
 4. B. Uzkent, E. Sheehan, C. Meng, Z. Tang, D. Lobell, M. Burke, S. Ermon, "Learning How to Interpret Satellite Images using Wikipedia," *International Joint Conference on Artificial Intelligence*, 2019. [arxiv](https://arxiv.org/abs/1905.02506) [PDF](https://www.ijcai.org/proceedings/2019/0502.pdf) [Code](https://github.com/buzkent86/WikiSatNet)
 

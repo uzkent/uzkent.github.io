@@ -26,7 +26,7 @@ Peer-Reviewed Journal Papers
 
 Peer-Reviewed Conference Papers
 ===
-1. B. Uzkent, S. Ermon, "Learning When and Where to Zoom Using Deep Reinforcement Learning", IEEE Computer Vision and Pattern Recognition, July 2020, (Under Review).[RGATE](https://www.researchgate.net/publication/336778211_Learning_When_and_Where_to_Zoom_With_Deep_Reinforcement_Learning)
+1. B. Uzkent, S. Ermon, "Learning When and Where to Zoom Using Deep Reinforcement Learning", In *Proceedings of IEEE Computer Vision and Pattern Recognition*, July 2020 (Accepted).[RGATE](https://www.researchgate.net/publication/336778211_Learning_When_and_Where_to_Zoom_With_Deep_Reinforcement_Learning)
 
 2. V. Sarukkai, A. Jain, B. Uzkent, S. Ermon, "Cloud Removal from Satellite Images Using Spatiotemporal Generator Networks", In *Proceedings of IEEE Winter Conference of Applications of Computer Vision (WACV)*, March 2020.[arxiv](https://arxiv.org/pdf/1912.06838.pdf) [code](https://github.com/VSAnimator/stgan)
 

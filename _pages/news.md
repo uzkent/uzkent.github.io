@@ -7,6 +7,8 @@ redirect_from:
 ---
 
 {% include base_path %}
+- Our paper titled `Learning Where and When to Zoom Using Deep Reinforcement Learning' has been accepted to CVPR 2020! [Short Version](https://www.researchgate.net/publication/336778211_Learning_When_and_Where_to_Zoom_With_Deep_Reinforcement_Learning)
+
 - I gave a presentation at Planet Labs HQ in San Francisco.[PDF](../files/Planet_Presentation.pdf)
 
 - We submitted our paper on `Sequential Adversarial Domain Adaptation for Analyzing Low Resolution Images` to IJCAI20.
@@ -24,6 +26,7 @@ redirect_from:
 - I presented one of my recent research projects in University of California at San Diego.
 
 - We submitted one paper on `Dynamic Data Sampling using Deep Reinforcement Learning` to CVPR 2020.[RGATE](https://www.researchgate.net/publication/336778211_Learning_When_and_Where_to_Zoom_With_Deep_Reinforcement_Learning)
+
 - We submitted one paper on `Adversarial Domain Adaptation for Improving Deep Convolutional Neural Network's Performance on Low Resolution Images` to AAAI 2020.
 
 - We submitted one paper on `Efficient Object Detection on Large Images using Deep Reinforcement Learning` to WACV 2020.

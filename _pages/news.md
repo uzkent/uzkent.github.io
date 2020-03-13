@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-- Our paper titled `Learning When and Where to Zoom Using Deep Reinforcement Learning` has been accepted to CVPR 2020! [Short Version](https://www.researchgate.net/publication/336778211_Learning_When_and_Where_to_Zoom_With_Deep_Reinforcement_Learning)
+- Our paper titled `Learning When and Where to Zoom Using Deep Reinforcement Learning` has been accepted to CVPR 2020 as oral paper! [arxiv](https://arxiv.org/pdf/2003.00425.pdf)
 
 - I gave a presentation at Planet Labs HQ in San Francisco.[PDF](../files/Planet_Presentation.pdf)
 

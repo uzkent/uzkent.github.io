@@ -26,7 +26,7 @@ Peer-Reviewed Journal Papers
 
 Peer-Reviewed Conference Papers
 ===
-1. K. Ayush*, B. Uzkent*, M. Burke, D. Lobell, S. Ermon, "Generating Interpretable Poverty Maps Using Object Detection in Satellite Images", In *Proceedings of International Joint Conference on Artificial Intelligence*, August 2020. [arxiv](https://arxiv.org/pdf/2002.01612.pdf) 
+1. K. Ayush, B. Uzkent, M. Burke, D. Lobell, S. Ermon, "Generating Interpretable Poverty Maps Using Object Detection in Satellite Images", In *Proceedings of International Joint Conference on Artificial Intelligence*, August 2020. [arxiv](https://arxiv.org/pdf/2002.01612.pdf)
 
 2. B. Uzkent, S. Ermon, "Learning When and Where to Zoom Using Deep Reinforcement Learning", In *Proceedings of IEEE Computer Vision and Pattern Recognition*, July 2020 (**Oral**).[arxiv](https://arxiv.org/pdf/2003.00425.pdf)
 

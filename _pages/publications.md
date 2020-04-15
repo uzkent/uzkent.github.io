@@ -28,7 +28,7 @@ Peer-Reviewed Conference Papers
 ===
 1. K. Ayush, B. Uzkent, M. Burke, D. Lobell, S. Ermon, "Generating Interpretable Poverty Maps Using Object Detection in Satellite Images", In *Proceedings of International Joint Conference on Artificial Intelligence*, August 2020. [arxiv](https://arxiv.org/pdf/2002.01612.pdf)
 
-2. B. Uzkent, S. Ermon, "Learning When and Where to Zoom Using Deep Reinforcement Learning", In *Proceedings of IEEE Computer Vision and Pattern Recognition*, July 2020 (**Oral**).[arxiv](https://arxiv.org/pdf/2003.00425.pdf)[code](https://github.com/ermongroup/PatchDrop)
+2. B. Uzkent, S. Ermon, "Learning When and Where to Zoom Using Deep Reinforcement Learning", In *Proceedings of IEEE Computer Vision and Pattern Recognition*, July 2020 (**Oral**).[arxiv](https://arxiv.org/pdf/2003.00425.pdf) [code](https://github.com/ermongroup/PatchDrop)
 
 3. V. Sarukkai, A. Jain, B. Uzkent, S. Ermon, "Cloud Removal from Satellite Images Using Spatiotemporal Generator Networks", In *Proceedings of IEEE Winter Conference of Applications of Computer Vision (WACV)*, March 2020.[arxiv](https://arxiv.org/pdf/1912.06838.pdf) [code](https://github.com/VSAnimator/stgan)
 

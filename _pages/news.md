@@ -7,6 +7,8 @@ redirect_from:
 ---
 
 {% include base_path %}
+- Our paper titled `Farmland Parcel Delineation using Spatio-temporal Convolutional Neural Networks' has been accepted to IEEE CVPR 2020 Workshop on Agriculture-Vision: Challenges & Opportunities For Computer Vision in Agriculture. [arxiv](https://arxiv.org/pdf/2004.05471.pdf) [code](https://github.com/sustainlab-group/ParcelDelineation)  
+
 - Our paper titled `Generating Interpretable Poverty Maps using Convolutional Object Detection in Satellite Images` has been accepted to IJCAI 2020! [arxiv](https://arxiv.org/pdf/2002.01612.pdf)
 
 - Our paper titled `Learning When and Where to Zoom Using Deep Reinforcement Learning` has been accepted to CVPR 2020 as oral paper! [arxiv](https://arxiv.org/pdf/2003.00425.pdf) [code](https://github.com/ermongroup/PatchDrop)

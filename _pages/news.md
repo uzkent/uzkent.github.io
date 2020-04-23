@@ -7,6 +7,8 @@ redirect_from:
 ---
 
 {% include base_path %}
+- We submitted our paper on `Adversarial Domain Adaptation for Studying Low Resolution Images' to BMVC 2020.
+
 - Our paper titled `Farmland Parcel Delineation using Spatio-temporal Convolutional Neural Networks` has been accepted to IEEE CVPR 2020 Workshop on Agriculture-Vision: Challenges & Opportunities For Computer Vision in Agriculture. [arxiv](https://arxiv.org/pdf/2004.05471.pdf) [code](https://github.com/sustainlab-group/ParcelDelineation)  
 
 - Our paper titled `Generating Interpretable Poverty Maps using Convolutional Object Detection in Satellite Images` has been accepted to IJCAI 2020! [arxiv](https://arxiv.org/pdf/2002.01612.pdf)
@@ -14,8 +16,6 @@ redirect_from:
 - Our paper titled `Learning When and Where to Zoom Using Deep Reinforcement Learning` has been accepted to CVPR 2020 as oral paper! [arxiv](https://arxiv.org/pdf/2003.00425.pdf) [code](https://github.com/ermongroup/PatchDrop)
 
 - I gave a presentation at Planet Labs HQ in San Francisco.[PDF](../files/Planet_Presentation.pdf)
-
-- We submitted our paper on `Sequential Adversarial Domain Adaptation for Analyzing Low Resolution Images` to IJCAI20.
 
 - We submitted our paper on `Generating Interpretable Poverty Maps with a Convolutional Object Detector using High Resolution Images` to IJCAI20.
 
@@ -30,8 +30,6 @@ redirect_from:
 - I presented one of my recent research projects in University of California at San Diego.
 
 - We submitted one paper on `Dynamic Data Sampling using Deep Reinforcement Learning` to CVPR 2020.[RGATE](https://www.researchgate.net/publication/336778211_Learning_When_and_Where_to_Zoom_With_Deep_Reinforcement_Learning)
-
-- We submitted one paper on `Adversarial Domain Adaptation for Improving Deep Convolutional Neural Network's Performance on Low Resolution Images` to AAAI 2020.
 
 - We submitted one paper on `Efficient Object Detection on Large Images using Deep Reinforcement Learning` to WACV 2020.
 

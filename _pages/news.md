@@ -7,6 +7,8 @@ redirect_from:
 ---
 
 {% include base_path %}
+- We submitted two papers to Neurips 2020.
+
 - We submitted our paper on `Adversarial Domain Adaptation for Studying Low Resolution Images` to BMVC 2020. [Researchgate](https://www.researchgate.net/publication/341030568_Adversarial_Domain_Adaptation_for_Analyzing_Low_Resolution_Images)
 
 - Our paper titled `Farmland Parcel Delineation using Spatio-temporal Convolutional Neural Networks` has been accepted to IEEE CVPR 2020 Workshop on Agriculture-Vision: Challenges & Opportunities For Computer Vision in Agriculture. [arxiv](https://arxiv.org/pdf/2004.05471.pdf) [code](https://github.com/sustainlab-group/ParcelDelineation)  

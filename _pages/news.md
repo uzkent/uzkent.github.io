@@ -17,7 +17,7 @@ redirect_from:
 
 - I gave a presentation at Qualcomm HQ in San Diego. [PDF](../files/Qualcomm.pdf)
 
-- Our paper titled `Learning When and Where to Zoom Using Deep Reinforcement Learning` has been accepted to CVPR 2020 as oral paper! [arxiv](https://arxiv.org/pdf/2003.00425.pdf) [code](https://github.com/ermongroup/PatchDrop)[Video](https://www.youtube.com/watch?v=n0HGh2x6Cgg)
+- Our paper titled `Learning When and Where to Zoom Using Deep Reinforcement Learning` has been accepted to CVPR 2020 as oral paper! [arxiv](https://arxiv.org/pdf/2003.00425.pdf) [code](https://github.com/ermongroup/PatchDrop) [Video](https://www.youtube.com/watch?v=n0HGh2x6Cgg)
 
 - I gave a presentation at Planet Labs HQ in San Francisco.[PDF](../files/Planet_Presentation.pdf)
 

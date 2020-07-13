@@ -7,7 +7,11 @@ redirect_from:
 ---
 
 {% include base_path %}
-- We submitted three papers to Neurips 2020.
+- We submitted our work on `Negative Data Augmentation for Unsupervised Learning` to Neurips 2020.
+
+- We submitted our work on `Data-efficient Computer Vision Using Reinforcement Learning` to Neurips 2020. [arxiv](https://arxiv.org/pdf/2006.04224.pdf)
+
+- We submitted our work on using `Street-level Mapillary Images to Learn Geoattributes` to Neurips 2020. [arxiv](https://arxiv.org/pdf/2006.08661.pdf)
 
 - We submitted our paper on `Adversarial Domain Adaptation for Studying Low Resolution Images` to BMVC 2020. [Researchgate](https://www.researchgate.net/publication/341030568_Adversarial_Domain_Adaptation_for_Analyzing_Low_Resolution_Images)
 

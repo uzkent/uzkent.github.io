@@ -20,10 +20,10 @@ I am currently working in the [Stanford AI Lab](http://ai.stanford.edu) at Stanf
 
 ## Work Experience
 - *Postdoctoral Fellow*, Stanford University, July 2018 -
-    * **Topic** - Innovative applications of machine learning on aerial and conventional images
+   * **Topics** - Unsupervised/Weakly Supervised Learning, Efficient Computer Vision, Generative Models, Computational Sustainability 
 - *Computer Vision Engineer*, Planet Labs, June 2017 - July 2018
-    * **Topic** - Object detection in low resolution aerial images
+    * **Topic** - Convolutional Object detection in low resolution aerial images
 - *Computer Vision Engineer*, Autel Robotics, August 2016 - June 2017
-    * **Topic** - High-speed object tracking from a drone platform
+    * **Topic** - High-speed object tracking on low-end embedded systems
 - *Computer Vision Algorithm Engineer Intern*, Huawei R&D, November 2015 - May 2016   
-    * **Topic** - Semantic role assignment to people in a photo album
+    * **Topic** - Unsupervised semantic role assignment to the people in a photo album

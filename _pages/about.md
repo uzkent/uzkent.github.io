@@ -7,7 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am currently working in the [Stanford AI Lab](http://ai.stanford.edu) at Stanford University as a postdoctoral fellow under the advisory of [Dr. Stefano Ermon](https://cs.stanford.edu/~ermon/). My work focuses on building efficient convolutional networks in terms of run-time complexity,  developing unsupervised and weakly supervised learning methods for better sample complexity in downstream tasks, and machine learning for computational sustainability. I earned my **Ph.D**. degree (2011-2016) in the [Chester F. Carlson Center for the Imaging Science](https://www.cis.rit.edu) at Rochester Institute of Technology under the advisory of Dr. [Matthew. J. Hoffman](https://people.rit.edu/mjhsma/index.html).
+I am currently working in the [Stanford AI Lab](http://ai.stanford.edu) at Stanford University as a postdoctoral research fellow under the advisory of [Dr. Stefano Ermon](https://cs.stanford.edu/~ermon/). My work focuses on building efficient convolutional networks in terms of run-time complexity, developing unsupervised and weakly supervised learning methods for better sample complexity in downstream tasks, generative models, and machine learning for computational sustainability. I earned my **Ph.D**. degree in the [Chester F. Carlson Center for the Imaging Science](https://www.cis.rit.edu) at Rochester Institute of Technology under the advisory of Dr. [Matthew. J. Hoffman](https://people.rit.edu/mjhsma/index.html).
 
 ## Education
 

@@ -52,7 +52,6 @@ redirect_from:
 - I gave a presentation at Orbital Insight. [PDF](../files/Orbital_Insight_Presentation.pdf)
 
 - We submitted our work on `Predicting Economic Development using Textual Information` to the KDD 2019 conference.
-	![wiki_ppi_workflow](../images/workflow_wikippi.png)
 
 - We submitted our work on `Large Scale Pre-training Using Weakly Supervised and Unsupervised Learning on Overhead Images` to the IJCAI 2019 conference. [arxiv](https://arxiv.org/abs/1809.10236)
 	![wiki_satellite_workflow](../images/combined_workflow_wikisatnet.png)

@@ -7,6 +7,10 @@ redirect_from:
 ---
 
 {% include base_path %}
+- We submitted our work on 'Self-supervised Learning with Geography Information' to CVPR 2021.
+
+- We submitted our work on 'Efficient Pre-training for Transfer Learning' to CVPR 2021. 
+
 - We submitted our work on `Negative Data Augmentation for Unsupervised Learning` to ICLR 2021.[PDF](https://openreview.net/forum?id=Ovp8dvB8IBH)
 
 - We submitted our work on `Data-efficient Computer Vision Using Reinforcement Learning` to AAAI 2021. [arxiv](https://arxiv.org/pdf/2006.04224.pdf)

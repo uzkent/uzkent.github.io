@@ -66,7 +66,7 @@ Peer-Reviewed Conference Papers
 
 20. B. Uzkent, O. Parlaktuna, ''Autonomous parallel parking of non-holonomic vehicles'', In *Proceedings of the 13th National Conference in Middle East Technical University*, Ankara, Turkey, 2009.
 
-Preprints or Papers Under Review
+Preprints and Papers Under Review
 ===
 1. B. Uzkent, K. Ayush, C. Meng, M. Burke, D. Lobell, S. Ermon, "Geography-Aware Self-Supervised Learning", *International Conference on Computer Vision and Pattern Recognition*, June 2021. (Under Review)
 

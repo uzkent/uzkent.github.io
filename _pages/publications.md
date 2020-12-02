@@ -26,19 +26,19 @@ Peer-Reviewed Journal Papers
 
 Peer-Reviewed Conference Papers
 ===
-1. B. Uzkent, Kumar Ayush, M. Burke, D. Lobell, S. Ermon, "Efficient High Resolution Image Processing using Deep Reinforcement Learning", In *Proceedings of The Thirty-Fourth AAAI Conference on Artificial Intelligence*, January 2021.
+1. B. Uzkent, Kumar Ayush, M. Burke, D. Lobell, S. Ermon, "Efficient High Resolution Image Processing using Deep Reinforcement Learning", In *Proceedings of The Thirty-Fourth AAAI Conference on Artificial Intelligence*, January 2021. [arxiv](https://arxiv.org/pdf/2006.04224.pdf)
 
-2. J. Lee, D. Grosz, B. Uzkent, S. Zheng, M. Burke, D. Lobell, S. Ermon, "Predicting Geo-attributes Using Deep Learning and Publicly Available Street-level Images", In *Proceedings of The Thirty-Fourth AAAI Conference on Artificial Intelligence*, January 2021.
+2. J. Lee, D. Grosz, B. Uzkent, S. Zheng, M. Burke, D. Lobell, S. Ermon, "Predicting Geo-attributes Using Deep Learning and Publicly Available Street-level Images", In *Proceedings of The Thirty-Fourth AAAI Conference on Artificial Intelligence*, January 2021. [arxiv](https://arxiv.org/pdf/2006.08661.pdf)
 
-3. K. Ayush, B. Uzkent, M. Burke, D. Lobell, S. Ermon, "Generating Interpretable Poverty Maps Using Object Detection in Satellite Images", In *Proceedings of International Joint Conference on Artificial Intelligence*, August 2020. [arxiv](https://arxiv.org/pdf/2002.01612.pdf)
+3. K. Ayush, B. Uzkent, M. Burke, D. Lobell, S. Ermon, "Generating Interpretable Poverty Maps Using Object Detection in Satellite Images", In *Proceedings of International Joint Conference on Artificial Intelligence*, August 2020. [arxiv](https://arxiv.org/pdf/2002.01612.pdf) [PDF](https://www.ijcai.org/Proceedings/2020/0608.pdf)
 
-4. B. Uzkent, S. Ermon, "Learning When and Where to Zoom Using Deep Reinforcement Learning", In *Proceedings of IEEE Computer Vision and Pattern Recognition*, July 2020 (**Oral**).[arxiv](https://arxiv.org/pdf/2003.00425.pdf) [code](https://github.com/ermongroup/PatchDrop)
+4. B. Uzkent, S. Ermon, "Learning When and Where to Zoom Using Deep Reinforcement Learning", In *Proceedings of IEEE Computer Vision and Pattern Recognition*, July 2020 (**Oral**).[arxiv](https://arxiv.org/pdf/2003.00425.pdf) [PDF](https://openaccess.thecvf.com/content_CVPR_2020/papers/Uzkent_Learning_When_and_Where_to_Zoom_With_Deep_Reinforcement_Learning_CVPR_2020_paper.pdf) [code](https://github.com/ermongroup/PatchDrop)
 
-5. H.L. Aung, B. Uzkent, M. Burke, D. Lobell, S. Ermon, "Farmland Parcel Delineation using Spatio-temporal Convolutional Networks", In *Proceedings of the Agriculture-Vision: Challenges & Opportunities for Computer Vision in Agriculture, In conjunction with Computer Vision and Pattern Recognition*, June 2020.
+5. H.L. Aung, B. Uzkent, M. Burke, D. Lobell, S. Ermon, "Farmland Parcel Delineation using Spatio-temporal Convolutional Networks", In *Proceedings of the Agriculture-Vision: Challenges & Opportunities for Computer Vision in Agriculture, In conjunction with Computer Vision and Pattern Recognition*, June 2020. [PDF](https://openaccess.thecvf.com/content_CVPRW_2020/papers/w5/Aung_Farm_Parcel_Delineation_Using_Spatio-Temporal_Convolutional_Networks_CVPRW_2020_paper.pdf) [code](https://github.com/sustainlab-group/ParcelDelineation)
 
-6. V. Sarukkai, A. Jain, B. Uzkent, S. Ermon, "Cloud Removal from Satellite Images Using Spatiotemporal Generator Networks", In *Proceedings of IEEE Winter Conference of Applications of Computer Vision (WACV)*, March 2020.[arxiv](https://arxiv.org/pdf/1912.06838.pdf) [code](https://github.com/VSAnimator/stgan)
+6. V. Sarukkai, A. Jain, B. Uzkent, S. Ermon, "Cloud Removal from Satellite Images Using Spatiotemporal Generator Networks", In *Proceedings of IEEE Winter Conference of Applications of Computer Vision (WACV)*, March 2020.[arxiv](https://arxiv.org/pdf/1912.06838.pdf) [PDF](https://openaccess.thecvf.com/content_WACV_2020/papers/Sarukkai_Cloud_Removal_from_Satellite_Images_using_Spatiotemporal_Generator_Networks_WACV_2020_paper.pdf) [code](https://github.com/VSAnimator/stgan)
 
-7. B. Uzkent, C. Yeh, S. Ermon, "Efficient Object Detection in Large Images Using Deep Reinforcement Learning", In *Proceedings of IEEE Winter Conference of Applications of Computer Vision (WACV)*, March 2020.[arxiv](https://arxiv.org/pdf/1912.03966.pdf) [code](https://github.com/uzkent/EfficientObjectDetection)
+7. B. Uzkent, C. Yeh, S. Ermon, "Efficient Object Detection in Large Images Using Deep Reinforcement Learning", In *Proceedings of IEEE Winter Conference of Applications of Computer Vision (WACV)*, March 2020.[arxiv](https://arxiv.org/pdf/1912.03966.pdf) [PDF](https://openaccess.thecvf.com/content_WACV_2020/papers/Uzkent_Efficient_Object_Detection_in_Large_Images_Using_Deep_Reinforcement_Learning_WACV_2020_paper.pdf) [code](https://github.com/uzkent/EfficientObjectDetection)
 
 8. B. Uzkent, E. Sheehan, C. Meng, Z. Tang, D. Lobell, M. Burke, S. Ermon, "Learning How to Interpret Satellite Images using Wikipedia," *International Joint Conference on Artificial Intelligence*, 2019. [arxiv](https://arxiv.org/abs/1905.02506) [PDF](https://www.ijcai.org/proceedings/2019/0502.pdf) [Code](https://github.com/buzkent86/WikiSatNet)
 

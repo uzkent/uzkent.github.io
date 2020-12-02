@@ -7,15 +7,15 @@ redirect_from:
 ---
 
 {% include base_path %}
+- Our paper on `Street-level Mapillary Images to Learn Geoattributes` has been accepted to AAAI 2021. [arxiv](https://arxiv.org/pdf/2006.08661.pdf)
+
+- Our paper on `Data-efficient Computer Vision Using Reinforcement Learning` has been accepted to AAAI 2021. [arxiv](https://arxiv.org/pdf/2006.04224.pdf)
+
 - We submitted our work on `Self-supervised Learning with Geography Information` to CVPR 2021. [arxiv](https://arxiv.org/abs/2011.09980)
 
 - We submitted our work on `Efficient Pre-training for Transfer Learning` to CVPR 2021. [arxiv](https://arxiv.org/abs/2011.10231)
 
-- We submitted our work on `Negative Data Augmentation for Unsupervised Learning` to ICLR 2021.[PDF](https://openreview.net/forum?id=Ovp8dvB8IBH)
-
-- We submitted our work on `Data-efficient Computer Vision Using Reinforcement Learning` to AAAI 2021. [arxiv](https://arxiv.org/pdf/2006.04224.pdf)
-
-- We submitted our work on using `Street-level Mapillary Images to Learn Geoattributes` to AAAI 2021. [arxiv](https://arxiv.org/pdf/2006.08661.pdf)
+- We submitted our work on `Negative Data Augmentation for Unsupervised Learning` to ICLR 2021. [PDF](https://openreview.net/forum?id=Ovp8dvB8IBH)
 
 - We submitted our paper on `Adversarial Domain Adaptation for Studying Low Resolution Images` to WACV 2021. [Researchgate](https://www.researchgate.net/publication/341030568_Adversarial_Domain_Adaptation_for_Analyzing_Low_Resolution_Images)
 

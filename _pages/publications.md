@@ -28,7 +28,7 @@ Peer-Reviewed Conference Papers
 ===
 1. B. Uzkent, Kumar Ayush, M. Burke, D. Lobell, S. Ermon, "Efficient High Resolution Image Processing using Deep Reinforcement Learning", In *Proceedings of The Thirty-Fourth AAAI Conference on Artificial Intelligence*, January 2021. [arxiv](https://arxiv.org/pdf/2006.04224.pdf)
 
-2. J. Lee, D. Grosz, B. Uzkent, S. Zheng, M. Burke, D. Lobell, S. Ermon, "Predicting Geo-attributes Using Deep Learning and Publicly Available Street-level Images", In *Proceedings of The Thirty-Fourth AAAI Conference on Artificial Intelligence*, January 2021. [arxiv](https://arxiv.org/pdf/2006.08661.pdf)
+2. J. Lee, D. Grosz, B. Uzkent, S. Zheng, M. Burke, D. Lobell, S. Ermon, "Predicting Geo-attributes Using Deep Learning and Publicly Available Street-level Images", In *Proceedings of The Thirty-Fourth AAAI Conference on Artificial Intelligence*, January 2021. [arxiv](https://arxiv.org/pdf/2006.08661.pdf) [code](https://github.com/sustainlab-group/mapillarygcn)
 
 3. K. Ayush, B. Uzkent, M. Burke, D. Lobell, S. Ermon, "Generating Interpretable Poverty Maps Using Object Detection in Satellite Images", In *Proceedings of International Joint Conference on Artificial Intelligence*, August 2020. [arxiv](https://arxiv.org/pdf/2002.01612.pdf) [PDF](https://www.ijcai.org/Proceedings/2020/0608.pdf)
 

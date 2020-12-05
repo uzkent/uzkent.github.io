@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-- Our paper on `Street-level Mapillary Images to Learn Geoattributes` has been accepted to AAAI 2021. [arxiv](https://arxiv.org/pdf/2006.08661.pdf)
+- Our paper on `Street-level Mapillary Images to Learn Geoattributes` has been accepted to AAAI 2021. [arxiv](https://arxiv.org/pdf/2006.08661.pdf) [code](https://github.com/sustainlab-group/mapillarygcn)
 
 - Our paper on `Data-efficient Computer Vision Using Reinforcement Learning` has been accepted to AAAI 2021. [arxiv](https://arxiv.org/pdf/2006.04224.pdf)
 

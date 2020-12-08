@@ -15,6 +15,8 @@ redirect_from:
 
 - We submitted our work on `Efficient Pre-training for Transfer Learning` to CVPR 2021. [arxiv](https://arxiv.org/abs/2011.10231)
 
+- I joined Samsung Research America as a Senior Research Scientist.
+
 - We submitted our work on `Negative Data Augmentation for Unsupervised Learning` to ICLR 2021. [PDF](https://openreview.net/forum?id=Ovp8dvB8IBH)
 
 - We submitted our paper on `Adversarial Domain Adaptation for Studying Low Resolution Images` to WACV 2021. [Researchgate](https://www.researchgate.net/publication/341030568_Adversarial_Domain_Adaptation_for_Analyzing_Low_Resolution_Images)

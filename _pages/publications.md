@@ -12,17 +12,17 @@ Peer-Reviewed Journal Papers
 ===
 1. B. Uzkent, A. Rangnekar, M.J. Hoffman, ''Tracking in Aerial Hyperspectral Videos using Deep Kernelized Correlation Filters'', In *IEEE Transactions on Geoscience and Remote Sensing*, 2019 [PDF](https://ieeexplore.ieee.org/document/8435971) [arxiv](https://arxiv.org/pdf/1711.07235.pdf) [code](https://github.com/buzkent86/HKCF_Tracker)
 
-2. B. Uzkent, M. J. Hoffman, A. Vodacek, ''Integrating Hyperspectral Likelihoods in a Multi-dimensional Assignment Algorithm for Aerial Vehicle Tracking'', *IEEE Journal of Selected Topics in Remote Sensing and Observation*, 9(9): 4325--4333, May 2016. [PDF](https://ieeexplore.ieee.org/document/7471414) [code](https://github.com/buzkent86/CVPRW17_Paper_code)
+2. B. Uzkent, M. J. Hoffman, A. Vodacek, ''Integrating Hyperspectral Likelihoods in a Multi-dimensional Assignment Algorithm for Aerial Vehicle Tracking'', In *IEEE Journal of Selected Topics in Remote Sensing and Observation*, 9(9): 4325--4333, May 2016. [PDF](https://ieeexplore.ieee.org/document/7471414) [code](https://github.com/buzkent86/CVPRW17_Paper_code)
 
-3. B. Uzkent, M. J. Hoffman, A. Vodacek, Bin Chen, ''Feature Matching with an Adaptive Optical Sensor in a Ground Target Tracking System'', *IEEE Sensors Journal*, 15(1): 510--519, January 2015. [PDF](https://ieeexplore.ieee.org/document/6873232/)
+3. B. Uzkent, M. J. Hoffman, A. Vodacek, Bin Chen, ''Feature Matching with an Adaptive Optical Sensor in a Ground Target Tracking System'', In *IEEE Sensors Journal*, 15(1): 510--519, January 2015. [PDF](https://ieeexplore.ieee.org/document/6873232/)
 
-4. B. Uzkent, B.D. Barkana, H. Cevikalp, ''Non-speech environmental sound classification using SVMS with a new set of features'', *International Journal of Innovative Computing, Information and Control*, 8(5): 3511--3524, May 2012. [PDF](https://www.researchgate.net/profile/Hakan_Cevikalp/publication/267782696_Non-speech_environmental_sound_classification_using_SVMs_with_a_new_set_of_features/links/54b7bf9f0cf24eb34f6ed7ff/Non-speech-environmental-sound-classification-using-SVMs-with-a-new-set-of-features.pdf)
+4. B. Uzkent, B.D. Barkana, H. Cevikalp, ''Non-speech environmental sound classification using SVMS with a new set of features'', In *International Journal of Innovative Computing, Information and Control*, 8(5): 3511--3524, May 2012. [PDF](https://www.researchgate.net/profile/Hakan_Cevikalp/publication/267782696_Non-speech_environmental_sound_classification_using_SVMs_with_a_new_set_of_features/links/54b7bf9f0cf24eb34f6ed7ff/Non-speech-environmental-sound-classification-using-SVMs-with-a-new-set-of-features.pdf)
 
-5. B.D. Barkana, B. Uzkent, I. Saricicek, ''Normal and abnormal non-speech audio event detection using MFCC and PR-based feature sets'', *Advanced Materials Research*, Volume 601, pp: 200--208, December 2012.
+5. B.D. Barkana, B. Uzkent, I. Saricicek, ''Normal and abnormal non-speech audio event detection using MFCC and PR-based feature sets'', In *Advanced Materials Research*, Volume 601, pp: 200--208, December 2012.
 
-6. B.D. Barkana, B. Uzkent, I. Saricicek, ''Environmental noise classifier using a new set of feature parameters based on pitch range'', *Applied Acoustics*, 72(11): 841--848, November 2011. [PDF](https://www.sciencedirect.com/science/article/abs/pii/S0003682X11001381)
+6. B.D. Barkana, B. Uzkent, I. Saricicek, ''Environmental noise classifier using a new set of feature parameters based on pitch range'', In *Applied Acoustics*, 72(11): 841--848, November 2011. [PDF](https://www.sciencedirect.com/science/article/abs/pii/S0003682X11001381)
 
-7. B. Uzkent, B.D. Barkana, J. Yang, ''Automatic environmental noise source classification model using fuzzy logic'', *Expert Systems with Applications*, 38(7): 8751--8755, July 2011. [PDF](https://www.sciencedirect.com/science/article/pii/S0957417411001047)
+7. B. Uzkent, B.D. Barkana, J. Yang, ''Automatic environmental noise source classification model using fuzzy logic'', In *Expert Systems with Applications*, 38(7): 8751--8755, July 2011. [PDF](https://www.sciencedirect.com/science/article/pii/S0957417411001047)
 
 Peer-Reviewed Conference Papers
 ===
@@ -40,9 +40,9 @@ Peer-Reviewed Conference Papers
 
 7. B. Uzkent, C. Yeh, S. Ermon, "Efficient Object Detection in Large Images Using Deep Reinforcement Learning", In *Proceedings of IEEE Winter Conference of Applications of Computer Vision (WACV)*, March 2020. [arxiv](https://arxiv.org/pdf/1912.03966.pdf) [PDF](https://openaccess.thecvf.com/content_WACV_2020/papers/Uzkent_Efficient_Object_Detection_in_Large_Images_Using_Deep_Reinforcement_Learning_WACV_2020_paper.pdf) [code](https://github.com/uzkent/EfficientObjectDetection)
 
-8. B. Uzkent, E. Sheehan, C. Meng, Z. Tang, D. Lobell, M. Burke, S. Ermon, "Learning How to Interpret Satellite Images using Wikipedia," *International Joint Conference on Artificial Intelligence*, 2019. [arxiv](https://arxiv.org/abs/1905.02506) [PDF](https://www.ijcai.org/proceedings/2019/0502.pdf) [Code](https://github.com/buzkent86/WikiSatNet)
+8. B. Uzkent, E. Sheehan, C. Meng, Z. Tang, D. Lobell, M. Burke, S. Ermon, "Learning How to Interpret Satellite Images using Wikipedia," In *Proceedings of the International Joint Conference on Artificial Intelligence*, 2019. [arxiv](https://arxiv.org/abs/1905.02506) [PDF](https://www.ijcai.org/proceedings/2019/0502.pdf) [Code](https://github.com/buzkent86/WikiSatNet)
 
-9. E. Sheehan, C. Meng, M. Tan, B. Uzkent, N. Jean, D. Lobell, M. Burke, S. Ermon, "Predicting Economic Development using Geolocated Wikipedia Articles," *25TH ACM SIGKDD Conference on Knowledge Discovery and Data Mining*, 2019. [PDF](https://dl.acm.org/citation.cfm?id=3330784) [code](https://github.com/buzkent86/WikipediaPovertyMapping)
+9. E. Sheehan, C. Meng, M. Tan, B. Uzkent, N. Jean, D. Lobell, M. Burke, S. Ermon, "Predicting Economic Development using Geolocated Wikipedia Articles," In *Proceedings of 25TH ACM SIGKDD Conference on Knowledge Discovery and Data Mining*, 2019. [PDF](https://dl.acm.org/citation.cfm?id=3330784) [code](https://github.com/buzkent86/WikipediaPovertyMapping)
 
 10. B. Uzkent, Y. Seo, "EnKCF: Ensemble of Kernelized Correlation Filters for High-Speed Object Tracking," In *Proceedings of IEEE Winter Conference on Applications of Computer Vision (WACV)*, pp. 1133-1141, March 2018. [PDF](https://ieeexplore.ieee.org/document/8354233) [code](https://github.com/buzkent86/EnKCF_Tracking_WACV18)
 
@@ -58,7 +58,7 @@ Peer-Reviewed Conference Papers
        
 16. B. Uzkent, M. J. Hoffman, A. Vodacek, '. B. Uzkent, M. J. Hoffman, E. Cherry, N. Cahill, ''3-D MRI Cardiac Segmentation using Graph Cuts'', In *Proceedings of the IEEE Western NY Image Processing Workshop*, pp. 47--51, Rochester, NY, November 2014. [PDF](https://ieeexplore.ieee.org/document/6999484) [code](https://github.com/buzkent86/3D_MRI_Segmentation)  
 
-17. B. Uzkent, M. J. Hoffman, A. Vodacek, J. P. Kerekes, B. Chen, ''Feature matching and adaptive prediction models in an object tracking DDDAS'', In *Procedia Computer Science*, Volume 18, pp. 1939-1948, 2013. [PDF](https://www.sciencedirect.com/science/article/pii/S1877050913005061)
+17. B. Uzkent, M. J. Hoffman, A. Vodacek, J. P. Kerekes, B. Chen, ''Feature matching and adaptive prediction models in an object tracking DDDAS'', In *Proceedings of Procedia Computer Science*, Volume 18, pp. 1939-1948, 2013. [PDF](https://www.sciencedirect.com/science/article/pii/S1877050913005061)
 
 18. B. Uzkent, B.D. Barkana, ''Pitch range-based feature extraction for audio surveillance systems'', In *Proceedings of IEEE International Conference on Information Technology: New Generations (ITNG)*, pp. 476--480, April 11-13, 2011. [PDF](https://www.researchgate.net/profile/Buket_Barkana/publication/224245542_Pitch-Range_Based_Feature_Extraction_for_Audio_Surveillance_Systems/links/5654aa9808ae4988a7b055f7/Pitch-Range-Based-Feature-Extraction-for-Audio-Surveillance-Systems.pdf)
 

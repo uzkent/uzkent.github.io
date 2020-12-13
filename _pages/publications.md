@@ -74,7 +74,7 @@ Preprints and Papers Under Review
 
 3. K. Ayush, A. Sinha, J. Song, B. Uzkent, Hongxia Jin, S. Ermon, "Negative Data Augmentation for Unsupervised Learning", *International Conference on Learning Representations*, May 2021. (Under Review)
 
-4. B. Uzkent, S. Ermon, "Domain Adaptation Using Adversarial Learning for Studying Low Resolution Images", *IEEE Winter Conference on Applications of Computer Vision*, March 2021. (Under Review)
+4. B. Uzkent, S. Ermon, "Domain Adaptation Using Adversarial Learning for Studying Low Resolution Images", *IEEE International Conference on Image Processing*, September 2021. (Under Review)
 
 5. B. Uzkent, E. Sheehan, C. Meng, Z. Tang, M. Burke, D. Lobell, S. Ermon, ''Learning to Interpret Satellite Images in Global Scale Using Wikipedia''. [Arxiv](https://arxiv.org/pdf/1905.02506.pdf)
 

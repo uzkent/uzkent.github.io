@@ -7,6 +7,7 @@ redirect_from:
 ---
 
 {% include base_path %}
+- You can find our dataset on **predicting geoattributes using Mapillary street-level images" in our github repository. [code](https://github.com/sustainlab-group/mapillarygcn).
 
 - We released our dataset on **paired and unpaired cloudy and cloud-free satellite images** for learning generative models to remove clouds in satellite images. For more information, please check our github repo. [github](https://github.com/VSAnimator/stgan)
 

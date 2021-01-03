@@ -21,7 +21,7 @@ redirect_from:
 
 - We submitted our paper on `Adversarial Domain Adaptation for Studying Low Resolution Images` to **ICIP 2021**. [Researchgate](https://www.researchgate.net/publication/341030568_Adversarial_Domain_Adaptation_for_Analyzing_Low_Resolution_Images)
 
-- Our paper titled `Farmland Parcel Delineation using Spatio-temporal Convolutional Neural Networks` has been accepted to IEEE CVPR 2020 Workshop on Agriculture-Vision: Challenges & Opportunities For Computer Vision in Agriculture. [arxiv](https://arxiv.org/pdf/2004.05471.pdf) [code](https://github.com/sustainlab-group/ParcelDelineation)  
+- Our paper titled `Farmland Parcel Delineation using Spatio-temporal Convolutional Neural Networks` has been accepted to **IEEE CVPR 2020 Workshop on Agriculture-Vision: Challenges & Opportunities For Computer Vision in Agriculture**. [arxiv](https://arxiv.org/pdf/2004.05471.pdf) [code](https://github.com/sustainlab-group/ParcelDelineation)  
 
 - Our paper titled `Generating Interpretable Poverty Maps using Convolutional Object Detection in Satellite Images` has been accepted to **IJCAI 2020**. [arxiv](https://arxiv.org/pdf/2002.01612.pdf)
 
@@ -38,8 +38,6 @@ redirect_from:
 - Our paper on `Efficient Object Detection in Large Images using Deep Reinforcement Learning` is accepted to **WACV 2020** Conference. [arxiv](https://arxiv.org/pdf/1912.03966.pdf) [code](https://github.com/uzkent/EfficientObjectDetection) [Short Presentation](../files/WACV_Short.pdf)
 
 - I presented one of my recent research projects in University of California at San Diego.
-
-- We submitted one paper on `Dynamic Data Sampling using Deep Reinforcement Learning` to CVPR 2020. [RGATE](https://www.researchgate.net/publication/336778211_Learning_When_and_Where_to_Zoom_With_Deep_Reinforcement_Learning)
 
 - Our Paper on `Large-Scale Unsupervised Pre-training of CNNs with Image to Text Matching` is accepted to **IJCAI 2019** conference! [arxiv](https://arxiv.org/pdf/1905.02506.pdf) [code](https://github.com/uzkent/WikiSatNet)
 
@@ -60,11 +58,7 @@ redirect_from:
 
   ![Tracking_Framework](../images/EnKCF_Framework.png)
 
-- We submitted our paper on high speed object tracking to the *Winter Application of Computer Vision Conference 2018*. Some experiments on the UAV123 dataset is attached below. The experiments are carried out on an *I5, 2.7 GHz processor* in *C++* platform on a Ubuntu OS. We propose a scale adaptive-tracker that can run on average at `416 fps` on the *UAV123 dataset*, that is faster than the vanilla form KCF tracker operating at `380 fps` in the same platform on the *UAV123 dataset*. Such tracker can then be run on a low-end platform at real-time (`30 fps`) unlike most of the state-of-the-art trackers. All the KCF driven trackers handle the scale update in a computationally demanding way, reducing the run-time performance from multiple hundreds of fps to less than a hunder fps. On the other hand, the proposed scale-adaptive tracker is as efficient as original KCF tracker, running at even slightly higher speed than the original KCF on the *UAV123 dataset*.
-
-	- Uzkent, Burak, and Seo, YoungWoo "EnKCF : Ensemble of Kernelized Correlation Filters for Object Tracking in High Speed" [Abstract](abstract_wacv18.pdf)
-
-- Our paper is accepted to the *Perception Beyond the Visible Spectrum Workshop in conjunction with the Computer Vision and Pattern Recognition Conference 2017*
+- Our paper is accepted to the **Perception Beyond the Visible Spectrum Workshop in conjunction with the Computer Vision and Pattern Recognition Conference 2017**
 
 	- Uzkent, Burak, Aneesh Rangnekar, Matthew J. Hoffman, and Anthony Vodacek. "Aerial Vehicle Tracking by Adaptive Fusion of Hyperspectral Likelihoods Maps"
 
@@ -76,15 +70,15 @@ redirect_from:
 
 	![Tracking_Framework](../images/CVPRW16_Tracking.png)
 
-- I defended my Ph.D. thesis on "Aerial Vehicle Tracking using a Multi-modal Optical Sensor" as of May 16, 2016. I would like to thank my thesis committee and my advisor Dr. Hoffman and co-adviser Dr. Vodacek for their supervision throughout my Ph.D. [Presentation](../files/Thesis.Defense.pdf)
+- I defended my Ph.D. thesis on "Aerial Vehicle Tracking using a Multi-modal Optical Sensor" as of May 16, 2016. I would like to thank my thesis committee, my advisor Dr. Hoffman and co-adviser Dr. Vodacek for their supervision throughout my Ph.D. [Presentation](../files/Thesis.Defense.pdf)
 
 - I finished my internship at *Huawei R&D* where I worked on representing people with face-only and contextual features to classify individuals in a photo album as strangers and family members. The second part of my work included designing an album-specific classifier to assign sematic roles to family members. My work also includes designing a general conditional random field graph based approach where several attributes about the individuals, and pairs are utilized to assign semantic roles. You can find an experiment on a family picture with strangers in the figure below. To learn contextual features, the ZFNet (Improved AlexNet) is fine-tuned on the People in Photo Album Dataset on three different areas including context. You can find the Caffe fine-tuning prototxt files in this [link](https://github.com/uzkent/AlexNet_FineTuned_PersonRecognition). For the face-only area, the pre-trained *FaceNet* model, an end-to-end face verification model, is used.
 
 	![obama_family](../images/Obama_Family.jpg)
 
-- Our journal paper titled "Integrating Hyperspectral Likelihoods in a Multi-dimensional Assignment Algorithm for Aerial Vehicle Tracking" is accepted by the *IEEE Journal of Selected Topics in Remote Sensing and Observation*. In this [link](https://www.youtube.com/watch?v=scRQjEMGSRE), you can find an example of single target tracking from a fixed aerial platform.
+- Our journal paper titled "Integrating Hyperspectral Likelihoods in a Multi-dimensional Assignment Algorithm for Aerial Vehicle Tracking" is accepted by the **IEEE Journal of Selected Topics in Remote Sensing and Observation**. In this [link](https://www.youtube.com/watch?v=scRQjEMGSRE), you can find an example of single target tracking from a fixed aerial platform.
 
-- For short term (2014 Summer), I worked on *3-D Cardiac segmentation using MRI slices*. I presented our paper in the IEEE Western New York Image Processing Workshop. Below, you can visualize some results on canine (left) and sheep (right) heart segmentation. C++ implementation can be found in this [link](https://github.com/uzkent/3D_MRI_Segmentation).
+- For short term (2014 Summer), I worked on *3-D Cardiac segmentation using MRI slices*. I presented our paper in the **IEEE Western New York Image Processing Workshop**. Below, you can visualize some results on canine (left) and sheep (right) heart segmentation. C++ implementation can be found in this [link](https://github.com/uzkent/3D_MRI_Segmentation).
 
 	- Uzkent, Burak, Matthew J. Hoffman, Elizabeth Cherry, and Nathan Cahill. "3-D MRI cardiac segmentation using graph cuts." In *Image and Signal Processing Workshop (WNYISPW)*, 2014 IEEE Western New York, pp. 47-51. IEEE, 2014.
 

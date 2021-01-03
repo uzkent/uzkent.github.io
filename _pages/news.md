@@ -29,21 +29,21 @@ redirect_from:
 
 - Our paper titled `Learning When and Where to Zoom Using Deep Reinforcement Learning` has been accepted to CVPR 2020 as oral paper! [arxiv](https://arxiv.org/pdf/2003.00425.pdf) [code](https://github.com/ermongroup/PatchDrop) [video](https://www.youtube.com/watch?v=n0HGh2x6Cgg)
 
-- I gave a presentation at Planet Labs HQ in San Francisco.[PDF](../files/Planet_Presentation.pdf)
+- I gave a presentation at Planet Labs HQ in San Francisco. [PDF](../files/Planet_Presentation.pdf)
 
 - We submitted our paper on `Generating Interpretable Poverty Maps with a Convolutional Object Detector using High Resolution Images` to IJCAI20.
 
 - We submitted our paper on `Predicting Geo-attributes using Publicly Available Street-level Images` to IJCAI20.
 
-- I gave a seminar at Sabanci University, Turkey.[Abstract](https://mfg.sabanciuniv.edu/tr/events-detail/21371) [PDF](../files/Sabanci_Seminar.pdf)
+- I gave a seminar at Sabanci University, Turkey. [Abstract](https://mfg.sabanciuniv.edu/tr/events-detail/21371) [PDF](../files/Sabanci_Seminar.pdf)
 
-- Our paper on `Removing Cloud from Satellite Images Using Spatiotemporal Generator Networks` is accepted to WACV 2020 Conference.[arxiv](https://arxiv.org/pdf/1912.06838.pdf) [code](https://github.com/VSAnimator/stgan)
+- Our paper on `Removing Cloud from Satellite Images Using Spatiotemporal Generator Networks` is accepted to WACV 2020 Conference. [arxiv](https://arxiv.org/pdf/1912.06838.pdf) [code](https://github.com/VSAnimator/stgan)
 
-- Our paper on `Efficient Object Detection in Large Images using Deep Reinforcement Learning` is accepted to WACV 2020 Conference.[arxiv](https://arxiv.org/pdf/1912.03966.pdf) [code](https://github.com/uzkent/EfficientObjectDetection) [Short Presentation](../files/WACV_Short.pdf)
+- Our paper on `Efficient Object Detection in Large Images using Deep Reinforcement Learning` is accepted to WACV 2020 Conference. [arxiv](https://arxiv.org/pdf/1912.03966.pdf) [code](https://github.com/uzkent/EfficientObjectDetection) [Short Presentation](../files/WACV_Short.pdf)
 
 - I presented one of my recent research projects in University of California at San Diego.
 
-- We submitted one paper on `Dynamic Data Sampling using Deep Reinforcement Learning` to CVPR 2020.[RGATE](https://www.researchgate.net/publication/336778211_Learning_When_and_Where_to_Zoom_With_Deep_Reinforcement_Learning)
+- We submitted one paper on `Dynamic Data Sampling using Deep Reinforcement Learning` to CVPR 2020. [RGATE](https://www.researchgate.net/publication/336778211_Learning_When_and_Where_to_Zoom_With_Deep_Reinforcement_Learning)
 
 - We submitted one paper on `Efficient Object Detection on Large Images using Deep Reinforcement Learning` to WACV 2020.
 

@@ -7,13 +7,13 @@ redirect_from:
 ---
 
 {% include base_path %}
-- Our paper on `Street-level Mapillary Images to Learn Geoattributes` has been accepted to AAAI 2021. [arxiv](https://arxiv.org/pdf/2006.08661.pdf) [code](https://github.com/sustainlab-group/mapillarygcn)
+- Our paper on `Street-level Mapillary Images to Learn Geoattributes` has been accepted to *AAAI 2021*. [arxiv](https://arxiv.org/pdf/2006.08661.pdf) [code](https://github.com/sustainlab-group/mapillarygcn)
 
-- Our paper on `Data-efficient Computer Vision Using Reinforcement Learning` has been accepted to AAAI 2021. [arxiv](https://arxiv.org/pdf/2006.04224.pdf)
+- Our paper on `Data-efficient Computer Vision Using Reinforcement Learning` has been accepted to *AAAI 2021*. [arxiv](https://arxiv.org/pdf/2006.04224.pdf)
 
-- We submitted our work on `Self-supervised Learning with Geography Information` to CVPR 2021. [arxiv](https://arxiv.org/abs/2011.09980)
+- We submitted our work on `Self-supervised Learning with Geography Information` to *CVPR 2021*. [arxiv](https://arxiv.org/abs/2011.09980)
 
-- We submitted our work on `Efficient Pre-training for Transfer Learning` to CVPR 2021. [arxiv](https://arxiv.org/abs/2011.10231)
+- We submitted our work on `Efficient Pre-training for Transfer Learning` to *CVPR 2021*. [arxiv](https://arxiv.org/abs/2011.10231)
 
 - I joined Samsung Research America as a Senior Research Scientist.
 

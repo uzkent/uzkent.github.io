@@ -17,59 +17,44 @@ redirect_from:
 
 - I joined Samsung Research America as a Senior Research Scientist.
 
-- We submitted our work on `Negative Data Augmentation for Unsupervised Learning` to ICLR 2021. [PDF](https://openreview.net/forum?id=Ovp8dvB8IBH)
+- We submitted our work on `Negative Data Augmentation for Unsupervised Learning` to **ICLR 2021**. [PDF](https://openreview.net/forum?id=Ovp8dvB8IBH)
 
-- We submitted our paper on `Adversarial Domain Adaptation for Studying Low Resolution Images` to ICIP 2021. [Researchgate](https://www.researchgate.net/publication/341030568_Adversarial_Domain_Adaptation_for_Analyzing_Low_Resolution_Images)
+- We submitted our paper on `Adversarial Domain Adaptation for Studying Low Resolution Images` to **ICIP 2021**. [Researchgate](https://www.researchgate.net/publication/341030568_Adversarial_Domain_Adaptation_for_Analyzing_Low_Resolution_Images)
 
 - Our paper titled `Farmland Parcel Delineation using Spatio-temporal Convolutional Neural Networks` has been accepted to IEEE CVPR 2020 Workshop on Agriculture-Vision: Challenges & Opportunities For Computer Vision in Agriculture. [arxiv](https://arxiv.org/pdf/2004.05471.pdf) [code](https://github.com/sustainlab-group/ParcelDelineation)  
 
-- Our paper titled `Generating Interpretable Poverty Maps using Convolutional Object Detection in Satellite Images` has been accepted to IJCAI 2020! [arxiv](https://arxiv.org/pdf/2002.01612.pdf)
+- Our paper titled `Generating Interpretable Poverty Maps using Convolutional Object Detection in Satellite Images` has been accepted to **IJCAI 2020**. [arxiv](https://arxiv.org/pdf/2002.01612.pdf)
 
 - I gave a presentation at Qualcomm HQ in San Diego. [PDF](../files/Qualcomm.pdf)
 
-- Our paper titled `Learning When and Where to Zoom Using Deep Reinforcement Learning` has been accepted to CVPR 2020 as oral paper! [arxiv](https://arxiv.org/pdf/2003.00425.pdf) [code](https://github.com/ermongroup/PatchDrop) [video](https://www.youtube.com/watch?v=n0HGh2x6Cgg)
+- Our paper titled `Learning When and Where to Zoom Using Deep Reinforcement Learning` has been accepted to **CVPR 2020** as oral paper! [arxiv](https://arxiv.org/pdf/2003.00425.pdf) [code](https://github.com/ermongroup/PatchDrop) [video](https://www.youtube.com/watch?v=n0HGh2x6Cgg)
 
 - I gave a presentation at Planet Labs HQ in San Francisco. [PDF](../files/Planet_Presentation.pdf)
 
-- We submitted our paper on `Generating Interpretable Poverty Maps with a Convolutional Object Detector using High Resolution Images` to IJCAI20.
-
-- We submitted our paper on `Predicting Geo-attributes using Publicly Available Street-level Images` to IJCAI20.
-
 - I gave a seminar at Sabanci University, Turkey. [Abstract](https://mfg.sabanciuniv.edu/tr/events-detail/21371) [PDF](../files/Sabanci_Seminar.pdf)
 
-- Our paper on `Removing Cloud from Satellite Images Using Spatiotemporal Generator Networks` is accepted to WACV 2020 Conference. [arxiv](https://arxiv.org/pdf/1912.06838.pdf) [code](https://github.com/VSAnimator/stgan)
+- Our paper on `Removing Cloud from Satellite Images Using Spatiotemporal Generator Networks` is accepted to **WACV 2020** Conference. [arxiv](https://arxiv.org/pdf/1912.06838.pdf) [code](https://github.com/VSAnimator/stgan)
 
-- Our paper on `Efficient Object Detection in Large Images using Deep Reinforcement Learning` is accepted to WACV 2020 Conference. [arxiv](https://arxiv.org/pdf/1912.03966.pdf) [code](https://github.com/uzkent/EfficientObjectDetection) [Short Presentation](../files/WACV_Short.pdf)
+- Our paper on `Efficient Object Detection in Large Images using Deep Reinforcement Learning` is accepted to **WACV 2020** Conference. [arxiv](https://arxiv.org/pdf/1912.03966.pdf) [code](https://github.com/uzkent/EfficientObjectDetection) [Short Presentation](../files/WACV_Short.pdf)
 
 - I presented one of my recent research projects in University of California at San Diego.
 
 - We submitted one paper on `Dynamic Data Sampling using Deep Reinforcement Learning` to CVPR 2020. [RGATE](https://www.researchgate.net/publication/336778211_Learning_When_and_Where_to_Zoom_With_Deep_Reinforcement_Learning)
 
-- We submitted one paper on `Efficient Object Detection on Large Images using Deep Reinforcement Learning` to WACV 2020.
+- Our Paper on `Large-Scale Unsupervised Pre-training of CNNs with Image to Text Matching` is accepted to **IJCAI 2019** conference! [arxiv](https://arxiv.org/pdf/1905.02506.pdf) [code](https://github.com/uzkent/WikiSatNet)
 
-- We submitted one paper on `Cloud Removal from Satellite Images Using Spatiotemporal GANs` to WACV2020.
-
-- Five papers reviewed for the NeurIPS 2019.
-
-- Our Paper on `Large-Scale Unsupervised Pre-training of CNNs with Image to Text Matching` is accepted to IJCAI 2019 conference! [arxiv](https://arxiv.org/pdf/1905.02506.pdf) [code](https://github.com/uzkent/WikiSatNet)
-
-- Our paper on `Predicting Economic Development using Wikipedia Articles` is accepted to KDD 2019 conference! [arxiv](https://arxiv.org/pdf/1905.01627.pdf) [code](https://github.com/uzkent/WikipediaPovertyMapping)
+- Our paper on `Predicting Economic Development using Wikipedia Articles` is accepted to **KDD 2019** conference! [arxiv](https://arxiv.org/pdf/1905.01627.pdf) [code](https://github.com/uzkent/WikipediaPovertyMapping)
 
 - I gave a presentation at Orbital Insight. [PDF](../files/Orbital_Insight_Presentation.pdf)
 
-- We submitted our work on `Predicting Economic Development using Textual Information` to the KDD 2019 conference.
-
-- We submitted our work on `Large Scale Pre-training Using Weakly Supervised and Unsupervised Learning on Overhead Images` to the IJCAI 2019 conference. [arxiv](https://arxiv.org/abs/1809.10236)
-	![wiki_satellite_workflow](../images/combined_workflow_wikisatnet.png)
-
-- Our paper on `Deep Hyperspectral Kernelized Correlation Filter (DeepHKCF) Tracking in Aerial Images` is accepted to the IEEE Transactions on Geoscience and Remote Sensing. [arxiv](https://arxiv.org/abs/1711.07235) [code](https://github.com/uzkent/HKCF_Tracker)
+- Our paper on `Deep Hyperspectral Kernelized Correlation Filter (DeepHKCF) Tracking in Aerial Images` is accepted to the **IEEE Transactions on Geoscience and Remote Sensing**. [arxiv](https://arxiv.org/abs/1711.07235) [code](https://github.com/uzkent/HKCF_Tracker)
 	![Tracking_Framework_FastDeepHCKF](../images/FastDeepHKCF_Framework.png)
 
 - I presented my recent works on object detection and tracking in aerial images in the Vision and Autonomous System Center Seminar at Carnegie Mellon University.[Abstract](https://www.ri.cmu.edu/event/object-detection-and-tracking-on-low-resolution-aerial-images/) [PDF](../files/CMU_VSAR_Seminar.pdf)
 
-- I presented our paper on high-speed scale adaptive object tracking in WACV18 conference in South Lake Tahoe. [Presentation](../files/WACV18_Presentation.pdf) [Poster](../files/WACV18_Poster.pdf) [Video](https://www.youtube.com/watch?v=xLjLc0eVqLU)
+- I presented our paper on high-speed scale adaptive object tracking in WACV18 conference in South Lake Tahoe. [Presentation](../files/WACV18_Presentation.pdf) [Poster](../files/WACV18_Poster.pdf)
 
-- Our paper on high-speed scale-adaptive object tracking (>300fps) is accepted to the *IEEE Winter Conference on Applications ofa Computer Vision (WACV18) 2018*. [arxiv](https://arxiv.org/pdf/1801.06729.pdf) [code](https://github.com/uzkent/EnKCF_Tracker)
+- Our paper on high-speed scale-adaptive object tracking (>300fps) is accepted to the **WACV 2018**. [arxiv](https://arxiv.org/pdf/1801.06729.pdf) [code](https://github.com/uzkent/EnKCF_Tracker)
 
   - [Demo Video 1](https://www.youtube.com/embed/dWeIbECiVkY?ecver=1), [Demo Video 2](https://www.youtube.com/embed/ZCnAjxJkseY?ecver=1), [Demo Video 3](https://www.youtube.com/embed/hAxA903YH2Y?ecver=1), [Demo Video 4](https://www.youtube.com/embed/h-yXx1A2dL0?ecver=1)
 

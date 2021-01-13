@@ -26,9 +26,9 @@ Peer-Reviewed Journal Papers
 
 Peer-Reviewed Conference Papers
 ===
-1. K. Ayush*, A. Sinha*, J. Song, B. Uzkent, Hongxia Jin, S. Ermon, "Negative Data Augmentation for Unsupervised Learning", In *Proceedings of The International Conference on Learning Representations*, May 2021. [PDF](https://openreview.net/forum?id=Ovp8dvB8IBH)
+1. K. Ayush*, A. Sinha*, J. Song, B. Uzkent, H. Jin, S. Ermon, "Negative Data Augmentation", In *Proceedings of The International Conference on Learning Representations*, May 2021. [PDF](https://openreview.net/forum?id=Ovp8dvB8IBH)
 
-2. B. Uzkent, Kumar Ayush, M. Burke, D. Lobell, S. Ermon, "Efficient High Resolution Image Processing using Deep Reinforcement Learning", In *Proceedings of The Thirty-Fourth AAAI Conference on Artificial Intelligence*, January 2021. [arxiv](https://arxiv.org/pdf/2006.04224.pdf)
+2. B. Uzkent, K. Ayush, M. Burke, D. Lobell, S. Ermon, "Efficient High Resolution Image Processing using Deep Reinforcement Learning", In *Proceedings of The Thirty-Fourth AAAI Conference on Artificial Intelligence*, January 2021. [arxiv](https://arxiv.org/pdf/2006.04224.pdf)
 
 3. J. Lee, D. Grosz, B. Uzkent, S. Zheng, M. Burke, D. Lobell, S. Ermon, "Predicting Geo-attributes Using Deep Learning and Publicly Available Street-level Images", In *Proceedings of The Thirty-Fourth AAAI Conference on Artificial Intelligence*, January 2021. [arxiv](https://arxiv.org/pdf/2006.08661.pdf) [code](https://github.com/sustainlab-group/mapillarygcn)
 

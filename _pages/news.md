@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-- Our paper on `Negative Data Augmentation for Unsupervised Learning` has been accepted to **ICLR 2021**. [PDF](https://openreview.net/forum?id=Ovp8dvB8IBH)
+- Our paper on `Negative Data Augmentation` has been accepted to **ICLR 2021**. [PDF](https://openreview.net/forum?id=Ovp8dvB8IBH)
 
 - Our paper on `Street-level Mapillary Images to Learn Geoattributes` has been accepted to **AAAI 2021**. [arxiv](https://arxiv.org/pdf/2006.08661.pdf) [code](https://github.com/sustainlab-group/mapillarygcn)
 

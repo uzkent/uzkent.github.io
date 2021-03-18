@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-- Three papers, two from Stanford University and one from Samsung Research, submitted to ICCV2021.
+- Three papers, two from Stanford University and one from Samsung Research, submitted to **ICCV 2021**.
 
 - Our paper on `Negative Data Augmentation` has been accepted to **ICLR 2021**. [PDF](https://openreview.net/forum?id=Ovp8dvB8IBH) [code](https://github.com/ermongroup/NDA)
 

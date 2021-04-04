@@ -7,7 +7,11 @@ redirect_from:
 ---
 
 {% include base_path %}
-- Three papers, two from Stanford University and one from Samsung Research, submitted to **ICCV 2021**.
+- We submitted our work on `Conditional Visual Transformer` to **ICCV 2021**.
+
+- We submitted our work on `Self-supervised Learning with Geography Information` to **ICCV 2021**. [arxiv](https://arxiv.org/abs/2011.09980)
+
+- We submitted our work on `Efficient Pre-training for Transfer Learning` to **ICCV 2021**. [arxiv](https://arxiv.org/abs/2011.10231)
 
 - Our paper on `Negative Data Augmentation` has been accepted to **ICLR 2021**. [PDF](https://openreview.net/forum?id=Ovp8dvB8IBH) [code](https://github.com/ermongroup/NDA)
 
@@ -15,11 +19,7 @@ redirect_from:
 
 - Our paper on `Data-efficient Computer Vision Using Reinforcement Learning` has been accepted to **AAAI 2021**. [arxiv](https://arxiv.org/pdf/2006.04224.pdf)
 
-- We submitted our work on `Self-supervised Learning with Geography Information` to **CVPR 2021**. [arxiv](https://arxiv.org/abs/2011.09980)
-
-- We submitted our work on `Efficient Pre-training for Transfer Learning` to **CVPR 2021**. [arxiv](https://arxiv.org/abs/2011.10231)
-
-- I joined Samsung Research America as a Senior Research Scientist.
+- I joined Samsung Research America as a Senior Research Scientist. Send me e-mail if you are interested in internship or full-term positions at Samsung Research America.
 
 - We submitted our paper on `Adversarial Domain Adaptation for Studying Low Resolution Images` to **ICIP 2021**. [Researchgate](https://www.researchgate.net/publication/341030568_Adversarial_Domain_Adaptation_for_Analyzing_Low_Resolution_Images)
 

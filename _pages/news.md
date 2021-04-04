@@ -13,7 +13,7 @@ redirect_from:
 
 - We submitted our work on `Efficient Pre-training for Transfer Learning` to **ICCV 2021**. [arxiv](https://arxiv.org/abs/2011.10231)
 
-- Our paper on `Negative Data Augmentation` has been accepted to **ICLR 2021**. [PDF](https://openreview.net/forum?id=Ovp8dvB8IBH) [code](https://github.com/ermongroup/NDA). A video summary of the paper can be found here. [YouTube](https://www.youtube.com/watch?v=K-1mN2mz66k&t=21s&ab_channel=HenryAILabs)
+- Our paper on `Negative Data Augmentation` has been accepted to **ICLR 2021**. [PDF](https://openreview.net/forum?id=Ovp8dvB8IBH) [code](https://github.com/ermongroup/NDA) [YouTube](https://www.youtube.com/watch?v=K-1mN2mz66k&t=21s&ab_channel=HenryAILabs)
 
 - Our paper on `Street-level Mapillary Images to Learn Geoattributes` has been accepted to **AAAI 2021**. [arxiv](https://arxiv.org/pdf/2006.08661.pdf) [code](https://github.com/sustainlab-group/mapillarygcn)
 

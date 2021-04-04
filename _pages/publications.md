@@ -70,12 +70,14 @@ Peer-Reviewed Conference Papers
 
 Preprints and Papers Under Review
 ===
-1. B. Uzkent, K. Ayush, C. Meng, M. Burke, D. Lobell, S. Ermon, "Geography-Aware Self-Supervised Learning", *International Conference on Computer Vision and Pattern Recognition*, June 2021. (Under Review)
+1. B. Uzkent, V. Ramanishka, Y. Shen, H. Jin, "Conditional Visual Transformers for Image Recognition", *International Conference on Computer Vision*, October 2021. (Under Review)
 
-2. S. Chakraborty, B. Uzkent, K. Ayush, S. Ermon, "Efficient Conditional Pre-training for Transfer Learning", *International Conference on Computer Vision and Pattern Recognition*, June 2021. (Under Review)
+2. B. Uzkent, K. Ayush, C. Meng, M. Burke, D. Lobell, S. Ermon, "Geography-Aware Self-Supervised Learning", *International Conference on Computer Vision*, October 2021. (Under Review)
 
-3. B. Uzkent, S. Ermon, "Domain Adaptation Using Adversarial Learning for Studying Low Resolution Images", *IEEE International Conference on Image Processing*, September 2021. (Under Review)
+3. S. Chakraborty, B. Uzkent, K. Ayush, S. Ermon, "Efficient Conditional Pre-training for Transfer Learning", *International Conference on Computer Vision*, October 2021. (Under Review)
 
-4. B. Uzkent, E. Sheehan, C. Meng, Z. Tang, M. Burke, D. Lobell, S. Ermon, ''Learning to Interpret Satellite Images in Global Scale Using Wikipedia''. [Arxiv](https://arxiv.org/pdf/1905.02506.pdf)
+4. B. Uzkent, S. Ermon, "Domain Adaptation Using Adversarial Learning for Studying Low Resolution Images", *IEEE International Conference on Image Processing*, September 2021. (Under Review)
 
-5. E. Sheehan, B. Uzkent, C. Meng, Z. Tang, M. Burke, D. Lobell, S. Ermon, ''Learning to interpret satellite images using wikipedia''. [Arxiv](https://arxiv.org/pdf/1809.10236.pdf)
+5. B. Uzkent, E. Sheehan, C. Meng, Z. Tang, M. Burke, D. Lobell, S. Ermon, ''Learning to Interpret Satellite Images in Global Scale Using Wikipedia''. [Arxiv](https://arxiv.org/pdf/1905.02506.pdf)
+
+6. E. Sheehan, B. Uzkent, C. Meng, Z. Tang, M. Burke, D. Lobell, S. Ermon, ''Learning to interpret satellite images using wikipedia''. [Arxiv](https://arxiv.org/pdf/1809.10236.pdf)

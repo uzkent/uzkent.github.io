@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-- I gave a seminar for the Machine Learning for Remote Sensing group at the University of Maryland.
+- I gave a seminar for the Machine Learning for Remote Sensing group at the University of Maryland. [PDF](./files/UMSeminar_Burak.pdf)
 
 - We submitted our work on `Conditional Visual Transformer` to **ICCV 2021**.
 

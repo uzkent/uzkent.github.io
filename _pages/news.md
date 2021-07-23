@@ -7,13 +7,9 @@ redirect_from:
 ---
 
 {% include base_path %}
+- Our work on `Geography-Aware Self-supervised Learning` has been accepted to **ICCV 2021**. [arxiv](https://arxiv.org/abs/2011.09980)
+
 - I gave a seminar for the Machine Learning for Remote Sensing group at the University of Maryland. [PDF](../files/UMSeminar_Burak.pdf)
-
-- We submitted our work on `Conditional Visual Transformer` to **ICCV 2021**.
-
-- We submitted our work on `Self-supervised Learning with Geography Information` to **ICCV 2021**. [arxiv](https://arxiv.org/abs/2011.09980)
-
-- We submitted our work on `Efficient Pre-training for Transfer Learning` to **ICCV 2021**. [arxiv](https://arxiv.org/abs/2011.10231)
 
 - Our paper on `Negative Data Augmentation` has been accepted to **ICLR 2021**. [PDF](https://openreview.net/forum?id=Ovp8dvB8IBH) [code](https://github.com/ermongroup/NDA) [YouTube](https://www.youtube.com/watch?v=K-1mN2mz66k&t=21s&ab_channel=HenryAILabs)
 

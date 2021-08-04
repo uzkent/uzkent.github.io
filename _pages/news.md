@@ -19,8 +19,7 @@ redirect_from:
 
 - I joined Samsung Research America as a Senior Research Scientist. Send me e-mail if you are interested in internship or full-term positions at Samsung Research America.
 
-- Our paper on `Farmland Parcel Delineation using Spatio-temporal Convolutional Neural Networks` has been accepted to **IEEE CVPR 2020 Workshop on Agriculture-Vision: Challenges & Opportunities For Computer Vision in Agriculture**. [arxiv](https://arxiv.org/pdf/2004.05471.pdf) [code](https://github.com/sustainlab-group/ParcelDelineation)
-) [PDF](https://openaccess.thecvf.com/content_CVPRW_2020/papers/w5/Aung_Farm_Parcel_Delineation_Using_Spatio-Temporal_Convolutional_Networks_CVPRW_2020_paper.pdf)
+- Our paper on `Farmland Parcel Delineation using Spatio-temporal Convolutional Neural Networks` has been accepted to **IEEE CVPR 2020 Workshop on Agriculture-Vision: Challenges & Opportunities For Computer Vision in Agriculture**. [arxiv](https://arxiv.org/pdf/2004.05471.pdf) [code](https://github.com/sustainlab-group/ParcelDelineation) [PDF](https://openaccess.thecvf.com/content_CVPRW_2020/papers/w5/Aung_Farm_Parcel_Delineation_Using_Spatio-Temporal_Convolutional_Networks_CVPRW_2020_paper.pdf)
 
 - Our paper on `Generating Interpretable Poverty Maps using Convolutional Object Detection in Satellite Images` has been accepted to **IJCAI 2020**. [arxiv](https://arxiv.org/pdf/2002.01612.pdf) [PDF](https://www.ijcai.org/Proceedings/2020/0608.pdf)
 

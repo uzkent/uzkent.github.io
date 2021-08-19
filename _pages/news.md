@@ -7,6 +7,8 @@ redirect_from:
 ---
 
 {% include base_path %}
+- Two papers submitted to the WACV 2022.
+
 - Our work on `Geography-Aware Self-supervised Learning` has been accepted to **ICCV 2021**. [arxiv](https://arxiv.org/abs/2011.09980)
 
 - I gave a seminar for the Machine Learning for Remote Sensing group at the University of Maryland. [PDF](../files/UMSeminar_Burak.pdf)

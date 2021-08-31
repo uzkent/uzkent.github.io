@@ -7,6 +7,8 @@ redirect_from:
 ---
 
 {% include base_path %}
+- Three papers submitted to **AAAI 2022**.
+
 - Two papers submitted to **WACV 2022**.
 
 - Our work on `Geography-Aware Self-supervised Learning` has been accepted to **ICCV 2021**. [arxiv](https://arxiv.org/abs/2011.09980)

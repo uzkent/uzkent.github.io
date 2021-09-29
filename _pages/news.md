@@ -7,33 +7,37 @@ redirect_from:
 ---
 
 {% include base_path %}
-- Our paper on `Geography-Aware Self-Supervised Learning` has been accepted to **ICCV 2021**. [arxiv](https://arxiv.org/pdf/2002.01612.pdf)
+- One paper on applied machine learning submitted to **Earth's Future**.
+
+- Three papers submitted to **AAAI 2022**.
+
+- Two papers submitted to **WACV 2022**.
+
+- Our work on `Geography-Aware Self-supervised Learning` has been accepted to **ICCV 2021**. [arxiv](https://arxiv.org/abs/2011.09980)
 
 - I gave a seminar for the Machine Learning for Remote Sensing group at the University of Maryland. [PDF](../files/UMSeminar_Burak.pdf)
 
 - Our paper on `Negative Data Augmentation` has been accepted to **ICLR 2021**. [PDF](https://openreview.net/forum?id=Ovp8dvB8IBH) [code](https://github.com/ermongroup/NDA) [YouTube](https://www.youtube.com/watch?v=K-1mN2mz66k&t=21s&ab_channel=HenryAILabs)
 
-- Our paper on `Street-level Mapillary Images to Learn Geoattributes` has been accepted to **AAAI 2021**. [arxiv](https://arxiv.org/pdf/2006.08661.pdf) [code](https://github.com/sustainlab-group/mapillarygcn)
+- Our paper on `Street-level Mapillary Images to Learn Geoattributes` has been accepted to **AAAI 2021**. [arxiv](https://arxiv.org/pdf/2006.08661.pdf) [code](https://github.com/sustainlab-group/mapillarygcn) [PDF](https://www.aaai.org/AAAI21Papers/AAAI-10056.LeeJ.pdf)
 
-- Our paper on `Data-efficient Computer Vision Using Reinforcement Learning` has been accepted to **AAAI 2021**. [arxiv](https://arxiv.org/pdf/2006.04224.pdf)
+- Our paper on `Data-efficient Computer Vision Using Reinforcement Learning` has been accepted to **AAAI 2021**. [arxiv](https://arxiv.org/pdf/2006.04224.pdf) [PDF](https://www.aaai.org/AAAI21Papers/AAAI-10300.AyushK.pdf)
 
 - I joined Samsung Research America as a Senior Research Scientist. Send me e-mail if you are interested in internship or full-term positions at Samsung Research America.
 
-- We submitted our paper on `Adversarial Domain Adaptation for Studying Low Resolution Images` to **ICIP 2021**. [Researchgate](https://www.researchgate.net/publication/341030568_Adversarial_Domain_Adaptation_for_Analyzing_Low_Resolution_Images)
+- Our paper on `Farmland Parcel Delineation using Spatio-temporal Convolutional Neural Networks` has been accepted to **IEEE CVPR 2020 Workshop on Agriculture-Vision: Challenges & Opportunities For Computer Vision in Agriculture**. [arxiv](https://arxiv.org/pdf/2004.05471.pdf) [code](https://github.com/sustainlab-group/ParcelDelineation) [PDF](https://openaccess.thecvf.com/content_CVPRW_2020/papers/w5/Aung_Farm_Parcel_Delineation_Using_Spatio-Temporal_Convolutional_Networks_CVPRW_2020_paper.pdf)
 
-- Our paper titled `Farmland Parcel Delineation using Spatio-temporal Convolutional Neural Networks` has been accepted to **IEEE CVPR 2020 Workshop on Agriculture-Vision: Challenges & Opportunities For Computer Vision in Agriculture**. [arxiv](https://arxiv.org/pdf/2004.05471.pdf) [code](https://github.com/sustainlab-group/ParcelDelineation)  
-
-- Our paper titled `Generating Interpretable Poverty Maps using Convolutional Object Detection in Satellite Images` has been accepted to **IJCAI 2020**. [arxiv](https://arxiv.org/pdf/2002.01612.pdf)
+- Our paper on `Generating Interpretable Poverty Maps using Convolutional Object Detection in Satellite Images` has been accepted to **IJCAI 2020**. [arxiv](https://arxiv.org/pdf/2002.01612.pdf) [PDF](https://www.ijcai.org/Proceedings/2020/0608.pdf)
 
 - I gave a presentation at Qualcomm HQ in San Diego. [PDF](../files/Qualcomm.pdf)
 
-- Our paper titled `Learning When and Where to Zoom Using Deep Reinforcement Learning` has been accepted to **CVPR 2020** as oral paper! [arxiv](https://arxiv.org/pdf/2003.00425.pdf) [code](https://github.com/ermongroup/PatchDrop) [video](https://www.youtube.com/watch?v=n0HGh2x6Cgg)
+- Our paper on `Learning When and Where to Zoom Using Deep Reinforcement Learning` has been accepted to **CVPR 2020** as oral paper! [arxiv](https://arxiv.org/pdf/2003.00425.pdf) [code](https://github.com/ermongroup/PatchDrop) [video](https://www.youtube.com/watch?v=n0HGh2x6Cgg) [PDF](https://openaccess.thecvf.com/content_CVPR_2020/papers/Uzkent_Learning_When_and_Where_to_Zoom_With_Deep_Reinforcement_Learning_CVPR_2020_paper.pdf)
 
 - I gave a presentation at Planet Labs HQ in San Francisco. [PDF](../files/Planet_Presentation.pdf)
 
 - I gave a seminar at Sabanci University, Turkey. [Abstract](https://mfg.sabanciuniv.edu/tr/events-detail/21371) [PDF](../files/Sabanci_Seminar.pdf)
 
-- Our paper on `Removing Cloud from Satellite Images Using Spatiotemporal Generator Networks` is accepted to **WACV 2020** Conference. [arxiv](https://arxiv.org/pdf/1912.06838.pdf) [code](https://github.com/VSAnimator/stgan)
+- Our paper on `Removing Cloud from Satellite Images Using Spatiotemporal Generator Networks` is accepted to **WACV 2020** Conference. [arxiv](https://arxiv.org/pdf/1912.06838.pdf) [code](https://github.com/VSAnimator/stgan) [PDF](https://openaccess.thecvf.com/content_WACV_2020/papers/Sarukkai_Cloud_Removal_from_Satellite_Images_using_Spatiotemporal_Generator_Networks_WACV_2020_paper.pdf)
 
 - Our paper on `Efficient Object Detection in Large Images using Deep Reinforcement Learning` is accepted to **WACV 2020** Conference. [arxiv](https://arxiv.org/pdf/1912.03966.pdf) [code](https://github.com/uzkent/EfficientObjectDetection) [Short Presentation](../files/WACV_Short.pdf)
 
@@ -41,7 +45,7 @@ redirect_from:
 
 - Our Paper on `Large-Scale Unsupervised Pre-training of CNNs with Image to Text Matching` is accepted to **IJCAI 2019** conference! [arxiv](https://arxiv.org/pdf/1905.02506.pdf) [code](https://github.com/uzkent/WikiSatNet)
 
-- Our paper on `Predicting Economic Development using Wikipedia Articles` is accepted to **KDD 2019** conference! [arxiv](https://arxiv.org/pdf/1905.01627.pdf) [code](https://github.com/uzkent/WikipediaPovertyMapping)
+- Our paper on `Predicting Economic Development using Wikipedia Articles` is accepted to **KDD 2019** conference! [arxiv](https://arxiv.org/pdf/1905.01627.pdf) [code](https://github.com/uzkent/WikipediaPovertyMapping) [PDF](https://dl.acm.org/doi/10.1145/3292500.3330784)
 
 - I gave a presentation at Orbital Insight. [PDF](../files/Orbital_Insight_Presentation.pdf)
 

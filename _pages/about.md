@@ -21,7 +21,7 @@ I am currently working for [Samsung Research America](https://www.sra.samsung.co
 
 ## Work Experience
 - *Sr. Research Scientist*, Samsung Research America, November 2020 - 
-  * **Topics** - Visual Transformers, Multimodal Machine Learning
+  * **Topics** - Visual Transformers, Multimodal Machine Learning 
 - *Postdoctoral Research Fellow*, Stanford University, July 2018 - October 2020
    * **Topics** - Unsupervised/Weakly Supervised Learning, Efficient Computer Vision, Generative Models, Computational Sustainability 
 - *Computer Vision Engineer*, Planet Labs, June 2017 - July 2018

@@ -7,11 +7,11 @@ redirect_from:
 ---
 
 {% include base_path %}
+- One patent application on multimodal machine learning submitted.
+
 - One paper on applied machine learning submitted to **Earth's Future**.
 
 - Three papers submitted to **AAAI 2022**.
-
-- Two papers submitted to **WACV 2022**.
 
 - Our work on `Geography-Aware Self-supervised Learning` has been accepted to **ICCV 2021**. [arxiv](https://arxiv.org/abs/2011.09980) [code](https://github.com/sustainlab-group/geography-aware-ssl)
 

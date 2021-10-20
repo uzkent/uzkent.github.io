@@ -13,7 +13,7 @@ redirect_from:
 
 - Three papers submitted to **AAAI 2022**.
 
-- Our work on `Geography-Aware Self-supervised Learning` has been accepted to **ICCV 2021**. [PDF](https://arxiv.org/abs/2011.09980) [code](https://openaccess.thecvf.com/content/ICCV2021/papers/Ayush_Geography-Aware_Self-Supervised_Learning_ICCV_2021_paper.pdf) [webpage](https://geography-aware-ssl.github.io/)
+- Our work on `Geography-Aware Self-supervised Learning` has been accepted to **ICCV 2021**. [PDF](https://openaccess.thecvf.com/content/ICCV2021/papers/Ayush_Geography-Aware_Self-Supervised_Learning_ICCV_2021_paper.pdf) [code](https://github.com/sustainlab-group/geography-aware-ssl) [webpage](https://geography-aware-ssl.github.io/)
 
 - I gave a seminar for the Machine Learning for Remote Sensing group at the University of Maryland. [PDF](../files/UMSeminar_Burak.pdf)
 

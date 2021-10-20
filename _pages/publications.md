@@ -26,7 +26,7 @@ Peer-Reviewed Journal Papers
 
 Peer-Reviewed Conference Papers
 ===
-1. B. Uzkent, K. Ayush, C. Meng, M. Burke, D. Lobell, S. Ermon, "Geography-Aware Self-Supervised Learning", *International Conference on Computer Vision*, October 2021. [arxiv](https://arxiv.org/pdf/2011.09980.pdf) [code](https://github.com/sustainlab-group/geography-aware-ssl) [webpage](https://geography-aware-ssl.github.io/)
+1. B. Uzkent, K. Ayush, C. Meng, M. Burke, D. Lobell, S. Ermon, "Geography-Aware Self-Supervised Learning", *International Conference on Computer Vision*, October 2021. [PDF](https://openaccess.thecvf.com/content/ICCV2021/papers/Ayush_Geography-Aware_Self-Supervised_Learning_ICCV_2021_paper.pdf) [code](https://github.com/sustainlab-group/geography-aware-ssl) [webpage](https://geography-aware-ssl.github.io/)
   
 2. K. Ayush*, A. Sinha*, J. Song, B. Uzkent, H. Jin, S. Ermon, "Negative Data Augmentation", In *Proceedings of The International Conference on Learning Representations*, May 2021. [PDF](https://openreview.net/forum?id=Ovp8dvB8IBH)
 

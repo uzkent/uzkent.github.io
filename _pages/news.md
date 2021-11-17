@@ -7,11 +7,11 @@ redirect_from:
 ---
 
 {% include base_path %}
-- Two papers submitted to **CVPR 2022**
+- Two papers submitted to **CVPR 2022**.
 
-- One patent application on multimodal machine learning submitted.
+- One patent application submitted.
 
-- One paper on applied machine learning submitted to **Earth's Future**.
+- One paper submitted to **Earth's Future**.
 
 - Two papers submitted to **AAAI 2022**.
 

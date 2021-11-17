@@ -7,11 +7,13 @@ redirect_from:
 ---
 
 {% include base_path %}
+- Two papers submitted to **CVPR 2022**
+
 - One patent application on multimodal machine learning submitted.
 
 - One paper on applied machine learning submitted to **Earth's Future**.
 
-- Three papers submitted to **AAAI 2022**.
+- Two papers submitted to **AAAI 2022**.
 
 - Our work on `Geography-Aware Self-supervised Learning` has been accepted to **ICCV 2021**. [PDF](https://openaccess.thecvf.com/content/ICCV2021/papers/Ayush_Geography-Aware_Self-Supervised_Learning_ICCV_2021_paper.pdf) [code](https://github.com/sustainlab-group/geography-aware-ssl) [webpage](https://geography-aware-ssl.github.io/)
 

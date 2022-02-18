@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-- Two papers submitted to **ECCV 2022**.
+- Three papers submitted to **ECCV 2022**.
 
 - Two papers submitted to **CVPR 2022**.
 

@@ -7,9 +7,9 @@ redirect_from:
 ---
 
 {% include base_path %}
-- Three papers submitted to **ECCV 2022**.
+- Our paper on "Compressing Multi-modal Objecting Detection Networks" is accepted to **CVPR 2022**.
 
-- Two papers submitted to **CVPR 2022**.
+- Three papers submitted to **ECCV 2022**.
 
 - Two patent applications submitted.
 

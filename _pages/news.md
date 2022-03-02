@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-- Our paper on `Compressing Multi-modal Objection Detection Networks` is accepted to **CVPR 2022**.
+- Our paper on `Compressing Multi-modal Object Detection Networks` is accepted to **CVPR 2022**.
 
 - Three papers submitted to **ECCV 2022**.
 

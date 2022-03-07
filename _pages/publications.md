@@ -26,10 +26,10 @@ Peer-Reviewed Journal Papers
 
 Peer-Reviewed Conference Papers
 ===
-1. Q. Lu, Y.C. Shu, B. Uzkent, T. Hua, Y. Shen, B. Uzkent, "Lite-MDETR: Lightweight Modulated Detection", *International Conference on Computer Vision and Pattern Recognition*, June 2022.
+1. Q. Lu, Y.C. Shu, B. Uzkent, T. Hua, Y. Shen, B. Uzkent, "Lite-MDETR: A Lightweight Multi-Modal Detector", *International Conference on Computer Vision and Pattern Recognition*, June 2022.
 
-2. B. Uzkent, K. Ayush, C. Meng, M. Burke, D. Lobell, S. Ermon, "Geography-Aware Self-Supervised Learning", *International Conference on Computer Vision*, October 2021. [PDF](https://openaccess.thecvf.com/content/ICCV2021/papers/Ayush_Geography-Aware_Self-Supervised_Learning_ICCV_2021_paper.pdf) [code](https://github.com/sustainlab-group/geography-aware-ssl) [webpage](https://geography-aware-ssl.github.io/)
-  
+2. B. Uzkent, K. Ayush, C. Meng, M. Burke, D. Lobell, S. Ermon, "Geography-Aware Self-Supervised Learning", *International Conference on Computer Vision*, October 2021. [PDF](https://openaccess.thecvf.com/content/ICCV2021/papers/Ayush_Geography-Aware_Self-Supervised_Learning_ICCV_2021_paper.pdf) [code](https://github.com/sustainlab-group/geography-aware-ssl) [webpage](https://geography-aware-ssl.github.io/) [Code](https://github.com/sustainlab-group/geography-aware-ssl)
+
 3. K. Ayush*, A. Sinha*, J. Song, B. Uzkent, H. Jin, S. Ermon, "Negative Data Augmentation", In *Proceedings of The International Conference on Learning Representations*, May 2021. [PDF](https://openreview.net/forum?id=Ovp8dvB8IBH)
 
 4. B. Uzkent, K. Ayush, M. Burke, D. Lobell, S. Ermon, "Efficient High Resolution Image Processing using Deep Reinforcement Learning", In *Proceedings of The Thirty-Fourth AAAI Conference on Artificial Intelligence*, January 2021. [arxiv](https://arxiv.org/pdf/2006.04224.pdf)

@@ -7,9 +7,9 @@ redirect_from:
 ---
 
 {% include base_path %}
-- Our paper on `Compressing Multi-modal Object Detection Networks` is accepted to **CVPR 2022**.
+- Our paper on `Compressing Transformers in Multi-Modal Networks` is accepted to **CVPR 2022**.
 
-- Three papers submitted to **ECCV 2022**.
+- Four papers submitted to **ECCV 2022**.
 
 - Two patent applications submitted.
 

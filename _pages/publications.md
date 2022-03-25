@@ -72,7 +72,7 @@ Peer-Reviewed Conference Papers
 
 23. B. Uzkent, O. Parlaktuna, ''Autonomous parallel parking of non-holonomic vehicles'', In *Proceedings of the 13th National Conference in Middle East Technical University*, Ankara, Turkey, 2009.
 
-Preprints and Papers Under Review
+Preprints
 ===
 1. S. Chakraborty, B. Uzkent, K. Ayush, S. Ermon, "Efficient Conditional Pre-training for Transfer Learning". [Arxiv](https://arxiv.org/abs/2011.10231)
 

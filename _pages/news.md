@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-- One paper accepted to a CVPR 2022 Workshop
+- One paper accepted to a CVPR 2022 Workshop.
 
 - One paper accepted to CVPR 2022.
 

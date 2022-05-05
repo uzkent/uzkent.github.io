@@ -18,15 +18,16 @@ I am currently working for [Samsung Research America](https://www.sra.samsung.co
     - **Thesis Topic** : "Non-speech Enviromental Sound Classification with a Pitch Range based Features"
 - **B.S.**, Electrical and Electronics Engineering Department, Eskisehir Osmangazi University, 2004-2009
     - **Thesis Topic** : "Autonomous Parallel Parking of non-holonomic Vehicles"
-
+"""
 ## Work Experience
-- *Sr. Research Scientist*, Samsung Research America, November 2020 - 
-  * **Topics** - Vision Transformers, Vision and Language Understanding
-- *Postdoctoral Research Fellow*, Stanford University, July 2018 - October 2020
-   * **Topics** - Unsupervised/Weakly Supervised Learning, Efficient Computer Vision, Generative Models, Computational Sustainability 
-- *Computer Vision Engineer*, Planet Labs, June 2017 - July 2018
-    * **Topic** - Convolutional object detection in low resolution aerial images
-- *Computer Vision Engineer*, Autel Robotics, August 2016 - June 2017
-    * **Topic** - High-speed object tracking on low-end embedded systems
-- *Computer Vision Algorithm Engineer Intern*, Huawei R&D, November 2015 - May 2016   
-    * **Topic** - Unsupervised semantic role assignment to the people in a photo album
+#- *Sr. Research Scientist*, Samsung Research America, November 2020 - 
+#  * **Topics** - Vision Transformers, Vision and Language Understanding
+#- *Postdoctoral Research Fellow*, Stanford University, July 2018 - October 2020
+#   * **Topics** - Unsupervised/Weakly Supervised Learning, Efficient Computer Vision, Generative Models, Computational Sustainability 
+#- *Computer Vision Engineer*, Planet Labs, June 2017 - July 2018
+#    * **Topic** - Convolutional object detection in low resolution aerial images
+#- *Computer Vision Engineer*, Autel Robotics, August 2016 - June 2017
+#    * **Topic** - High-speed object tracking on low-end embedded systems
+#- *Computer Vision Algorithm Engineer Intern*, Huawei R&D, November 2015 - May 2016   
+#    * **Topic** - Unsupervised semantic role assignment to the people in a photo album
+

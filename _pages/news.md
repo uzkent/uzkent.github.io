@@ -7,11 +7,13 @@ redirect_from:
 ---
 
 {% include base_path %}
-- Our paper on `Compressing Transformers in Multi-Modal Networks` is accepted to **CVPR 2022**.
+- One paper accepted to a CVPR 2022 Workshop.
+
+- One paper accepted to CVPR 2022.
 
 - Four papers submitted to **ECCV 2022**.
 
-- Two patent applications submitted.
+- Three patents applications submitted.
 
 - One paper submitted to **Earth's Future**.
 

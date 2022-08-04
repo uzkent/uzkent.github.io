@@ -7,15 +7,13 @@ redirect_from:
 ---
 
 {% include base_path %}
+- One paper accepted to Earth's Future Journal. 
+
 - One paper accepted to a CVPR 2022 Workshop.
 
 - One paper accepted to CVPR 2022.
 
-- Four papers submitted to **ECCV 2022**.
-
 - Three patents applications submitted.
-
-- One paper submitted to **Earth's Future**.
 
 - Our work on `Geography-Aware Self-supervised Learning` has been accepted to **ICCV 2021**. [PDF](https://openaccess.thecvf.com/content/ICCV2021/papers/Ayush_Geography-Aware_Self-Supervised_Learning_ICCV_2021_paper.pdf) [code](https://github.com/sustainlab-group/geography-aware-ssl) [webpage](https://geography-aware-ssl.github.io/)
 

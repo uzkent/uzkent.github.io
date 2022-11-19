@@ -7,6 +7,8 @@ redirect_from:
 ---
 
 {% include base_path %}
+- One paper accepted to AAAI 2023.
+
 - One paper accepted to Earth's Future Journal. 
 
 - One paper accepted to a CVPR 2022 Workshop.

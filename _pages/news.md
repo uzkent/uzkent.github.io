@@ -11,11 +11,11 @@ redirect_from:
 
 - One paper accepted to AAAI 2023. [PDF](https://arxiv.org/pdf/2301.05345.pdf)
 
-- One paper accepted to Earth's Future Journal. 
+- One paper accepted to Earth's Future Journal. [PDF](https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2022EF002789)
 
-- One paper accepted to a CVPR 2022 Workshop.
+- One paper accepted to a CVPR 2022 Workshop. [PDF](https://openaccess.thecvf.com/content/CVPR2022W/L3D-IVU/papers/Chakraborty_Efficient_Conditional_Pre-Training_for_Transfer_Learning_CVPRW_2022_paper.pdf)
 
-- One paper accepted to CVPR 2022.
+- One paper accepted to CVPR 2022. [PDF](https://openaccess.thecvf.com/content/CVPR2022/papers/Lou_Lite-MDETR_A_Lightweight_Multi-Modal_Detector_CVPR_2022_paper.pdf)
 
 - Three patents applications submitted.
 

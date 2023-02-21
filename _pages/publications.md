@@ -34,7 +34,7 @@ Peer-Reviewed Conference Papers
 
 3. S. Chakraborty, **B. Uzkent**, K. Ayush, E. Sheehan, S. Ermon, "Efficient Conditional Pre-training for Transfer Learning", *International Conference on Computer Vision and Pattern Recognition Workshops*, June 2022. [Arxiv](https://arxiv.org/abs/2011.10231)
 
-4. Q. Lu, Y.C. Shu, **B. Uzkent**, T. Hua, Y. Shen, H. Jin, "Lite-MDETR: A Lightweight Multi-Modal Detector", *International Conference on Computer Vision and Pattern Recognition*, June 2022.
+4. Q. Lu, Y.C. Shu, **B. Uzkent**, T. Hua, Y. Shen, H. Jin, "Lite-MDETR: A Lightweight Multi-Modal Detector", *International Conference on Computer Vision and Pattern Recognition*, June 2022. [PDF](https://openaccess.thecvf.com/content/CVPR2022/papers/Lou_Lite-MDETR_A_Lightweight_Multi-Modal_Detector_CVPR_2022_paper.pdf)
 
 5. **B. Uzkent**, K. Ayush, C. Meng, M. Burke, D. Lobell, S. Ermon, "Geography-Aware Self-Supervised Learning", *International Conference on Computer Vision*, October 2021. [PDF](https://openaccess.thecvf.com/content/ICCV2021/papers/Ayush_Geography-Aware_Self-Supervised_Learning_ICCV_2021_paper.pdf) [code](https://github.com/sustainlab-group/geography-aware-ssl) [webpage](https://geography-aware-ssl.github.io/)
 

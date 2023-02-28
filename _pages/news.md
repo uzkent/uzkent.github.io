@@ -1,3 +1,11 @@
+---
+title: ""
+permalink: /news/
+author_profile: true
+redirect_from:
+  - /news
+---
+
 {% include base_path %}
 
 - One paper accepted to CVPR 2023.

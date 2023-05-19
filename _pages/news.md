@@ -8,8 +8,6 @@ redirect_from:
 
 {% include base_path %}
 
-- One paper accepted to CVPR 2023.
-
 - One paper accepted to ICLR 2023. [PDF](https://openreview.net/pdf?id=UMERaIHMwB3)
 
 - One paper accepted to AAAI 2023. [PDF](https://arxiv.org/pdf/2301.05345.pdf)

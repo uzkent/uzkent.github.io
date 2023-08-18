@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Academic Personal Website"
 title_separator          : "-"
 name                     : &name "Burak Uzkent"
-description              : &description "Sr. Research Scientist at Samsung Research America"
+description              : &description "Machine Learnig Scientist"
 url                      : https://uzkent.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "uzkent.github.io"
@@ -80,7 +80,7 @@ analytics:
 author:
   name             : "Burak Uzkent"
   avatar           : "profile.png"
-  bio              : "Sr. Research Scientist at Samsung Research America"
+  bio              : "Machine Learning Scientist"
   location         : "Mountain View, CA"
   employer         :
   googlescholar    : "https://scholar.google.com/citations?user=-Es6xrgAAAAJ&hl=en&oi=sra"

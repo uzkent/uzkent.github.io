@@ -7,7 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am currently working for [Samsung Research America](https://www.sra.samsung.com) as a Senior Research Scientist. Previously, I was a member of
+I am currently working for Amazon Prime Video as a Machine Learning Scientist. Previously, I was a member of
 [Stanford AI Lab](http://ai.stanford.edu) at Stanford University as a postdoctoral research fellow under the advisory of [Dr. Stefano Ermon](https://cs.stanford.edu/~ermon/). At Stanford University, I worked on building efficient convolutional networks in terms of run-time complexity, developing unsupervised and weakly supervised learning methods for better sample complexity in downstream tasks, generative models, and machine learning for computational sustainability. I earned my Ph.D in the [Chester F. Carlson Center for the Imaging Science](https://www.cis.rit.edu) at Rochester Institute of Technology under the advisory of Dr. [Matthew. J. Hoffman](https://people.rit.edu/mjhsma/index.html).
 
 ## Education
@@ -20,7 +20,8 @@ I am currently working for [Samsung Research America](https://www.sra.samsung.co
     - **Thesis Topic** : "Autonomous Parallel Parking of non-holonomic Vehicles"
 """
 ## Work Experience
-- *Sr. Research Scientist*, Samsung Research America, November 2020 -
+
+- *Sr. Research Scientist*, Samsung Research America, November 2020 - June 2023
   * **Topics** - Vision Transformers, Vision and Language Understanding
 - *Postdoctoral Research Fellow*, Stanford University, July 2018 - October 2020
    * **Topics** - Unsupervised/Weakly Supervised Learning, Efficient Computer Vision, Generative Models, Computational Sustainability

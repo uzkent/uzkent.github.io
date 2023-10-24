@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-- One paper accepted to WACV 2024.  
+- Two papers accepted to WACV 2024.  
 
 - One paper accepted to CVPR 2023. [PDF](https://openaccess.thecvf.com/content/CVPR2023/papers/Uzkent_Dynamic_Inference_With_Grounding_Based_Vision_and_Language_Models_CVPR_2023_paper.pdf)
 

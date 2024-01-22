@@ -78,16 +78,8 @@ redirect_from:
 
 - I defended my Ph.D. thesis on "Aerial Vehicle Tracking using a Multi-modal Optical Sensor" as of May 16, 2016. I would like to thank my thesis committee, my advisor Dr. Hoffman and co-adviser Dr. Vodacek for their supervision throughout my Ph.D. [Presentation](../files/Thesis.Defense.pdf)
 
-- I finished my internship at *Huawei R&D* where I worked on representing people with face-only and contextual features to classify individuals in a photo album as strangers and family members. The second part of my work included designing an album-specific classifier to assign sematic roles to family members. My work also includes designing a general conditional random field graph based approach where several attributes about the individuals, and pairs are utilized to assign semantic roles. You can find an experiment on a family picture with strangers in the figure below. To learn contextual features, the ZFNet (Improved AlexNet) is fine-tuned on the People in Photo Album Dataset on three different areas including context. You can find the Caffe fine-tuning prototxt files in this [link](https://github.com/uzkent/AlexNet_FineTuned_PersonRecognition). For the face-only area, the pre-trained *FaceNet* model, an end-to-end face verification model, is used.
-
-        ![obama_family](../images/Obama_Family.jpg)
+- I finished my internship at *Huawei R&D* where I worked on representing people with face-only and contextual features to classify individuals in a photo album as strangers and family members. 
 
 - Our journal paper titled "Integrating Hyperspectral Likelihoods in a Multi-dimensional Assignment Algorithm for Aerial Vehicle Tracking" is accepted by the **IEEE Journal of Selected Topics in Remote Sensing and Observation**. In this [link](https://www.youtube.com/watch?v=scRQjEMGSRE), you can find an example of single target tracking from a fixed aerial platform.
 
-- For short term (2014 Summer), I worked on *3-D Cardiac segmentation using MRI slices*. I presented our paper in the **IEEE Western New York Image Processing Workshop**. Below, you can visualize some results on canine (left) and sheep (right) heart segmentation. C++ implementation can be found in this [link](https://github.com/uzkent/3D_MRI_Segmentation).
-
-        - Uzkent, Burak, Matthew J. Hoffman, Elizabeth Cherry, and Nathan Cahill. "3-D MRI cardiac segmentation using graph cuts." In *Image and Signal Processing Workshop (WNYISPW)*, 2014 IEEE Western New York, pp. 47-51. IEEE, 2014.
-
-        Canine Heart             |  Sheep Heart
-        :-------------------------:|:-------------------------:
-        ![canine_heart](../images/Canine_Heart_Segmentation.png)  |  ![sheep_heart](../images/Sheep_Heart_Segmentation.png)
+- In 2014 Summer, I worked on *3-D Cardiac segmentation using MRI slices*. I presented our paper in the **IEEE Western New York Image Processing Workshop**. Below, you can visualize some results on canine (left) and sheep (right) heart segmentation. C++ implementation can be found in this [link](https://github.com/uzkent/3D_MRI_Segmentation).

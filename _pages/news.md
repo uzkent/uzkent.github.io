@@ -62,7 +62,7 @@ redirect_from:
 - I gave a presentation at Orbital Insight. [PDF](../files/Orbital_Insight_Presentation.pdf)
 
 - Our paper on `Deep Hyperspectral Kernelized Correlation Filter (DeepHKCF) Tracking in Aerial Images` is accepted to the **IEEE Transactions on Geoscience and Remote Sensing**. [arxiv](https://arxiv.org/abs/1711.07235) [code](https://github.com/uzkent/HKCF_Tracker)
-        ![Tracking_Framework_FastDeepHCKF](../images/FastDeepHKCF_Framework.png)
+
 
 - I presented my recent works on object detection and tracking in aerial images in the Vision and Autonomous System Center Seminar at Carnegie Mellon University.[Abstract](https://www.ri.cmu.edu/event/object-detection-and-tracking-on-low-resolution-aerial-images/) [PDF](../files/CMU_VSAR_Seminar.pdf)
 
@@ -72,19 +72,9 @@ redirect_from:
 
   - [Demo Video 1](https://www.youtube.com/embed/dWeIbECiVkY?ecver=1), [Demo Video 2](https://www.youtube.com/embed/ZCnAjxJkseY?ecver=1), [Demo Video 3](https://www.youtube.com/embed/hAxA903YH2Y?ecver=1), [Demo Video 4](https://www.youtube.com/embed/h-yXx1A2dL0?ecver=1)
 
-  ![Tracking_Framework](../images/EnKCF_Framework.png)
-
 - Our paper is accepted to the **Perception Beyond the Visible Spectrum Workshop in conjunction with the Computer Vision and Pattern Recognition Conference 2017**
 
-        - Uzkent, Burak, Aneesh Rangnekar, Matthew J. Hoffman, and Anthony Vodacek. "Aerial Vehicle Tracking by Adaptive Fusion of Hyperspectral Likelihoods Maps"
-
-        ![Tracking_Framework](../images/CVPRW17_Tracking.png)
-
-- Our [Hyperspectral Aerial Video Set](https://uzkent.github.io/datasets/) for vehicle tracking is uploaded. Please cite the paper listed below if you use this dataset in your research. Our dataset also contains the ground truth files of the vehicles in the scene. You can download the C detection module coupled to MATLAB tracking module in this [link](https://github.com/uzkent/CVPRW17_Paper_Code).
-
-        - Uzkent, Burak, Matthew J. Hoffman, and Anthony Vodacek. "Real-Time Vehicle Tracking in Aerial Video Using Hyperspectral Features." In *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops*, pp. 36-44. 2016.
-
-        ![Tracking_Framework](../images/CVPRW16_Tracking.png)
+- Our [Hyperspectral Aerial Video Set](https://uzkent.github.io/datasets/) for vehicle tracking is uploaded. Our dataset also contains the ground truth files of the vehicles in the scene. You can download the C detection module coupled to MATLAB tracking module in this [link](https://github.com/uzkent/CVPRW17_Paper_Code).
 
 - I defended my Ph.D. thesis on "Aerial Vehicle Tracking using a Multi-modal Optical Sensor" as of May 16, 2016. I would like to thank my thesis committee, my advisor Dr. Hoffman and co-adviser Dr. Vodacek for their supervision throughout my Ph.D. [Presentation](../files/Thesis.Defense.pdf)
 

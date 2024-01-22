@@ -7,7 +7,9 @@ redirect_from:
 ---
 
 {% include base_path %}
-- Two papers accepted to WACV 2024.  
+- One paper accepted to WACV 2024. [PDF](https://openaccess.thecvf.com/content/WACV2024/papers/Yi_Augment_the_Pairs_Semantics-Preserving_Image-Caption_Pair_Augmentation_for_Grounding-Based_Vision_WACV_2024_paper.pdf)
+  
+- One paper accepted to WACV 2024. [PDF](https://openaccess.thecvf.com/content/WACV2024/papers/Doshi_A_Multimodal_Benchmark_and_Improved_Architecture_for_Zero_Shot_Learning_WACV_2024_paper.pdf)
 
 - One paper accepted to CVPR 2023. [PDF](https://openaccess.thecvf.com/content/CVPR2023/papers/Uzkent_Dynamic_Inference_With_Grounding_Based_Vision_and_Language_Models_CVPR_2023_paper.pdf)
 

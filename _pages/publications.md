@@ -88,8 +88,10 @@ Peer-Reviewed Conference Papers
 
 Preprints
 ===
-1. **B. Uzkent**, S. Ermon, "Domain Adaptation Using Adversarial Learning for Studying Low Resolution Images". [Arxiv](https://www.researchgate.net/publication/341030568_Adversarial_Domain_Adaptation_for_Analyzing_Low_Resolution_Images)
+1. G. Sun, A. Singhal, **B. Uzkent**, M. Shah, C. Chen, G. Kessler, "From Frames to Clips: Efficient Key Clip Selection for Long-Form Video Understanding", [Arxiv](https://arxiv.org/abs/2510.02262)
 
-2. **B. Uzkent**, E. Sheehan, C. Meng, Z. Tang, M. Burke, D. Lobell, S. Ermon, ''Learning to Interpret Satellite Images in Global Scale Using Wikipedia''. [Arxiv](https://arxiv.org/pdf/1905.02506.pdf)
+2. **B. Uzkent**, S. Ermon, "Domain Adaptation Using Adversarial Learning for Studying Low Resolution Images". [Arxiv](https://www.researchgate.net/publication/341030568_Adversarial_Domain_Adaptation_for_Analyzing_Low_Resolution_Images)
 
-3. E. Sheehan, **B. Uzkent**, C. Meng, Z. Tang, M. Burke, D. Lobell, S. Ermon, ''Learning to interpret satellite images using wikipedia''. [Arxiv](https://arxiv.org/pdf/1809.10236.pdf)
+3. **B. Uzkent**, E. Sheehan, C. Meng, Z. Tang, M. Burke, D. Lobell, S. Ermon, ''Learning to Interpret Satellite Images in Global Scale Using Wikipedia''. [Arxiv](https://arxiv.org/pdf/1905.02506.pdf)
+
+4. E. Sheehan, **B. Uzkent**, C. Meng, Z. Tang, M. Burke, D. Lobell, S. Ermon, ''Learning to interpret satellite images using wikipedia''. [Arxiv](https://arxiv.org/pdf/1809.10236.pdf)

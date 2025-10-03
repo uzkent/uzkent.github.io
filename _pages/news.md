@@ -7,6 +7,10 @@ redirect_from:
 ---
 
 {% include base_path %}
+- One paper submitted to ICLR26. [PDF](https://arxiv.org/pdf/2510.02262)
+
+- Three patents accepted in 2025.
+
 - One paper accepted to WACV 2024. [PDF](https://openaccess.thecvf.com/content/WACV2024/papers/Yi_Augment_the_Pairs_Semantics-Preserving_Image-Caption_Pair_Augmentation_for_Grounding-Based_Vision_WACV_2024_paper.pdf)
   
 - One paper accepted to WACV 2024. [PDF](https://openaccess.thecvf.com/content/WACV2024/papers/Doshi_A_Multimodal_Benchmark_and_Improved_Architecture_for_Zero_Shot_Learning_WACV_2024_paper.pdf)

@@ -7,9 +7,13 @@ redirect_from:
 ---
 
 {% include base_path %}
-- One paper submitted to ICLR26. [PDF](https://arxiv.org/pdf/2510.02262)
+- One paper on video-text alignment with VLMs submitted to CVPR26.
+ 
+- One paper on long-form Complex Question Answering with VLMs submitted to CVPR26. 
 
-- One patent on long-form VLM submitted.
+- One paper on long-form Questing Answering with VLMs submitted to CVPR26. [PDF](https://arxiv.org/pdf/2510.02262)
+
+- One patent on long-form Questing Answering with VLMs submitted.
 
 - Three patents accepted in 2025.
 

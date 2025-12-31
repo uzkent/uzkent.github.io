@@ -7,6 +7,8 @@ redirect_from:
 ---
 
 {% include base_path %}
+- One paper on Improved Video Question Answering submitted to ACL26.
+  
 - One paper on video-text alignment with VLMs submitted to CVPR26.
  
 - One paper on long-form Complex Question Answering with VLMs submitted to CVPR26. 

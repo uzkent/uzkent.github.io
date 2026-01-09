@@ -7,15 +7,13 @@ redirect_from:
 ---
 
 {% include base_path %}
-- One paper submitted to ACL26. [Arxiv](https://arxiv.org/pdf/2601.04778)
+- One paper submitted to ACL 2026. [Arxiv](https://arxiv.org/pdf/2601.04778)
   
-- One paper on video-text alignment with VLMs submitted to CVPR26.
- 
-- One paper on long-form Complex Question Answering with VLMs submitted to CVPR26. 
+- Three papers submitted to CVPR 2026. [Arxiv](https://arxiv.org/pdf/2510.02262)
 
-- One paper on long-form Questing Answering with VLMs submitted to CVPR26. [Arxiv](https://arxiv.org/pdf/2510.02262)
+- Two patents submitted in 2025.
 
-- Three patents accepted in 2025.
+- Five patents accepted in 2025. [Link_1](https://patents.google.com/patent/US12506850B2/en) [Link_2](https://patents.google.com/patent/US12468944B2/en) [Link_3](https://patents.google.com/patent/US12394190B2/en) [Link_4](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-Es6xrgAAAAJ&sortby=pubdate&citation_for_view=-Es6xrgAAAAJ:_axFR9aDTf0C) [Link_5](https://patents.google.com/patent/US12373698B2/en)
 
 - One paper accepted to WACV 2024. [PDF](https://openaccess.thecvf.com/content/WACV2024/papers/Yi_Augment_the_Pairs_Semantics-Preserving_Image-Caption_Pair_Augmentation_for_Grounding-Based_Vision_WACV_2024_paper.pdf)
   
@@ -26,8 +24,6 @@ redirect_from:
 - One paper accepted to ICLR 2023. [PDF](https://openreview.net/pdf?id=UMERaIHMwB3)
 
 - One paper accepted to AAAI 2023. [PDF](https://arxiv.org/pdf/2301.05345.pdf)
-
-- Five patent applications submitted in 2022.
 
 - One paper accepted to Earth's Future Journal. [PDF](https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2022EF002789)
 

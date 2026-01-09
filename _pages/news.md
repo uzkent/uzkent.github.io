@@ -13,7 +13,9 @@ redirect_from:
 
 - Two patents submitted in 2025.
 
-- Five patents accepted in 2025. [Link_1](https://patents.google.com/patent/US12506850B2/en) [Link_2](https://patents.google.com/patent/US12468944B2/en) [Link_3](https://patents.google.com/patent/US12394190B2/en) [Link_4](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-Es6xrgAAAAJ&sortby=pubdate&citation_for_view=-Es6xrgAAAAJ:_axFR9aDTf0C) [Link_5](https://patents.google.com/patent/US12373698B2/en)
+- Five patents accepted in 2025. [Link_1](https://patents.google.com/patent/US12506850B2/en) [Link_2](https://patents.google.com/patent/US12468944B2/en) [Link_3](https://patents.google.com/patent/US12394190B2/en) [Link_4](https://patents.google.com/patent/US12386873B2/en) [Link_5](https://patents.google.com/patent/US12373698B2/en)
+
+- One patent accepted in 2024. [Link](https://patents.google.com/patent/US12183062B2/en)
 
 - One paper accepted to WACV 2024. [PDF](https://openaccess.thecvf.com/content/WACV2024/papers/Yi_Augment_the_Pairs_Semantics-Preserving_Image-Caption_Pair_Augmentation_for_Grounding-Based_Vision_WACV_2024_paper.pdf)
   

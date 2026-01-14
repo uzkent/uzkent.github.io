@@ -38,7 +38,7 @@ redirect_from:
 
 - One paper accepted to ICCV 2021. [PDF](https://openaccess.thecvf.com/content/ICCV2021/papers/Ayush_Geography-Aware_Self-Supervised_Learning_ICCV_2021_paper.pdf) [Code](https://github.com/sustainlab-group/geography-aware-ssl) [Webpage](https://geography-aware-ssl.github.io/)
 
-- Seminar presentation at the Machine Learning for Remote Sensing group at the University of Maryland. [PDF](../files/UMSeminar_Burak.pdf)
+- Seminar presentation at the University of Maryland. [PDF](../files/UMSeminar_Burak.pdf)
 
 - One paper accepted to ICLR 2021. [PDF](https://openreview.net/forum?id=Ovp8dvB8IBH) [Code](https://github.com/ermongroup/NDA) [YouTube](https://www.youtube.com/watch?v=K-1mN2mz66k&t=21s&ab_channel=HenryAILabs)
 
@@ -64,7 +64,7 @@ redirect_from:
 
 - One paper accepted to WACV 2020. [Arxiv](https://arxiv.org/pdf/1912.03966.pdf) [Code](https://github.com/uzkent/EfficientObjectDetection) [PDF](../files/WACV_Short.pdf)
 
-- Presentation at University of California at San Diego.
+- Seminar Presentation at University of California at San Diego.
 
 - One paper accepted to IJCAI 2019. [Arxiv](https://arxiv.org/pdf/1905.02506.pdf) [Code](https://github.com/uzkent/WikiSatNet)
 

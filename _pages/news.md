@@ -34,6 +34,8 @@ redirect_from:
 
 - One paper accepted to CVPR 2022. [PDF](https://openaccess.thecvf.com/content/CVPR2022/papers/Lou_Lite-MDETR_A_Lightweight_Multi-Modal_Detector_CVPR_2022_paper.pdf)
 
+- Joined Amazon as Machine Learning Scientist.
+
 - One paper accepted to ICCV 2021. [PDF](https://openaccess.thecvf.com/content/ICCV2021/papers/Ayush_Geography-Aware_Self-Supervised_Learning_ICCV_2021_paper.pdf) [Code](https://github.com/sustainlab-group/geography-aware-ssl) [Webpage](https://geography-aware-ssl.github.io/)
 
 - Seminar presentation at the Machine Learning for Remote Sensing group at the University of Maryland. [PDF](../files/UMSeminar_Burak.pdf)

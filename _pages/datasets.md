@@ -1,5 +1,5 @@
 ---
-title: "Datasets"
+title: ""
 permalink: /datasets/
 author_profile: true
 redirect_from:

@@ -10,7 +10,7 @@ redirect_from:
 
 # 📚 Publications
 
-My research has been published in top venues including **CVPR**, **ICCV**, **ICLR**, **AAAI**, **IJCAI**, **KDD**, **WACV**, and leading journals in remote sensing and geoscience.
+My research has been published in top venues including **CVPR (3)**, **ICCV (1)**, **ICLR (2)**, **AAAI (3)**, **IJCAI (2)**, **KDD (1)**, **WACV (5)**, and leading journals in remote sensing and geoscience.
 
 ---
 
@@ -227,7 +227,7 @@ My research has been published in top venues including **CVPR**, **ICCV**, **ICL
 
 ---
 
-## 📝 Preprints &amp; Technical Reports
+## 📝 Preprints & Technical Reports
 
 1. T. Poppi, **B. Uzkent**, A. Garg, L. Porto, G. Kessler, Y. Yang, M. Cornia, L. Baraldi, R. Cucchiara, F. Schiffers  
    **"CounterVid: Counterfactual Video Generation for Mitigating Action and Temporal Hallucinations in Video-Language Models"**  
@@ -253,7 +253,7 @@ My research has been published in top venues including **CVPR**, **ICCV**, **ICL
 
 ---
 
-&gt; 📊 **Summary:** 8 Journal Papers • 29 Conference Papers • 5 Preprints
+> 📊 **Summary:** 8 Journal Papers • 29 Conference Papers • 5 Preprints
 
 ---
 

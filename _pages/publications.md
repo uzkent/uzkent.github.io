@@ -232,12 +232,12 @@ My research has been published in top venues including **CVPR (3)**, **ICCV (1)*
 1. T. Poppi, **B. Uzkent**, A. Garg, L. Porto, G. Kessler, Y. Yang, M. Cornia, L. Baraldi, R. Cucchiara, F. Schiffers  
    **"CounterVid: Counterfactual Video Generation for Mitigating Action and Temporal Hallucinations in Video-Language Models"**  
    *arXiv preprint*, 2025  
-   [[arXiv]](https://arxiv.org/abs/2601.04778)[[Project]](https://guangyusun.com/f2c/)
+   [[arXiv]](https://arxiv.org/abs/2601.04778)
 
 2. G. Sun, A. Singhal, **B. Uzkent**, M. Shah, C. Chen, G. Kessler  
    **"From Frames to Clips: Efficient Key Clip Selection for Long-Form Video Understanding"**  
    *arXiv preprint*, 2025  
-   [[arXiv]](https://arxiv.org/abs/2510.02262)
+   [[arXiv]](https://arxiv.org/abs/2510.02262)[[Project]](https://guangyusun.com/f2c/)
 
 3. **B. Uzkent**, S. Ermon  
    **"Domain Adaptation Using Adversarial Learning for Studying Low Resolution Images"**  

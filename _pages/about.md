@@ -37,7 +37,7 @@ I earned my Ph.D. from the [Chester F. Carlson Center for Imaging Science](https
 > Vision Transformer Compression • Multimodal Understanding
 
 **Postdoctoral Research Fellow** | Stanford University | *Jul 2018 – Oct 2020*
-> Unsupervised & Weakly Supervised Learning • Efficient Computer Vision • Generative Models • Computational Sustainability
+> Unsupervised & Weakly Supervised Learning • Dynamic Models • Generative Models • Computational Sustainability
 
 **Computer Vision Engineer** | Planet Labs | *Jun 2017 – Jul 2018*
 > Convolutional Object Detection in Low-Resolution Aerial Imagery

@@ -77,12 +77,12 @@ My research has been published in top venues including **CVPR (3)**, **ICCV (1)*
 4. M. Yin, **B. Uzkent**, Y. Shen, H. Jin  
    **"GOHSP: A Unified Framework of Graph and Optimization-based Heterogeneous Structured Pruning for Vision Transformer"**  
    *AAAI Conference on Artificial Intelligence*, February 2023
-
-### 2022
-
-5. S. Gao, **B. Uzkent**, Y. Shen, H. Huang, H. Jin  
+   
+6. S. Gao, **B. Uzkent**, Y. Shen, H. Huang, H. Jin  
    **"Learning to Jointly Share and Prune Weights for Grounding Based Vision and Language Models"**  
-   *International Conference on Learning Representations (ICLR)*, 2022
+   *International Conference on Learning Representations (ICLR)*, 2023
+   
+### 2022
 
 6. S. Chakraborty, **B. Uzkent**, K. Ayush, E. Sheehan, S. Ermon  
    **"Efficient Conditional Pre-training for Transfer Learning"**  

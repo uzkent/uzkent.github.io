@@ -10,7 +10,7 @@ redirect_from:
 
 # 📚 Publications
 
-My research has been published in top venues including **CVPR (3)**, **ICCV (1)**, **ICLR (2)**, **AAAI (3)**, **IJCAI (2)**, **KDD (1)**, **WACV (5)**, **CVPRW** (3) and leading journals in computer vision.
+My research has been published in top venues including **CVPR (3)**, **ICCV (1)**, **ICLR (2)**, **AAAI (3)**, **IJCAI (2)**, **KDD (1)**, **WACV (5)**, **CVPRW (3)** and leading journals in computer vision.
 
 ---
 

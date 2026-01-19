@@ -10,7 +10,7 @@ redirect_from:
 
 # 📚 Publications
 
-My research has been published in top venues including **CVPR (3)**, **ICCV (1)**, **ICLR (2)**, **AAAI (3)**, **IJCAI (2)**, **KDD (1)**, **WACV (5)**, and leading journals in remote sensing and geoscience.
+My research has been published in top venues including **CVPR (3)**, **ICCV (1)**, **ICLR (2)**, **AAAI (3)**, **IJCAI (2)**, **KDD (1)**, **WACV (5)**, **CVPRW** (3) and leading journals in computer vision.
 
 ---
 
@@ -35,21 +35,26 @@ My research has been published in top venues including **CVPR (3)**, **ICCV (1)*
    *IEEE Sensors Journal*, 15(1): 510–519, January 2015  
    [[PDF]](https://ieeexplore.ieee.org/document/6873232/)
 
-5. **B. Uzkent**, B.D. Barkana, H. Cevikalp  
+5. **B. Uzkent**, M. J. Hoffman, A. Vodacek, J. P. Kerekes, B. Chen  
+    **"Feature matching and adaptive prediction models in an object tracking DDDAS"**  
+    *Procedia Computer Science*, Volume 18, pp. 1939-1948, 2013  
+    [[PDF]](https://www.sciencedirect.com/science/article/pii/S1877050913005061)
+
+6. **B. Uzkent**, B.D. Barkana, H. Cevikalp  
    **"Non-speech environmental sound classification using SVMS with a new set of features"**  
    *International Journal of Innovative Computing, Information and Control*, 8(5): 3511–3524, May 2012  
    [[PDF]](https://www.researchgate.net/profile/Hakan_Cevikalp/publication/267782696_Non-speech_environmental_sound_classification_using_SVMs_with_a_new_set_of_features/links/54b7bf9f0cf24eb34f6ed7ff/Non-speech-environmental-sound-classification-using-SVMs-with-a-new-set-of-features.pdf)
 
-6. B.D. Barkana, **B. Uzkent**, I. Saricicek  
+7. B.D. Barkana, **B. Uzkent**, I. Saricicek  
    **"Normal and abnormal non-speech audio event detection using MFCC and PR-based feature sets"**  
    *Advanced Materials Research*, Volume 601, pp: 200–208, December 2012
 
-7. B.D. Barkana, **B. Uzkent**, I. Saricicek  
+8. B.D. Barkana, **B. Uzkent**, I. Saricicek  
    **"Environmental noise classifier using a new set of feature parameters based on pitch range"**  
    *Applied Acoustics*, 72(11): 841–848, November 2011  
    [[PDF]](https://www.sciencedirect.com/science/article/abs/pii/S0003682X11001381)
 
-8. **B. Uzkent**, B.D. Barkana, J. Yang  
+9. **B. Uzkent**, B.D. Barkana, J. Yang  
    **"Automatic environmental noise source classification model using fuzzy logic"**  
    *Expert Systems with Applications*, 38(7): 8751–8755, July 2011  
    [[PDF]](https://www.sciencedirect.com/science/article/pii/S0957417411001047)
@@ -78,7 +83,7 @@ My research has been published in top venues including **CVPR (3)**, **ICCV (1)*
    **"GOHSP: A Unified Framework of Graph and Optimization-based Heterogeneous Structured Pruning for Vision Transformer"**  
    *AAAI Conference on Artificial Intelligence*, February 2023
    
-6. S. Gao, **B. Uzkent**, Y. Shen, H. Huang, H. Jin  
+5. S. Gao, **B. Uzkent**, Y. Shen, H. Huang, H. Jin  
    **"Learning to Jointly Share and Prune Weights for Grounding Based Vision and Language Models"**  
    *International Conference on Learning Representations (ICLR)*, 2023
    
@@ -253,7 +258,7 @@ My research has been published in top venues including **CVPR (3)**, **ICCV (1)*
 
 ---
 
-> 📊 **Summary:** 8 Journal Papers • 29 Conference Papers • 5 Preprints
+> 📊 **Summary:** 9 Journal Papers • 29 Conference Papers • 5 Preprints
 
 ---
 

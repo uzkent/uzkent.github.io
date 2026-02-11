@@ -1,4 +1,3 @@
-```markdown
 ---
 title: ""
 permalink: /publications/
@@ -1115,4 +1114,3 @@ redirect_from:
 </div>
 
 </div><!-- end pub-page -->
-```

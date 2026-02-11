@@ -1,6 +1,3 @@
-
-
-```markdown
 ---
 title: "Publications"
 permalink: /publications/
@@ -850,16 +847,3 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
   });
 });
 </script>
-```
-
-**What changed to add clickable navigation:**
-
-1. **Hero stat cards are now `<a>` links** — the Conference (29), Journal (9), and Preprints (5) cards in the hero section link to `#section-conferences`, `#section-journals`, and `#section-preprints` with a small "▼ click to jump" hint
-
-2. **Quick-nav bar** added below the venue badges — three prominent styled buttons that jump to each section
-
-3. **Section `id` anchors** — each `section-header` div has `id="section-conferences"`, `id="section-journals"`, `id="section-preprints"` and `scroll-margin-top: 80px` so they don't hide behind a sticky navbar
-
-4. **Smooth scrolling** via a small `<script>` block that intercepts all `#` anchor clicks
-
-5. **Back-to-top button** — a floating ⬆ button that appears after scrolling down 400px, linking back to `#top`

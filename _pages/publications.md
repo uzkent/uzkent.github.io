@@ -10,12 +10,12 @@ redirect_from:
 
 <style>
 .pub-header {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid #e5e7eb;
 }
-.pub-header h1 { font-size: 1.8rem; margin: 0 0 0.5rem 0; color: #1a1a1a; }
-.pub-header p { color: #6b7280; font-size: 0.95rem; margin: 0; line-height: 1.6; }
+.pub-header h1 { font-size: 1.8rem; margin: 0 0 0.3rem 0; color: #1a1a1a; }
+.pub-header-line { width: 120px; height: 3px; background: #2563eb; border-radius: 2px; margin-bottom: 0.5rem; }
+.pub-header p { color: #6b7280; font-size: 0.92rem; margin: 0; line-height: 1.5; }
 
 .pub-nav {
   display: flex;
@@ -31,40 +31,96 @@ redirect_from:
 }
 .pub-nav a:hover { text-decoration: underline; }
 
+/* Section headers */
 .section-title {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: #1a1a1a;
-  margin: 2.5rem 0 0.5rem 0;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid #d1d5db;
+  margin: 2.5rem 0 0.3rem 0;
   scroll-margin-top: 80px;
 }
+.section-title .icon { margin-right: 0.4rem; }
+.section-line { width: 100px; height: 3px; background: #2563eb; border-radius: 2px; margin-bottom: 1.5rem; }
 .section-count {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #9ca3af;
   font-weight: 400;
 }
 
-.year-label {
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 28px;
+  margin-left: 8px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #2563eb;
+  border-radius: 2px;
+}
+
+/* Year markers */
+.year-marker {
+  position: relative;
+  margin: 1.8rem 0 0.8rem 0;
+}
+.year-marker::before {
+  content: '';
+  position: absolute;
+  left: -28px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 17px;
+  height: 17px;
+  background: #fff;
+  border: 3px solid #2563eb;
+  border-radius: 50%;
+  z-index: 1;
+}
+.year-marker span {
   font-size: 1rem;
-  font-weight: 700;
-  color: #374151;
-  margin: 1.5rem 0 0.6rem 0;
+  font-weight: 800;
+  color: #1a1a1a;
 }
 
+/* Paper entries */
 .paper {
-  margin-bottom: 1rem;
-  padding: 0.8rem 0;
-  border-bottom: 1px solid #f3f4f6;
+  position: relative;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.7rem;
 }
-.paper:last-child { border-bottom: none; }
+.paper::before {
+  content: '';
+  position: absolute;
+  left: -24px;
+  top: 1.2rem;
+  width: 9px;
+  height: 9px;
+  background: #fff;
+  border: 2.5px solid #2563eb;
+  border-radius: 50%;
+  z-index: 1;
+}
 
+.paper-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
 .paper-venue {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  color: #6b7280;
+  color: #2563eb;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
 }
 .paper-venue .oral-tag {
   color: #dc2626;
@@ -72,54 +128,57 @@ redirect_from:
 }
 .paper-title {
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #111827;
-  margin: 0.2rem 0;
+  margin: 0.25rem 0;
   line-height: 1.4;
 }
 .paper-authors {
-  font-size: 0.85rem;
+  font-size: 0.83rem;
   color: #6b7280;
-  line-height: 1.4;
+  line-height: 1.45;
 }
 .paper-authors .me {
   font-weight: 700;
-  color: #111827;
+  color: #2563eb;
 }
 .paper-links {
   display: flex;
-  gap: 0.8rem;
-  margin-top: 0.3rem;
+  gap: 0.7rem;
+  margin-top: 0.4rem;
   flex-wrap: wrap;
 }
 .paper-links a {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: #2563eb;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
 }
 .paper-links a:hover { text-decoration: underline; }
 </style>
 
 <div class="pub-header">
-  <p>
-    Research in computer vision, efficient deep learning, multi-modal models, and remote sensing. 43 publications across conferences, journals, and preprints.
-  </p>
+  <h1>📚 Publications</h1>
+  <div class="pub-header-line"></div>
+  <p>Research in computer vision, efficient deep learning, multi-modal models, and remote sensing.</p>
 </div>
 
 <div class="pub-nav">
-  <a href="#conferences">Conference Papers (29)</a>
-  <a href="#journals">Journal Articles (9)</a>
-  <a href="#preprints">Preprints (5)</a>
+  <a href="#conferences">🎤 Conference Papers (29)</a>
+  <a href="#journals">📖 Journal Articles (9)</a>
+  <a href="#preprints">📝 Preprints (5)</a>
 </div>
 
 <!-- ============================================================ -->
 <!--                     CONFERENCE PAPERS                        -->
 <!-- ============================================================ -->
 
-<h2 class="section-title" id="conferences">Conference Papers <span class="section-count">(29)</span></h2>
+<h2 class="section-title" id="conferences"><span class="icon">🎤</span> Conference Papers <span class="section-count">(29)</span></h2>
+<div class="section-line"></div>
 
-<div class="year-label">2024</div>
+<div class="timeline">
+
+<div class="year-marker"><span>2024</span></div>
 
 <div class="paper">
   <div class="paper-venue">WACV 2024</div>
@@ -133,7 +192,7 @@ redirect_from:
   <div class="paper-authors">J. Yi, <span class="me">B. Uzkent</span>, O. Ignat, Z. Li, A. Garg, X. Yu, L. Liu</div>
 </div>
 
-<div class="year-label">2023</div>
+<div class="year-marker"><span>2023</span></div>
 
 <div class="paper">
   <div class="paper-venue">CVPR 2023</div>
@@ -153,7 +212,7 @@ redirect_from:
   <div class="paper-authors">S. Gao, <span class="me">B. Uzkent</span>, Y. Shen, H. Huang, H. Jin</div>
 </div>
 
-<div class="year-label">2022</div>
+<div class="year-marker"><span>2022</span></div>
 
 <div class="paper">
   <div class="paper-venue">CVPR Workshop 2022</div>
@@ -168,7 +227,7 @@ redirect_from:
   <div class="paper-authors">Q. Lu, Y.C. Shu, <span class="me">B. Uzkent</span>, T. Hua, Y. Shen, H. Jin</div>
 </div>
 
-<div class="year-label">2021</div>
+<div class="year-marker"><span>2021</span></div>
 
 <div class="paper">
   <div class="paper-venue">ICCV 2021</div>
@@ -208,7 +267,7 @@ redirect_from:
   </div>
 </div>
 
-<div class="year-label">2020</div>
+<div class="year-marker"><span>2020</span></div>
 
 <div class="paper">
   <div class="paper-venue">IJCAI 2020</div>
@@ -263,7 +322,7 @@ redirect_from:
   </div>
 </div>
 
-<div class="year-label">2019</div>
+<div class="year-marker"><span>2019</span></div>
 
 <div class="paper">
   <div class="paper-venue">IJCAI 2019</div>
@@ -286,7 +345,7 @@ redirect_from:
   </div>
 </div>
 
-<div class="year-label">2018</div>
+<div class="year-marker"><span>2018</span></div>
 
 <div class="paper">
   <div class="paper-venue">WACV 2018</div>
@@ -298,7 +357,7 @@ redirect_from:
   </div>
 </div>
 
-<div class="year-label">2017</div>
+<div class="year-marker"><span>2017</span></div>
 
 <div class="paper">
   <div class="paper-venue">CVPR Workshop 2017</div>
@@ -310,7 +369,7 @@ redirect_from:
   </div>
 </div>
 
-<div class="year-label">2016</div>
+<div class="year-marker"><span>2016</span></div>
 
 <div class="paper">
   <div class="paper-venue">CVPR Workshop 2016</div>
@@ -322,7 +381,7 @@ redirect_from:
   </div>
 </div>
 
-<div class="year-label">2015</div>
+<div class="year-marker"><span>2015</span></div>
 
 <div class="paper">
   <div class="paper-venue">ICCS 2015</div>
@@ -345,7 +404,7 @@ redirect_from:
   <div class="paper-links"><a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/9407/1/Efficient-integration-of-spectral-features-for-vehicle-tracking-utilizing-an/10.1117/12.2082266.short">PDF</a></div>
 </div>
 
-<div class="year-label">2014</div>
+<div class="year-marker"><span>2014</span></div>
 
 <div class="paper">
   <div class="paper-venue">IEEE WNYIPW 2014</div>
@@ -357,7 +416,7 @@ redirect_from:
   </div>
 </div>
 
-<div class="year-label">2013</div>
+<div class="year-marker"><span>2013</span></div>
 
 <div class="paper">
   <div class="paper-venue">ICCS 2013</div>
@@ -366,7 +425,7 @@ redirect_from:
   <div class="paper-links"><a href="https://www.sciencedirect.com/science/article/pii/S1877050913005061">PDF</a></div>
 </div>
 
-<div class="year-label">2011</div>
+<div class="year-marker"><span>2011</span></div>
 
 <div class="paper">
   <div class="paper-venue">IEEE ITNG 2011</div>
@@ -375,7 +434,7 @@ redirect_from:
   <div class="paper-links"><a href="https://www.researchgate.net/profile/Buket_Barkana/publication/224245542_Pitch-Range_Based_Feature_Extraction_for_Audio_Surveillance_Systems/links/5654aa9808ae4988a7b055f7/Pitch-Range-Based-Feature-Extraction-for-Audio-Surveillance-Systems.pdf">PDF</a></div>
 </div>
 
-<div class="year-label">2010</div>
+<div class="year-marker"><span>2010</span></div>
 
 <div class="paper">
   <div class="paper-venue">EURO 2010</div>
@@ -383,7 +442,7 @@ redirect_from:
   <div class="paper-authors">B.D. Barkana, I. Saricicek, <span class="me">B. Uzkent</span></div>
 </div>
 
-<div class="year-label">2009</div>
+<div class="year-marker"><span>2009</span></div>
 
 <div class="paper">
   <div class="paper-venue">METU 2009</div>
@@ -391,11 +450,16 @@ redirect_from:
   <div class="paper-authors"><span class="me">B. Uzkent</span>, O. Parlaktuna</div>
 </div>
 
+</div><!-- end timeline -->
+
 <!-- ============================================================ -->
 <!--                       JOURNAL PAPERS                         -->
 <!-- ============================================================ -->
 
-<h2 class="section-title" id="journals">Journal Articles <span class="section-count">(9)</span></h2>
+<h2 class="section-title" id="journals"><span class="icon">📖</span> Journal Articles <span class="section-count">(9)</span></h2>
+<div class="section-line"></div>
+
+<div class="timeline">
 
 <div class="paper">
   <div class="paper-venue">Earth's Future · 2022</div>
@@ -465,11 +529,16 @@ redirect_from:
   <div class="paper-links"><a href="https://www.sciencedirect.com/science/article/pii/S0957417411001047">PDF</a></div>
 </div>
 
+</div><!-- end timeline -->
+
 <!-- ============================================================ -->
 <!--                  PREPRINTS & TECH REPORTS                    -->
 <!-- ============================================================ -->
 
-<h2 class="section-title" id="preprints">Preprints <span class="section-count">(5)</span></h2>
+<h2 class="section-title" id="preprints"><span class="icon">📝</span> Preprints <span class="section-count">(5)</span></h2>
+<div class="section-line"></div>
+
+<div class="timeline">
 
 <div class="paper">
   <div class="paper-venue">arXiv · 2025</div>
@@ -508,5 +577,7 @@ redirect_from:
   <div class="paper-authors">E. Sheehan, <span class="me">B. Uzkent</span>, C. Meng, Z. Tang, M. Burke, D. Lobell, S. Ermon</div>
   <div class="paper-links"><a href="https://arxiv.org/pdf/1809.10236.pdf">arXiv</a></div>
 </div>
+
+</div><!-- end timeline -->
 
 <p style="text-align: center; color: #9ca3af; font-size: 0.85rem; margin-top: 3rem; font-style: italic;">* denotes equal contribution</p>

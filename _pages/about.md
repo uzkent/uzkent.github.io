@@ -275,4 +275,3 @@ redirect_from:
   <span class="interest-pill">🌱 Computational Sustainability</span>
   <span class="interest-pill">🎨 Generative Models</span>
 </div>
-```

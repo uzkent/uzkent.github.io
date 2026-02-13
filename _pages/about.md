@@ -161,7 +161,7 @@ redirect_from:
 
 <!-- ════════════════════════════════════════════════════ -->
 
-<span class="section-title">👋&ensp;About Me</span>
+<span class="section-title">&ensp;About Me</span>
 
 <div class="hero-card">
   <p>

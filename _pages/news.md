@@ -1,6 +1,3 @@
-
-
-```markdown
 ---
 title: ""
 permalink: /news/

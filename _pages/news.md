@@ -146,7 +146,7 @@ redirect_from:
 </div>
 
 <div class="news-item">
-  <p class="news-text"><span class="news-tag tag-paper">Paper</span> Three papers submitted to <strong>CVPR 2026</strong>.</p>
+  <p class="news-text"><span class="news-tag tag-paper">Paper</span> Two papers submitted to <strong>ECCV 2026</strong>.</p>
   <div class="news-links"><a href="https://arxiv.org/pdf/2510.02262">arXiv</a></div>
 </div>
 

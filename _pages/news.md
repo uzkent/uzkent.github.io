@@ -154,7 +154,7 @@ redirect_from:
 </div>
 
 <div class="news-item">
-  <p class="news-text"><span class="news-tag tag-paper">Paper</span> One paper submitted to the <strong>3rd CV4Smalls Workshop at CVPR 2026</strong>.</p>
+  <p class="news-text"><span class="news-tag tag-paper">Paper</span> One paper accepted to the <strong>3rd CV4Smalls Workshop at CVPR 2026</strong> as the best paper candidate.</p>
   <div class="news-links"><a href="https://arxiv.org/pdf/2603.19481">arXiv</a></div>
 </div>
 

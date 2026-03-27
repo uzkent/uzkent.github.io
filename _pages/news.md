@@ -1,3 +1,4 @@
+
 ---
 title: ""
 permalink: /news/
@@ -147,7 +148,15 @@ redirect_from:
 
 <div class="news-item">
   <p class="news-text"><span class="news-tag tag-paper">Paper</span> Two papers submitted to <strong>ECCV 2026</strong>.</p>
-  <div class="news-links"><a href="https://arxiv.org/pdf/2510.02262">arXiv</a></div>
+  <div class="news-links">
+    <a href="https://arxiv.org/pdf/2510.02262">arXiv 1</a>
+    <a href="https://arxiv.org/pdf/2603.25145">arXiv 2</a>
+  </div>
+</div>
+
+<div class="news-item">
+  <p class="news-text"><span class="news-tag tag-paper">Paper</span> One paper submitted to the <strong>3rd CV4Smalls Workshop at CVPR 2026</strong>.</p>
+  <div class="news-links"><a href="https://arxiv.org/pdf/2603.19481">arXiv</a></div>
 </div>
 
 <!-- ==================== 2025 ==================== -->
@@ -442,4 +451,3 @@ redirect_from:
 </div>
 
 </div><!-- end timeline -->
-```

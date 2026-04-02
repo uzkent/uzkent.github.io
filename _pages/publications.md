@@ -126,6 +126,15 @@ redirect_from:
   color: #dc2626;
   font-weight: 700;
 }
+.paper-venue .best-paper-tag {
+  color: #d97706;
+  font-weight: 700;
+}
+.paper-venue .under-review-tag {
+  color: #6b7280;
+  font-weight: 600;
+  font-style: italic;
+}
 .paper-title {
   font-size: 0.95rem;
   font-weight: 700;
@@ -164,19 +173,50 @@ redirect_from:
 </div>
 
 <div class="pub-nav">
-  <a href="#conferences">🎤 Conference Papers (29)</a>
+  <a href="#conferences">🎤 Conference Papers (33)</a>
   <a href="#journals">📖 Journal Articles (9)</a>
-  <a href="#preprints">📝 Preprints (5)</a>
+  <a href="#preprints">📝 Preprints (3)</a>
 </div>
 
 <!-- ============================================================ -->
 <!--                     CONFERENCE PAPERS                        -->
 <!-- ============================================================ -->
 
-<h2 class="section-title" id="conferences"><span class="icon">🎤</span> Conference Papers <span class="section-count">(29)</span></h2>
+<h2 class="section-title" id="conferences"><span class="icon">🎤</span> Conference Papers <span class="section-count">(33)</span></h2>
 <div class="section-line"></div>
 
 <div class="timeline">
+
+<div class="year-marker"><span>2026</span></div>
+
+<div class="paper">
+  <div class="paper-venue">ACL 2026 · <span class="under-review-tag">Under Review</span></div>
+  <div class="paper-title">CounterVid: Counterfactual Video Generation for Mitigating Action and Temporal Hallucinations in Video-Language Models</div>
+  <div class="paper-authors">T. Poppi, <span class="me">B. Uzkent</span>, A. Garg, L. Porto, G. Kessler, Y. Yang, M. Cornia, L. Baraldi, R. Cucchiara, F. Schiffers</div>
+  <div class="paper-links"><a href="https://arxiv.org/pdf/2601.04778">arXiv</a></div>
+</div>
+
+<div class="paper">
+  <div class="paper-venue">ECCV 2026 · <span class="under-review-tag">Under Review</span></div>
+  <div class="paper-title">From Frames to Clips: Efficient Key Clip Selection for Long-Form Video Understanding</div>
+  <div class="paper-authors">G. Sun, A. Singhal, <span class="me">B. Uzkent</span>, M. Shah, C. Chen, G. Kessler</div>
+  <div class="paper-links">
+    <a href="https://arxiv.org/pdf/2510.02262">arXiv</a>
+    <a href="https://guangyusun.com/f2c/">Project</a>
+  </div>
+</div>
+
+<div class="paper">
+  <div class="paper-venue">ECCV 2026 · <span class="under-review-tag">Under Review</span></div>
+  <div class="paper-title">[ECCV 2026 Submission 2]</div>
+  <div class="paper-links"><a href="https://arxiv.org/pdf/2603.25145">arXiv</a></div>
+</div>
+
+<div class="paper">
+  <div class="paper-venue">CVPR Workshop 2026 · <span class="best-paper-tag">Best Paper Candidate</span></div>
+  <div class="paper-title">[CV4Smalls Workshop Paper]</div>
+  <div class="paper-links"><a href="https://arxiv.org/pdf/2603.19481">arXiv</a></div>
+</div>
 
 <div class="year-marker"><span>2024</span></div>
 
@@ -184,12 +224,14 @@ redirect_from:
   <div class="paper-venue">WACV 2024</div>
   <div class="paper-title">A Multimodal Benchmark and Improved Architecture for Zero Shot Learning</div>
   <div class="paper-authors">K. Doshi, A. Garg, <span class="me">B. Uzkent</span>, X. Wang, M. Omar</div>
+  <div class="paper-links"><a href="https://openaccess.thecvf.com/content/WACV2024/papers/Doshi_A_Multimodal_Benchmark_and_Improved_Architecture_for_Zero_Shot_Learning_WACV_2024_paper.pdf">PDF</a></div>
 </div>
 
 <div class="paper">
   <div class="paper-venue">WACV 2024</div>
   <div class="paper-title">Augment the Pairs: Semantics-Preserving Image-Caption Pair Augmentation for Grounding-Based Vision and Language Models</div>
   <div class="paper-authors">J. Yi, <span class="me">B. Uzkent</span>, O. Ignat, Z. Li, A. Garg, X. Yu, L. Liu</div>
+  <div class="paper-links"><a href="https://openaccess.thecvf.com/content/WACV2024/papers/Yi_Augment_the_Pairs_Semantics-Preserving_Image-Caption_Pair_Augmentation_for_Grounding-Based_Vision_WACV_2024_paper.pdf">PDF</a></div>
 </div>
 
 <div class="year-marker"><span>2023</span></div>
@@ -204,12 +246,14 @@ redirect_from:
   <div class="paper-venue">AAAI 2023</div>
   <div class="paper-title">GOHSP: A Unified Framework of Graph and Optimization-based Heterogeneous Structured Pruning for Vision Transformer</div>
   <div class="paper-authors">M. Yin, <span class="me">B. Uzkent</span>, Y. Shen, H. Jin</div>
+  <div class="paper-links"><a href="https://arxiv.org/pdf/2301.05345.pdf">PDF</a></div>
 </div>
 
 <div class="paper">
   <div class="paper-venue">ICLR 2023</div>
   <div class="paper-title">Learning to Jointly Share and Prune Weights for Grounding Based Vision and Language Models</div>
   <div class="paper-authors">S. Gao, <span class="me">B. Uzkent</span>, Y. Shen, H. Huang, H. Jin</div>
+  <div class="paper-links"><a href="https://openreview.net/pdf?id=UMERaIHMwB3">PDF</a></div>
 </div>
 
 <div class="year-marker"><span>2022</span></div>
@@ -218,13 +262,17 @@ redirect_from:
   <div class="paper-venue">CVPR Workshop 2022</div>
   <div class="paper-title">Efficient Conditional Pre-training for Transfer Learning</div>
   <div class="paper-authors">S. Chakraborty, <span class="me">B. Uzkent</span>, K. Ayush, E. Sheehan, S. Ermon</div>
-  <div class="paper-links"><a href="https://arxiv.org/abs/2011.10231">arXiv</a></div>
+  <div class="paper-links">
+    <a href="https://openaccess.thecvf.com/content/CVPR2022W/L3D-IVU/papers/Chakraborty_Efficient_Conditional_Pre-Training_for_Transfer_Learning_CVPRW_2022_paper.pdf">PDF</a>
+    <a href="https://arxiv.org/abs/2011.10231">arXiv</a>
+  </div>
 </div>
 
 <div class="paper">
   <div class="paper-venue">CVPR 2022</div>
   <div class="paper-title">Lite-MDETR: A Lightweight Multi-Modal Detector</div>
   <div class="paper-authors">Q. Lu, Y.C. Shu, <span class="me">B. Uzkent</span>, T. Hua, Y. Shen, H. Jin</div>
+  <div class="paper-links"><a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Lou_Lite-MDETR_A_Lightweight_Multi-Modal_Detector_CVPR_2022_paper.pdf">PDF</a></div>
 </div>
 
 <div class="year-marker"><span>2021</span></div>
@@ -254,7 +302,10 @@ redirect_from:
   <div class="paper-venue">AAAI 2021</div>
   <div class="paper-title">Efficient High Resolution Image Processing using Deep Reinforcement Learning</div>
   <div class="paper-authors"><span class="me">B. Uzkent</span>, K. Ayush, M. Burke, D. Lobell, S. Ermon</div>
-  <div class="paper-links"><a href="https://arxiv.org/pdf/2006.04224.pdf">arXiv</a></div>
+  <div class="paper-links">
+    <a href="https://arxiv.org/pdf/2006.04224.pdf">arXiv</a>
+    <a href="https://www.aaai.org/AAAI21Papers/AAAI-10300.AyushK.pdf">PDF</a>
+  </div>
 </div>
 
 <div class="paper">
@@ -264,6 +315,7 @@ redirect_from:
   <div class="paper-links">
     <a href="https://arxiv.org/pdf/2006.08661.pdf">arXiv</a>
     <a href="https://github.com/sustainlab-group/mapillarygcn">Code</a>
+    <a href="https://www.aaai.org/AAAI21Papers/AAAI-10056.LeeJ.pdf">PDF</a>
   </div>
 </div>
 
@@ -287,6 +339,7 @@ redirect_from:
     <a href="https://arxiv.org/pdf/2003.00425.pdf">arXiv</a>
     <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Uzkent_Learning_When_and_Where_to_Zoom_With_Deep_Reinforcement_Learning_CVPR_2020_paper.pdf">PDF</a>
     <a href="https://github.com/ermongroup/PatchDrop">Code</a>
+    <a href="https://www.youtube.com/watch?v=n0HGh2x6Cgg">Video</a>
   </div>
 </div>
 
@@ -296,6 +349,7 @@ redirect_from:
   <div class="paper-authors">H.L. Aung, <span class="me">B. Uzkent</span>, M. Burke, D. Lobell, S. Ermon</div>
   <div class="paper-links">
     <a href="https://openaccess.thecvf.com/content_CVPRW_2020/papers/w5/Aung_Farm_Parcel_Delineation_Using_Spatio-Temporal_Convolutional_Networks_CVPRW_2020_paper.pdf">PDF</a>
+    <a href="https://arxiv.org/pdf/2004.05471.pdf">arXiv</a>
     <a href="https://github.com/sustainlab-group/ParcelDelineation">Code</a>
   </div>
 </div>
@@ -340,8 +394,9 @@ redirect_from:
   <div class="paper-title">Predicting Economic Development using Geolocated Wikipedia Articles</div>
   <div class="paper-authors">E. Sheehan, C. Meng, M. Tan, <span class="me">B. Uzkent</span>, N. Jean, D. Lobell, M. Burke, S. Ermon</div>
   <div class="paper-links">
-    <a href="https://dl.acm.org/citation.cfm?id=3330784">PDF</a>
-    <a href="https://github.com/buzkent86/WikipediaPovertyMapping">Code</a>
+    <a href="https://arxiv.org/pdf/1905.01627.pdf">arXiv</a>
+    <a href="https://dl.acm.org/doi/10.1145/3292500.3330784">PDF</a>
+    <a href="https://github.com/uzkent/WikipediaPovertyMapping">Code</a>
   </div>
 </div>
 
@@ -352,6 +407,7 @@ redirect_from:
   <div class="paper-title">EnKCF: Ensemble of Kernelized Correlation Filters for High-Speed Object Tracking</div>
   <div class="paper-authors"><span class="me">B. Uzkent</span>, Y. Seo</div>
   <div class="paper-links">
+    <a href="https://arxiv.org/pdf/1801.06729.pdf">arXiv</a>
     <a href="https://ieeexplore.ieee.org/document/8354233">PDF</a>
     <a href="https://github.com/buzkent86/EnKCF_Tracking_WACV18">Code</a>
   </div>
@@ -462,9 +518,10 @@ redirect_from:
 <div class="timeline">
 
 <div class="paper">
-  <div class="paper-venue">Earth's Future · 2022</div>
+  <div class="paper-venue">Earth's Future · 2023</div>
   <div class="paper-title">Safe Shelter: A Case for Prioritizing Housing Quality in Climate Adaptation Policy by Remotely Sensing Roof Tarps in the San Francisco Bay Area</div>
   <div class="paper-authors">E. Velterop, <span class="me">B. Uzkent</span>, J. Suckale</div>
+  <div class="paper-links"><a href="https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2022EF002789">PDF</a></div>
 </div>
 
 <div class="paper">
@@ -485,6 +542,7 @@ redirect_from:
   <div class="paper-links">
     <a href="https://ieeexplore.ieee.org/document/7471414">PDF</a>
     <a href="https://github.com/buzkent86/CVPRW17_Paper_code">Code</a>
+    <a href="https://www.youtube.com/watch?v=scRQjEMGSRE">Video</a>
   </div>
 </div>
 
@@ -535,26 +593,15 @@ redirect_from:
 <!--                  PREPRINTS & TECH REPORTS                    -->
 <!-- ============================================================ -->
 
-<h2 class="section-title" id="preprints"><span class="icon">📝</span> Preprints <span class="section-count">(5)</span></h2>
+<h2 class="section-title" id="preprints"><span class="icon">📝</span> Preprints <span class="section-count">(3)</span></h2>
 <div class="section-line"></div>
 
 <div class="timeline">
 
 <div class="paper">
   <div class="paper-venue">arXiv · 2025</div>
-  <div class="paper-title">CounterVid: Counterfactual Video Generation for Mitigating Action and Temporal Hallucinations in Video-Language Models</div>
-  <div class="paper-authors">T. Poppi, <span class="me">B. Uzkent</span>, A. Garg, L. Porto, G. Kessler, Y. Yang, M. Cornia, L. Baraldi, R. Cucchiara, F. Schiffers</div>
-  <div class="paper-links"><a href="https://arxiv.org/abs/2601.04778">arXiv</a></div>
-</div>
-
-<div class="paper">
-  <div class="paper-venue">arXiv · 2025</div>
-  <div class="paper-title">From Frames to Clips: Efficient Key Clip Selection for Long-Form Video Understanding</div>
-  <div class="paper-authors">G. Sun, A. Singhal, <span class="me">B. Uzkent</span>, M. Shah, C. Chen, G. Kessler</div>
-  <div class="paper-links">
-    <a href="https://arxiv.org/abs/2510.02262">arXiv</a>
-    <a href="https://guangyusun.com/f2c/">Project</a>
-  </div>
+  <div class="paper-title">[arXiv Preprint 2603.25145]</div>
+  <div class="paper-links"><a href="https://arxiv.org/pdf/2603.25145">arXiv</a></div>
 </div>
 
 <div class="paper">
@@ -562,13 +609,6 @@ redirect_from:
   <div class="paper-title">Domain Adaptation Using Adversarial Learning for Studying Low Resolution Images</div>
   <div class="paper-authors"><span class="me">B. Uzkent</span>, S. Ermon</div>
   <div class="paper-links"><a href="https://www.researchgate.net/publication/341030568_Adversarial_Domain_Adaptation_for_Analyzing_Low_Resolution_Images">ResearchGate</a></div>
-</div>
-
-<div class="paper">
-  <div class="paper-venue">arXiv</div>
-  <div class="paper-title">Learning to Interpret Satellite Images in Global Scale Using Wikipedia</div>
-  <div class="paper-authors"><span class="me">B. Uzkent</span>, E. Sheehan, C. Meng, Z. Tang, M. Burke, D. Lobell, S. Ermon</div>
-  <div class="paper-links"><a href="https://arxiv.org/pdf/1905.02506.pdf">arXiv</a></div>
 </div>
 
 <div class="paper">

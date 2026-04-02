@@ -175,7 +175,7 @@ redirect_from:
 <div class="pub-nav">
   <a href="#conferences">🎤 Conference Papers (33)</a>
   <a href="#journals">📖 Journal Articles (9)</a>
-  <a href="#preprints">📝 Preprints (3)</a>
+  <a href="#preprints">📝 Preprints (2)</a>
 </div>
 
 <!-- ============================================================ -->
@@ -208,13 +208,15 @@ redirect_from:
 
 <div class="paper">
   <div class="paper-venue">ECCV 2026 · <span class="under-review-tag">Under Review</span></div>
-  <div class="paper-title">[ECCV 2026 Submission 2]</div>
+  <div class="paper-title">Learning to Rank Caption Chains for Video-Text Alignment</div>
+  <div class="paper-authors">A. Blume, <span class="me">B. Uzkent</span>, S. Chaudhuri, G. Kessler</div>
   <div class="paper-links"><a href="https://arxiv.org/pdf/2603.25145">arXiv</a></div>
 </div>
 
 <div class="paper">
   <div class="paper-venue">CVPR Workshop 2026 · <span class="best-paper-tag">Best Paper Candidate</span></div>
-  <div class="paper-title">[CV4Smalls Workshop Paper]</div>
+  <div class="paper-title">Narrative Aligned Long Form Video Question Answering</div>
+  <div class="paper-authors">R. Jain, K. Doshi, <span class="me">B. Uzkent</span>, G. Kessler</div>
   <div class="paper-links"><a href="https://arxiv.org/pdf/2603.19481">arXiv</a></div>
 </div>
 
@@ -240,6 +242,7 @@ redirect_from:
   <div class="paper-venue">CVPR 2023</div>
   <div class="paper-title">Dynamic Inference with Grounding Based Vision and Language Models</div>
   <div class="paper-authors"><span class="me">B. Uzkent</span>, A. Garg, W. Zhou, K. Doshi, J. Yi, X. Wang, M. Omar</div>
+  <div class="paper-links"><a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Uzkent_Dynamic_Inference_With_Grounding_Based_Vision_and_Language_Models_CVPR_2023_paper.pdf">PDF</a></div>
 </div>
 
 <div class="paper">
@@ -593,16 +596,10 @@ redirect_from:
 <!--                  PREPRINTS & TECH REPORTS                    -->
 <!-- ============================================================ -->
 
-<h2 class="section-title" id="preprints"><span class="icon">📝</span> Preprints <span class="section-count">(3)</span></h2>
+<h2 class="section-title" id="preprints"><span class="icon">📝</span> Preprints <span class="section-count">(2)</span></h2>
 <div class="section-line"></div>
 
 <div class="timeline">
-
-<div class="paper">
-  <div class="paper-venue">arXiv · 2025</div>
-  <div class="paper-title">[arXiv Preprint 2603.25145]</div>
-  <div class="paper-links"><a href="https://arxiv.org/pdf/2603.25145">arXiv</a></div>
-</div>
 
 <div class="paper">
   <div class="paper-venue">Preprint</div>

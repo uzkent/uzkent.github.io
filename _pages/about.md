@@ -183,7 +183,7 @@ redirect_from:
 
 <div class="hero-card">
   <p>
-    I am a <strong>Principal Member of Staff</strong> at <strong>AMD</strong>, where I work on machine learning and AI since April 2026.
+    I am a <strong>Principal Member of Staff</strong> at <strong>AMD</strong>, where I work on the applications of <strong>Generative AI</strong> on <strong>AMD hardware</strong> since April 2026.
   </p>
   <p>
     Previously, I was a <strong>Machine Learning Scientist</strong> at <strong>Amazon Prime Video</strong>, where I developed <em>Video-Language Foundational Models</em> that bridge visual and linguistic understanding at scale.
@@ -247,7 +247,7 @@ redirect_from:
       <span class="timeline-date">Apr 2026 – Present</span>
       <div class="timeline-role">Principal Member of Staff</div>
       <div class="timeline-org">AMD</div>
-      <div class="timeline-desc">Machine Learning &amp; AI</div>
+      <div class="timeline-desc">Applications of Generative AI on AMD hardware</div>
     </div>
   </div>
 

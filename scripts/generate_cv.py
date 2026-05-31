@@ -94,7 +94,7 @@ def build_pages_1_2() -> None:
         pdf.epw,
         5,
         (
-            "Principal Member of Staff with 10+ years of experience developing and deploying "
+            "Principal Member of Technical Staff with 10+ years of experience developing and deploying "
             "large-scale machine learning systems. Specialized in generative AI, computer vision, "
             "multimodal and video-language modeling, and efficient transformer architectures. "
             "Published 40+ papers in top-tier venues (CVPR, ICCV, ICLR, NeurIPS, AAAI, EMNLP) "
@@ -106,13 +106,14 @@ def build_pages_1_2() -> None:
     add_heading(pdf, "PROFESSIONAL EXPERIENCE")
     add_role(
         pdf,
-        "Principal Member of Staff",
+        "Principal Member of Technical Staff",
         "April 2026 - Present",
         "AMD",
         "Santa Clara, CA",
         [
             "Work on applications of Generative AI on AMD hardware",
             "Develop and evaluate ML systems optimized for AMD accelerators and platforms",
+            "Hiring for full-time positions at all levels",
         ],
     )
     add_role(

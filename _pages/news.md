@@ -141,7 +141,7 @@ redirect_from:
 <div class="year-marker"><span>2026</span></div>
 
 <div class="news-item highlight">
-  <p class="news-text"><span class="news-tag tag-career">Career</span> Joined <strong>AMD</strong> as a Principal Member of Staff.</p>
+  <p class="news-text"><span class="news-tag tag-career">Career</span> Joined <strong>AMD</strong> as a Principal Member of Technical Staff. We are hiring for full-time positions at all levels.</p>
 </div>
 
 <div class="news-item">

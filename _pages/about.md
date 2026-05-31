@@ -41,6 +41,17 @@ redirect_from:
     line-height: 1.75;
   }
   .hero-card p { margin: .55rem 0; }
+  .hiring-note {
+    margin-top: 0.85rem;
+    padding: 0.75rem 1rem;
+    background: #fff8e6;
+    border: 1px solid #f0d78c;
+    border-left: 4px solid #d97706;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #78350f;
+    line-height: 1.55;
+  }
 
   /* ── timeline ── */
   .timeline { position: relative; padding-left: 28px; margin: .6rem 0 2rem; }
@@ -211,7 +222,10 @@ redirect_from:
 
 <div class="hero-card">
   <p>
-    I am a <strong>Principal Member of Staff</strong> at <strong>AMD</strong>, where I work on the applications of <strong>Generative AI</strong> on <strong>AMD hardware</strong> since April 2026.
+    I am a <strong>Principal Member of Technical Staff</strong> at <strong>AMD</strong>, where I work on the applications of <strong>Generative AI</strong> on <strong>AMD hardware</strong> since April 2026.
+  </p>
+  <p class="hiring-note">
+    <strong>Note:</strong> We are hiring for full-time positions at all levels.
   </p>
   <p>
     Previously, I was a <strong>Machine Learning Scientist</strong> at <strong>Amazon Prime Video</strong>, where I developed <em>Video-Language Foundational Models</em> that bridge visual and linguistic understanding at scale.
@@ -273,11 +287,11 @@ redirect_from:
     <img class="timeline-logo" src="/images/logos/amd.svg" alt="AMD logo" width="52" height="52" loading="lazy">
     <div class="timeline-content">
       <div class="timeline-header">
-        <div class="timeline-role">Principal Member of Staff</div>
+        <div class="timeline-role">Principal Member of Technical Staff</div>
         <span class="timeline-date">Apr 2026 – Present</span>
       </div>
       <div class="timeline-org">AMD</div>
-      <div class="timeline-desc">Applications of Generative AI on AMD hardware</div>
+      <div class="timeline-desc">Applications of Generative AI on AMD hardware. We are hiring for full-time positions at all levels.</div>
     </div>
   </div>
 

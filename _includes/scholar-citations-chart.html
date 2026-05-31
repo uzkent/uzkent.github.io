@@ -1,0 +1,110 @@
+{% assign sc = site.data.scholar_citations %}
+{% if sc and sc.years and sc.counts %}
+<section class="scholar-metrics" aria-labelledby="scholar-metrics-title">
+  <h2 id="scholar-metrics-title" class="scholar-metrics-title">📈 Google Scholar Citations</h2>
+  <div class="scholar-metrics-line"></div>
+
+  <div class="scholar-metrics-grid">
+    <div class="scholar-stat">
+      <div class="scholar-stat-value">{{ sc.total | default: 0 }}</div>
+      <div class="scholar-stat-label">Total citations</div>
+    </div>
+    <div class="scholar-stat">
+      <div class="scholar-stat-value">{{ sc.h_index | default: "—" }}</div>
+      <div class="scholar-stat-label">h-index</div>
+    </div>
+    <div class="scholar-stat">
+      <div class="scholar-stat-value">{{ sc.i10_index | default: "—" }}</div>
+      <div class="scholar-stat-label">i10-index</div>
+    </div>
+  </div>
+
+  <div class="scholar-chart-wrap">
+    <canvas id="scholarCitationsChart" aria-label="Citations per year from Google Scholar"></canvas>
+  </div>
+
+  <p class="scholar-metrics-foot">
+    Citations received per calendar year (from
+    <a href="{{ sc.profile_url | default: site.author.googlescholar }}" target="_blank" rel="noopener">Google Scholar</a>).
+    {% if sc.updated %}Last updated {{ sc.updated }}.{% endif %}
+  </p>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script>
+(function () {
+  var years = {{ sc.years | jsonify }};
+  var counts = {{ sc.counts | jsonify }};
+  var cumulative = [];
+  var sum = 0;
+  for (var i = 0; i < counts.length; i++) {
+    sum += counts[i];
+    cumulative.push(sum);
+  }
+
+  var ctx = document.getElementById('scholarCitationsChart');
+  if (!ctx || typeof Chart === 'undefined') return;
+
+  new Chart(ctx, {
+    data: {
+      labels: years.map(String),
+      datasets: [
+        {
+          type: 'bar',
+          label: 'Citations per year',
+          data: counts,
+          backgroundColor: 'rgba(37, 99, 235, 0.55)',
+          borderColor: 'rgba(37, 99, 235, 1)',
+          borderWidth: 1,
+          borderRadius: 4,
+          yAxisID: 'y'
+        },
+        {
+          type: 'line',
+          label: 'Cumulative citations',
+          data: cumulative,
+          borderColor: 'rgba(15, 118, 110, 1)',
+          backgroundColor: 'rgba(15, 118, 110, 0.08)',
+          borderWidth: 2,
+          pointRadius: 3,
+          tension: 0.25,
+          yAxisID: 'y1'
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { position: 'top' },
+        tooltip: {
+          callbacks: {
+            label: function (item) {
+              return item.dataset.label + ': ' + item.parsed.y.toLocaleString();
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          title: { display: true, text: 'Year' },
+          grid: { display: false }
+        },
+        y: {
+          position: 'left',
+          title: { display: true, text: 'Citations / year' },
+          beginAtZero: true
+        },
+        y1: {
+          position: 'right',
+          title: { display: true, text: 'Cumulative' },
+          beginAtZero: true,
+          grid: { drawOnChartArea: false }
+        }
+      }
+    }
+  });
+})();
+</script>
+{% endif %}

@@ -1,0 +1,9 @@
+# Google Scholar citation metrics (user=-Es6xrgAAAAJ)
+# Regenerate: python3 scripts/update_scholar_citations.py
+updated: "2026-05-31"
+total: 2417
+h_index: 23
+i10_index: 30
+profile_url: "https://scholar.google.com/citations?user=-Es6xrgAAAAJ&hl=en"
+years: [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
+counts: [11, 6, 10, 29, 27, 34, 57, 57, 161, 242, 347, 385, 423, 439, 170]

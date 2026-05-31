@@ -164,6 +164,62 @@ redirect_from:
   font-weight: 600;
 }
 .paper-links a:hover { text-decoration: underline; }
+
+/* Google Scholar metrics */
+.scholar-metrics {
+  margin: 0 0 2.5rem 0;
+  padding: 1.25rem 1.35rem 1.1rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+.scholar-metrics-title {
+  font-size: 1.35rem;
+  margin: 0 0 0.35rem 0;
+  color: #1a1a1a;
+}
+.scholar-metrics-line {
+  width: 100px;
+  height: 3px;
+  background: #2563eb;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+.scholar-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.scholar-stat {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.65rem 0.85rem;
+  text-align: center;
+}
+.scholar-stat-value {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #2563eb;
+  line-height: 1.2;
+}
+.scholar-stat-label {
+  font-size: 0.78rem;
+  color: #6b7280;
+  margin-top: 0.15rem;
+}
+.scholar-chart-wrap {
+  position: relative;
+  height: 320px;
+  max-width: 100%;
+}
+.scholar-metrics-foot {
+  margin: 0.75rem 0 0;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+.scholar-metrics-foot a { color: #2563eb; font-weight: 600; }
 </style>
 
 <div class="pub-header">
@@ -173,10 +229,13 @@ redirect_from:
 </div>
 
 <div class="pub-nav">
+  <a href="#scholar-metrics-title">📈 Citations</a>
   <a href="#conferences">🎤 Conference Papers (33)</a>
   <a href="#journals">📖 Journal Articles (9)</a>
   <a href="#preprints">📝 Preprints (2)</a>
 </div>
+
+{% include scholar-citations-chart.html %}
 
 <!-- ============================================================ -->
 <!--                     CONFERENCE PAPERS                        -->

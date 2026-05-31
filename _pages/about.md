@@ -79,6 +79,20 @@ redirect_from:
   .timeline-content {
     flex: 1;
     min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.15rem;
+  }
+  .timeline-header .timeline-role {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
   }
   .timeline-item:hover {
     transform: translateY(-2px);
@@ -104,15 +118,29 @@ redirect_from:
     font-weight: 600;
   }
   .timeline-date {
-    float: right;
-    font-size: .85rem;
+    flex-shrink: 0;
+    font-size: .82rem;
     color: #777;
     font-style: italic;
+    text-align: right;
+    line-height: 1.35;
+    max-width: 9.5rem;
   }
   .timeline-desc {
-    margin-top: .4rem;
+    margin-top: .35rem;
     font-size: .93rem;
     color: #444;
+    line-height: 1.5;
+  }
+  @media (max-width: 520px) {
+    .timeline-header {
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+    .timeline-date {
+      text-align: left;
+      max-width: none;
+    }
   }
 
   /* ── education cards ── */
@@ -244,8 +272,10 @@ redirect_from:
   <div class="timeline-item">
     <img class="timeline-logo" src="/images/logos/amd.svg" alt="AMD logo" width="52" height="52" loading="lazy">
     <div class="timeline-content">
-      <span class="timeline-date">Apr 2026 – Present</span>
-      <div class="timeline-role">Principal Member of Staff</div>
+      <div class="timeline-header">
+        <div class="timeline-role">Principal Member of Staff</div>
+        <span class="timeline-date">Apr 2026 – Present</span>
+      </div>
       <div class="timeline-org">AMD</div>
       <div class="timeline-desc">Applications of Generative AI on AMD hardware</div>
     </div>
@@ -254,8 +284,10 @@ redirect_from:
   <div class="timeline-item">
     <img class="timeline-logo" src="/images/logos/amazon.svg" alt="Amazon logo" width="52" height="52" loading="lazy">
     <div class="timeline-content">
-      <span class="timeline-date">Apr 2022 – Mar 2026</span>
-      <div class="timeline-role">Machine Learning Scientist</div>
+      <div class="timeline-header">
+        <div class="timeline-role">Machine Learning Scientist</div>
+        <span class="timeline-date">Apr 2022 – Mar 2026</span>
+      </div>
       <div class="timeline-org">Amazon Prime Video</div>
       <div class="timeline-desc">Video-Language Foundational Models</div>
     </div>
@@ -264,8 +296,10 @@ redirect_from:
   <div class="timeline-item">
     <img class="timeline-logo" src="/images/logos/samsung.svg" alt="Samsung logo" width="52" height="52" loading="lazy">
     <div class="timeline-content">
-      <span class="timeline-date">Nov 2020 – Apr 2022</span>
-      <div class="timeline-role">Sr. Research Scientist</div>
+      <div class="timeline-header">
+        <div class="timeline-role">Sr. Research Scientist</div>
+        <span class="timeline-date">Nov 2020 – Apr 2022</span>
+      </div>
       <div class="timeline-org">Samsung Research America</div>
       <div class="timeline-desc">Vision Transformer Compression · Multimodal Understanding</div>
     </div>
@@ -274,8 +308,10 @@ redirect_from:
   <div class="timeline-item">
     <img class="timeline-logo" src="/images/logos/stanford.png" alt="Stanford University logo" width="52" height="52" loading="lazy">
     <div class="timeline-content">
-      <span class="timeline-date">Jul 2018 – Oct 2020</span>
-      <div class="timeline-role">Postdoctoral Research Fellow</div>
+      <div class="timeline-header">
+        <div class="timeline-role">Postdoctoral Research Fellow</div>
+        <span class="timeline-date">Jul 2018 – Oct 2020</span>
+      </div>
       <div class="timeline-org">Stanford University — Stanford AI Lab</div>
       <div class="timeline-desc">Self-Supervised Learning · Dynamic Models · Generative Models · Computational Sustainability</div>
     </div>
@@ -284,8 +320,10 @@ redirect_from:
   <div class="timeline-item">
     <img class="timeline-logo" src="/images/logos/planet.png" alt="Planet Labs logo" width="52" height="52" loading="lazy">
     <div class="timeline-content">
-      <span class="timeline-date">Jun 2017 – Jul 2018</span>
-      <div class="timeline-role">Computer Vision Engineer</div>
+      <div class="timeline-header">
+        <div class="timeline-role">Computer Vision Engineer</div>
+        <span class="timeline-date">Jun 2017 – Jul 2018</span>
+      </div>
       <div class="timeline-org">Planet Labs</div>
       <div class="timeline-desc">Convolutional Object Detection in Low-Resolution Aerial Imagery</div>
     </div>
@@ -294,8 +332,10 @@ redirect_from:
   <div class="timeline-item">
     <img class="timeline-logo" src="/images/logos/autel.png" alt="Autel Robotics logo" width="52" height="52" loading="lazy">
     <div class="timeline-content">
-      <span class="timeline-date">Aug 2016 – Jun 2017</span>
-      <div class="timeline-role">Computer Vision Engineer</div>
+      <div class="timeline-header">
+        <div class="timeline-role">Computer Vision Engineer</div>
+        <span class="timeline-date">Aug 2016 – Jun 2017</span>
+      </div>
       <div class="timeline-org">Autel Robotics</div>
       <div class="timeline-desc">High-Speed Object Tracking on Low-End Embedded Systems</div>
     </div>
@@ -304,8 +344,10 @@ redirect_from:
   <div class="timeline-item">
     <img class="timeline-logo" src="/images/logos/huawei.svg" alt="Huawei logo" width="52" height="52" loading="lazy">
     <div class="timeline-content">
-      <span class="timeline-date">Nov 2015 – May 2016</span>
-      <div class="timeline-role">Computer Vision Algorithm Engineer Intern</div>
+      <div class="timeline-header">
+        <div class="timeline-role">Computer Vision Algorithm Engineer Intern</div>
+        <span class="timeline-date">Nov 2015 – May 2016</span>
+      </div>
       <div class="timeline-org">Huawei R&amp;D</div>
       <div class="timeline-desc">Unsupervised Semantic Role Assignment in Photo Albums</div>
     </div>

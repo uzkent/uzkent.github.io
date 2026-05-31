@@ -27,10 +27,21 @@ def add_heading(pdf: CVPDF, title: str):
     pdf.ln(2)
     pdf.set_font("Helvetica", "B", 11)
     pdf.set_text_color(0, 80, 160)
-    pdf.cell(0, 7, title, new_x="LMARGIN", new_y="NEXT")
+    pdf.cell(pdf.epw, 7, title, new_x="LMARGIN", new_y="NEXT")
     pdf.set_draw_color(0, 80, 160)
     pdf.line(pdf.l_margin, pdf.get_y(), pdf.w - pdf.r_margin, pdf.get_y())
     pdf.ln(3)
+
+
+def write_wrapped(pdf: FPDF, text: str, line_h: float = 5, style: str = "") -> None:
+    pdf.set_x(pdf.l_margin)
+    if style == "bold":
+        pdf.set_font("Helvetica", "B", 10.5)
+    elif style == "italic":
+        pdf.set_font("Helvetica", "I", 9.5)
+    else:
+        pdf.set_font("Helvetica", "", 9.5)
+    pdf.multi_cell(pdf.epw, line_h, text)
 
 
 def add_role(
@@ -41,47 +52,46 @@ def add_role(
     location: str,
     bullets: list[str],
 ):
-    pdf.set_font("Helvetica", "B", 10.5)
     pdf.set_text_color(20, 20, 20)
-    pdf.cell(130, 6, role)
-    pdf.set_font("Helvetica", "I", 9.5)
+    write_wrapped(pdf, role, line_h=5.5, style="bold")
     pdf.set_text_color(80, 80, 80)
-    pdf.cell(0, 6, dates, align="R", new_x="LMARGIN", new_y="NEXT")
+    write_wrapped(pdf, dates, line_h=4.8, style="italic")
     pdf.set_font("Helvetica", "", 10)
     pdf.set_text_color(0, 80, 160)
-    pdf.cell(0, 5, f"{org}  |  {location}", new_x="LMARGIN", new_y="NEXT")
+    write_wrapped(pdf, f"{org}  |  {location}", line_h=5)
     pdf.set_text_color(30, 30, 30)
     pdf.set_font("Helvetica", "", 9.5)
     for bullet in bullets:
         pdf.set_x(pdf.l_margin)
-        pdf.multi_cell(pdf.epw, 4.8, f"  - {bullet}")
+        pdf.multi_cell(pdf.epw, 4.8, f"- {bullet}")
     pdf.ln(1.5)
 
 
 def build_pages_1_2() -> None:
     pdf = CVPDF()
-    pdf.set_auto_page_break(auto=True, margin=18)
+    pdf.set_margins(18, 18, 18)
+    pdf.set_auto_page_break(auto=True, margin=20)
     pdf.add_page()
 
     pdf.set_font("Helvetica", "B", 16)
     pdf.set_text_color(0, 0, 0)
-    pdf.cell(0, 9, "BURAK UZKENT, Ph.D.", new_x="LMARGIN", new_y="NEXT")
+    pdf.cell(pdf.epw, 9, "BURAK UZKENT, Ph.D.", new_x="LMARGIN", new_y="NEXT")
     pdf.set_font("Helvetica", "", 9.5)
     pdf.set_text_color(50, 50, 50)
-    pdf.cell(
-        0,
-        5,
+    pdf.set_x(pdf.l_margin)
+    pdf.multi_cell(
+        pdf.epw,
+        4.8,
         "Santa Clara, CA  |  +1-650-861-8068  |  uzkent.burak@gmail.com  |  uzkent.github.io",
-        new_x="LMARGIN",
-        new_y="NEXT",
     )
     pdf.ln(2)
 
     add_heading(pdf, "PROFESSIONAL SUMMARY")
     pdf.set_font("Helvetica", "", 9.8)
     pdf.set_text_color(30, 30, 30)
+    pdf.set_x(pdf.l_margin)
     pdf.multi_cell(
-        0,
+        pdf.epw,
         5,
         (
             "Principal Member of Staff with 10+ years of experience developing and deploying "
@@ -211,21 +221,18 @@ def build_pages_1_2() -> None:
             "Advisor: Osman Parlaktuna, Ph.D.",
         ),
     ]
-    pdf.set_font("Helvetica", "B", 10)
     for inst, years, degree, thesis, advisor in entries:
         pdf.set_text_color(20, 20, 20)
-        pdf.cell(130, 5, inst)
-        pdf.set_font("Helvetica", "I", 9)
+        write_wrapped(pdf, inst, line_h=5, style="bold")
         pdf.set_text_color(80, 80, 80)
-        pdf.cell(0, 5, years, align="R", new_x="LMARGIN", new_y="NEXT")
-        pdf.set_font("Helvetica", "", 9.5)
+        write_wrapped(pdf, years, line_h=4.5, style="italic")
         pdf.set_text_color(30, 30, 30)
-        pdf.cell(0, 4.5, degree, new_x="LMARGIN", new_y="NEXT")
+        write_wrapped(pdf, degree, line_h=4.5)
         pdf.set_font("Helvetica", "I", 9)
-        pdf.multi_cell(0, 4.5, thesis)
-        pdf.cell(0, 4.5, advisor, new_x="LMARGIN", new_y="NEXT")
+        pdf.set_x(pdf.l_margin)
+        pdf.multi_cell(pdf.epw, 4.5, thesis)
+        write_wrapped(pdf, advisor, line_h=4.5)
         pdf.ln(1)
-        pdf.set_font("Helvetica", "B", 10)
 
     add_heading(pdf, "RESEARCH EXPERIENCE")
     add_role(
@@ -247,7 +254,8 @@ def build_pages_1_2() -> None:
 
 def build_page_6() -> Path:
     pdf = FPDF()
-    pdf.set_auto_page_break(auto=True, margin=18)
+    pdf.set_margins(18, 18, 18)
+    pdf.set_auto_page_break(auto=True, margin=20)
     pdf.add_page()
     pdf.set_font("Helvetica", "B", 9)
     pdf.set_text_color(120, 120, 120)
@@ -274,8 +282,9 @@ def build_page_6() -> Path:
 
     add_heading(pdf, "PROFESSIONAL SERVICE")
     pdf.set_font("Helvetica", "", 9.5)
+    pdf.set_x(pdf.l_margin)
     pdf.multi_cell(
-        0,
+        pdf.epw,
         5,
         "Peer Reviewer: IEEE TGRS, IEEE TIFS, NeurIPS, WACV, ICCV, BMVC, IEEE TIP, ICML, ICLR, CVPR, "
         "IEEE Sensors Journal, Nature Machine Intelligence, IEEE Access",

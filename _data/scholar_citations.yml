@@ -7,3 +7,21 @@ i10_index: 30
 profile_url: "https://scholar.google.com/citations?user=-Es6xrgAAAAJ&hl=en"
 years: [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
 counts: [11, 6, 10, 29, 27, 34, 57, 57, 161, 242, 347, 385, 423, 439, 170]
+# Conference/workshop venues with publications that year (from publications page)
+venues_by_year:
+  2009: ["METU"]
+  2010: ["EURO"]
+  2011: ["IEEE ITNG"]
+  2013: ["ICCS"]
+  2014: ["IEEE WNYIPW"]
+  2015: ["ICCS", "SPIE"]
+  2016: ["CVPR Workshop"]
+  2017: ["CVPR Workshop"]
+  2018: ["WACV"]
+  2019: ["IJCAI", "KDD"]
+  2020: ["IJCAI", "CVPR", "CVPR Workshop", "WACV"]
+  2021: ["ICCV", "ICLR", "AAAI"]
+  2022: ["CVPR Workshop", "CVPR"]
+  2023: ["CVPR", "AAAI", "ICLR"]
+  2024: ["WACV"]
+  2026: ["EMNLP", "ECCV", "CVPR Workshop"]

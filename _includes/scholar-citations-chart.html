@@ -26,6 +26,7 @@
   <p class="scholar-metrics-foot">
     Citations received per calendar year (from
     <a href="{{ sc.profile_url | default: site.author.googlescholar }}" target="_blank" rel="noopener">Google Scholar</a>).
+    Bar labels list conference and workshop venues with publications that year.
     {% if sc.updated %}Last updated {{ sc.updated }}.{% endif %}
   </p>
 </section>
@@ -35,6 +36,7 @@
 (function () {
   var years = {{ sc.years | jsonify }};
   var counts = {{ sc.counts | jsonify }};
+  var venuesByYear = {{ sc.venues_by_year | default: "{}" | jsonify }};
   var cumulative = [];
   var sum = 0;
   for (var i = 0; i < counts.length; i++) {
@@ -42,12 +44,23 @@
     cumulative.push(sum);
   }
 
+  function venuesForYear(year) {
+    var key = String(year);
+    return venuesByYear[key] || venuesByYear[year] || [];
+  }
+
+  function barLabel(year) {
+    var venues = venuesForYear(year);
+    if (!venues.length) return String(year);
+    return String(year) + '\n' + venues.join(', ');
+  }
+
   var ctx = document.getElementById('scholarCitationsChart');
   if (!ctx || typeof Chart === 'undefined') return;
 
   new Chart(ctx, {
     data: {
-      labels: years.map(String),
+      labels: years.map(barLabel),
       datasets: [
         {
           type: 'bar',
@@ -75,21 +88,36 @@
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      layout: { padding: { bottom: 4 } },
       interaction: { mode: 'index', intersect: false },
       plugins: {
         legend: { position: 'top' },
         tooltip: {
           callbacks: {
+            title: function (items) {
+              return 'Year ' + years[items[0].dataIndex];
+            },
             label: function (item) {
               return item.dataset.label + ': ' + item.parsed.y.toLocaleString();
+            },
+            afterBody: function (items) {
+              var venues = venuesForYear(years[items[0].dataIndex]);
+              if (!venues.length) return ['No conference papers listed for this year'];
+              return ['Published at: ' + venues.join(', ')];
             }
           }
         }
       },
       scales: {
         x: {
-          title: { display: true, text: 'Year' },
-          grid: { display: false }
+          title: { display: true, text: 'Year · conference venues published' },
+          grid: { display: false },
+          ticks: {
+            autoSkip: false,
+            maxRotation: 0,
+            minRotation: 0,
+            font: { size: 8.5, lineHeight: 1.25 }
+          }
         },
         y: {
           position: 'left',

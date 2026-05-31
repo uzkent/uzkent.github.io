@@ -211,7 +211,7 @@ redirect_from:
 }
 .scholar-chart-wrap {
   position: relative;
-  height: 320px;
+  height: 400px;
   max-width: 100%;
 }
 .scholar-metrics-foot {

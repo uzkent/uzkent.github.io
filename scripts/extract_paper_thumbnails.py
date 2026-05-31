@@ -13,6 +13,7 @@ import urllib.request
 from pathlib import Path
 
 import fitz
+from PIL import Image, ImageChops
 
 ROOT = Path(__file__).resolve().parents[1]
 PUB_MD = ROOT / "_pages" / "publications.md"
@@ -165,8 +166,48 @@ def download_pdf(url: str, dest: Path, *, force: bool = False) -> bool:
         return False
 
 
+def trim_white_borders(img: Image.Image) -> Image.Image:
+    img = img.convert("RGB")
+    bg = Image.new("RGB", img.size, (255, 255, 255))
+    bbox = ImageChops.difference(img, bg).getbbox()
+    return img.crop(bbox) if bbox else img
+
+
+def trim_bottom_text_band(img: Image.Image) -> Image.Image:
+    """Drop caption / paragraph rows often left below the figure in page renders."""
+    gray = img.convert("L")
+    w, h = gray.size
+    if h < 48:
+        return img
+
+    step = max(1, w // 100)
+    rows: list[float] = []
+    px = gray.load()
+    for y in range(h):
+        dark = sum(1 for x in range(0, w, step) if px[x, y] < 215)
+        rows.append(dark / max(1, (w + step - 1) // step))
+
+    cut = h
+    text_run = 0
+    scan_from = max(0, int(h * 0.55))
+    for y in range(h - 1, scan_from, -1):
+        ink = rows[y]
+        if 0.025 <= ink <= 0.38:
+            text_run += 1
+            if text_run >= 4:
+                cut = y
+        elif text_run >= 4:
+            break
+        else:
+            text_run = 0
+
+    if cut < h - 10:
+        return img.crop((0, 0, w, max(32, cut - 4)))
+    return img
+
+
 def save_pixmap_jpeg(pix: fitz.Pixmap, out_path: Path, width: int) -> None:
-    img = pix.pil_image()
+    img = trim_bottom_text_band(trim_white_borders(pix.pil_image()))
     if img.width > width:
         h = max(1, int(img.height * width / img.width))
         img = img.resize((width, h))
@@ -232,21 +273,71 @@ def figure_page_index(doc: fitz.Document) -> int:
     return 1 if len(doc) > 1 else 0
 
 
-def render_workflow_clip(page: fitz.Page, bbox: fitz.Rect | None = None) -> fitz.Pixmap:
+def shrink_clip_above_caption(page: fitz.Page, bbox: fitz.Rect) -> fitz.Rect:
+    """Do not extend crop below the figure into caption / body text."""
+    clip = fitz.Rect(bbox)
+    caption_y = None
+    for block in page.get_text("blocks"):
+        if block[6] != 0:
+            continue
+        block_rect = fitz.Rect(block[:4])
+        if block_rect.y0 < clip.y1 - 4:
+            continue
+        if block_rect.y0 > clip.y1 + 140:
+            continue
+        if block_rect.x1 <= clip.x0 + 15 or block_rect.x0 >= clip.x1 - 15:
+            continue
+        caption_y = block_rect.y0 if caption_y is None else min(caption_y, block_rect.y0)
+    if caption_y is not None:
+        clip.y1 = min(clip.y1, caption_y - 3)
+    return clip
+
+
+def figure_clip_rect(page: fitz.Page, bbox: fitz.Rect) -> fitz.Rect:
+    """Tight crop around the figure only (minimal padding, no room for captions)."""
     rect = page.rect
+    clip = shrink_clip_above_caption(page, fitz.Rect(bbox))
+    pad_x = max(3.0, clip.width * 0.012)
+    pad_top = max(3.0, clip.height * 0.015)
+    clip.x0 = max(rect.x0, clip.x0 - pad_x)
+    clip.x1 = min(rect.x1, clip.x1 + pad_x)
+    clip.y0 = max(rect.y0, clip.y0 - pad_top)
+    clip.y1 = min(rect.y1, clip.y1)  # never pad below — captions sit under the figure
+    if clip.width < 40 or clip.height < 40:
+        return fitz.Rect(bbox)
+    return clip
+
+
+def largest_figure_bbox_on_page(page: fitz.Page, page_no: int) -> fitz.Rect | None:
+    best: fitz.Rect | None = None
+    best_score = -1e9
+    try:
+        infos = page.get_image_info(xrefs=True)
+    except Exception:
+        infos = []
+    for info in infos:
+        bbox = fitz.Rect(info["bbox"])
+        w, h = bbox.width, bbox.height
+        if w < 80 or h < 60:
+            continue
+        sc = score_workflow_image(int(w), int(h), page_no, int(w * h))
+        if sc > best_score:
+            best_score = sc
+            best = bbox
+    return best
+
+
+def render_figure_clip(page: fitz.Page, bbox: fitz.Rect | None, page_no: int = 1) -> fitz.Pixmap:
+    rect = page.rect
+    if bbox is None:
+        bbox = largest_figure_bbox_on_page(page, page_no)
     if bbox is not None and bbox.width > 80 and bbox.height > 60:
-        clip = fitz.Rect(bbox)
-        pad_x = max(12.0, clip.width * 0.04)
-        pad_y = max(12.0, clip.height * 0.06)
-        clip.x0 = max(rect.x0, clip.x0 - pad_x)
-        clip.y0 = max(rect.y0, clip.y0 - pad_y)
-        clip.x1 = min(rect.x1, clip.x1 + pad_x)
-        clip.y1 = min(rect.y1, clip.y1 + pad_y)
+        clip = figure_clip_rect(page, bbox)
     else:
-        y0 = rect.y0 + 55
-        y1 = rect.y0 + rect.height * 0.56
-        clip = fitz.Rect(rect.x0 + 28, y0, rect.x1 - 28, y1)
-    mat = fitz.Matrix(1.6, 1.6)
+        y0 = rect.y0 + 60
+        y1 = rect.y0 + rect.height * 0.38
+        clip = fitz.Rect(rect.x0 + 36, y0, rect.x1 - 36, y1)
+    mat = fitz.Matrix(2.0, 2.0)
     return page.get_pixmap(matrix=mat, clip=clip, alpha=False)
 
 
@@ -319,24 +410,39 @@ def extract_thumbnail(pdf_path: Path, out_path: Path) -> bool:
     if candidates:
         cand = max(candidates, key=lambda c: c["score"])
         best_score = cand["score"]
-        if cand["score"] >= MIN_WORKFLOW_SCORE and cand["bbox"] is not None:
-            try:
-                best_pix = render_workflow_clip(cand["page"], cand["bbox"])
-            except Exception:
-                best_pix = cand["pix"]
-        else:
-            best_pix = cand["pix"]
+        # Embedded image bytes are usually the figure alone (no PDF caption text).
+        best_pix = cand["pix"]
+        bbox = cand["bbox"]
+        page = cand["page"]
+        pno = cand["pno"]
+        if bbox is not None:
+            bbox_area = bbox.width * bbox.height
+            pix_area = cand["pix"].width * cand["pix"].height
+            # Re-render only when the on-page placement is much larger than the bitmap
+            # (vector figure) or the embedded asset looks like a full-page raster with text.
+            if pix_area > bbox_area * 1.8 or (
+                cand["score"] < MIN_WORKFLOW_SCORE + 15 and pix_area > 1_200_000
+            ):
+                try:
+                    best_pix = render_figure_clip(page, bbox, pno)
+                except Exception:
+                    pass
+            elif pix_area < bbox_area * 0.45:
+                try:
+                    best_pix = render_figure_clip(page, bbox, pno)
+                except Exception:
+                    pass
 
     if best_score < MIN_WORKFLOW_SCORE or best_pix is None:
         pno = figure_page_index(doc)
         page = doc[pno]
-        bbox = None
-        if candidates:
+        bbox = largest_figure_bbox_on_page(page, pno)
+        if bbox is None and candidates:
             page_hits = [c for c in candidates if c["pno"] == pno]
             if page_hits:
                 bbox = max(page_hits, key=lambda c: c["score"]).get("bbox")
         try:
-            best_pix = render_workflow_clip(page, bbox)
+            best_pix = render_figure_clip(page, bbox, pno)
         except Exception:
             best_pix = None
 

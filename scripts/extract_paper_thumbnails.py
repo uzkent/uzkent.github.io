@@ -19,8 +19,18 @@ PUB_MD = ROOT / "_pages" / "publications.md"
 OUT_DIR = ROOT / "images" / "papers"
 CACHE_DIR = ROOT / ".cache" / "paper-pdfs"
 THUMB_WIDTH = 220
-MAX_PAGES_SCAN = 4
-MIN_IMAGE_AREA = 40_000
+MAX_PAGES_SCAN = 6
+MIN_IMAGE_AREA = 35_000
+MIN_WORKFLOW_SCORE = 18.0
+
+# Prefer architecture / pipeline / overview figures (common in ML papers).
+WORKFLOW_CAPTION_RE = re.compile(
+    r"\b(architecture|pipeline|overview|framework|workflow|proposed\s+method|"
+    r"our\s+method|system\s+overview|model\s+architecture|end[- ]to[- ]end|"
+    r"approach|methodology|schematic)\b",
+    re.IGNORECASE,
+)
+FIGURE_ONE_RE = re.compile(r"\b(figure\s*1|fig\.?\s*1)\b", re.IGNORECASE)
 
 PAPER_OPEN = '<div class="paper">'
 TITLE_RE = re.compile(r'<div class="paper-title">(.*?)</div>', re.DOTALL)
@@ -163,38 +173,172 @@ def save_pixmap_jpeg(pix: fitz.Pixmap, out_path: Path, width: int) -> None:
     img.convert("RGB").save(str(out_path), format="JPEG", quality=82, optimize=True)
 
 
+def score_workflow_image(width: int, height: int, page_no: int, area: int) -> float:
+    """Higher score = more likely an architecture / workflow diagram."""
+    aspect = width / max(height, 1)
+    score = 0.0
+
+    if 1.1 <= aspect <= 4.0:
+        score += 42.0
+    elif aspect > 4.0:
+        score += 8.0
+    else:
+        score -= 28.0  # portrait or square (photos, portraits)
+
+    if page_no == 0:
+        score -= 40.0
+    elif page_no in (1, 2):
+        score += 30.0
+    elif page_no == 3:
+        score += 12.0
+
+    if 90_000 <= area <= 2_800_000:
+        score += min(35.0, area / 95_000.0)
+    elif area > 2_800_000:
+        score += 18.0
+    elif area < MIN_IMAGE_AREA:
+        score -= 50.0
+    else:
+        score += 8.0
+
+    if width < 140 or height < 100:
+        score -= 25.0
+
+    return score
+
+
+def caption_bonus(page: fitz.Page, bbox: fitz.Rect | None) -> float:
+    if bbox is None:
+        return 0.0
+    r = fitz.Rect(bbox)
+    r.y0 = max(page.rect.y0, r.y0 - 30)
+    r.y1 = min(page.rect.y1, r.y1 + 90)
+    r.x0 = max(page.rect.x0, r.x0 - 15)
+    r.x1 = min(page.rect.x1, r.x1 + 15)
+    text = page.get_textbox(r)
+    bonus = 0.0
+    if WORKFLOW_CAPTION_RE.search(text):
+        bonus += 35.0
+    if FIGURE_ONE_RE.search(text):
+        bonus += 20.0
+    return bonus
+
+
+def figure_page_index(doc: fitz.Document) -> int:
+    for pno in range(min(len(doc), MAX_PAGES_SCAN)):
+        text = doc[pno].get_text()
+        if FIGURE_ONE_RE.search(text) or WORKFLOW_CAPTION_RE.search(text):
+            return pno
+    return 1 if len(doc) > 1 else 0
+
+
+def render_workflow_clip(page: fitz.Page, bbox: fitz.Rect | None = None) -> fitz.Pixmap:
+    rect = page.rect
+    if bbox is not None and bbox.width > 80 and bbox.height > 60:
+        clip = fitz.Rect(bbox)
+        pad_x = max(12.0, clip.width * 0.04)
+        pad_y = max(12.0, clip.height * 0.06)
+        clip.x0 = max(rect.x0, clip.x0 - pad_x)
+        clip.y0 = max(rect.y0, clip.y0 - pad_y)
+        clip.x1 = min(rect.x1, clip.x1 + pad_x)
+        clip.y1 = min(rect.y1, clip.y1 + pad_y)
+    else:
+        y0 = rect.y0 + 55
+        y1 = rect.y0 + rect.height * 0.56
+        clip = fitz.Rect(rect.x0 + 28, y0, rect.x1 - 28, y1)
+    mat = fitz.Matrix(1.6, 1.6)
+    return page.get_pixmap(matrix=mat, clip=clip, alpha=False)
+
+
+def pixmap_from_xref(doc: fitz.Document, xref: int) -> fitz.Pixmap | None:
+    try:
+        pix = fitz.Pixmap(doc, xref)
+        if pix.n - pix.alpha > 3:
+            pix = fitz.Pixmap(fitz.csRGB, pix)
+        return pix
+    except Exception:
+        return None
+
+
+def collect_image_candidates(doc: fitz.Document) -> list[dict]:
+    seen_xrefs: set[int] = set()
+    candidates: list[dict] = []
+
+    for pno in range(min(len(doc), MAX_PAGES_SCAN)):
+        page = doc[pno]
+        bboxes_by_xref: dict[int, fitz.Rect] = {}
+        try:
+            for info in page.get_image_info(xrefs=True):
+                xref = info.get("xref")
+                if xref:
+                    bboxes_by_xref.setdefault(xref, fitz.Rect(info["bbox"]))
+        except Exception:
+            pass
+
+        for img in page.get_images(full=True):
+            xref = img[0]
+            if xref in seen_xrefs:
+                continue
+            seen_xrefs.add(xref)
+
+            pix = pixmap_from_xref(doc, xref)
+            if pix is None:
+                continue
+            w, h = pix.width, pix.height
+            area = w * h
+            if w < 80 or h < 80:
+                continue
+
+            bbox = bboxes_by_xref.get(xref)
+            if bbox is None:
+                try:
+                    rects = page.get_image_rects(xref)
+                    if rects:
+                        bbox = fitz.Rect(rects[0])
+                except Exception:
+                    bbox = None
+
+            score = score_workflow_image(w, h, pno, area) + caption_bonus(page, bbox)
+            candidates.append(
+                {"score": score, "pno": pno, "xref": xref, "pix": pix, "bbox": bbox, "page": page}
+            )
+
+    return candidates
+
+
 def extract_thumbnail(pdf_path: Path, out_path: Path) -> bool:
     try:
         doc = fitz.open(pdf_path)
     except Exception:
         return False
 
-    best_pix = None
-    best_area = 0
+    candidates = collect_image_candidates(doc)
+    best_pix: fitz.Pixmap | None = None
+    best_score = -1e9
 
-    for pno in range(min(len(doc), MAX_PAGES_SCAN)):
-        page = doc[pno]
-        for img in page.get_images(full=True):
+    if candidates:
+        cand = max(candidates, key=lambda c: c["score"])
+        best_score = cand["score"]
+        if cand["score"] >= MIN_WORKFLOW_SCORE and cand["bbox"] is not None:
             try:
-                xref = img[0]
-                pix = fitz.Pixmap(doc, xref)
-                if pix.n - pix.alpha > 3:
-                    pix = fitz.Pixmap(fitz.csRGB, pix)
-                area = pix.width * pix.height
-                if area > best_area and pix.width >= 80 and pix.height >= 80:
-                    best_area = area
-                    best_pix = pix
+                best_pix = render_workflow_clip(cand["page"], cand["bbox"])
             except Exception:
-                continue
+                best_pix = cand["pix"]
+        else:
+            best_pix = cand["pix"]
 
-    if best_area < MIN_IMAGE_AREA:
-        # Fallback: render a page likely containing a figure (page 2, else page 1)
-        pno = 1 if len(doc) > 1 else 0
+    if best_score < MIN_WORKFLOW_SCORE or best_pix is None:
+        pno = figure_page_index(doc)
         page = doc[pno]
-        rect = page.rect
-        clip = fitz.Rect(rect.x0, rect.y0, rect.x1, min(rect.y1, rect.y0 + 520))
-        mat = fitz.Matrix(1.2, 1.2)
-        best_pix = page.get_pixmap(matrix=mat, clip=clip, alpha=False)
+        bbox = None
+        if candidates:
+            page_hits = [c for c in candidates if c["pno"] == pno]
+            if page_hits:
+                bbox = max(page_hits, key=lambda c: c["score"]).get("bbox")
+        try:
+            best_pix = render_workflow_clip(page, bbox)
+        except Exception:
+            best_pix = None
 
     if best_pix is None:
         doc.close()

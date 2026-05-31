@@ -1,2 +1,4 @@
 _site/
+files/*.bak
+files/_cv_*.pdf
 

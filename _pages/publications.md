@@ -190,7 +190,7 @@ redirect_from:
 <div class="year-marker"><span>2026</span></div>
 
 <div class="paper">
-  <div class="paper-venue">ACL 2026 · <span class="under-review-tag">Under Review</span></div>
+  <div class="paper-venue">EMNLP 2026 · <span class="under-review-tag">Under Review</span></div>
   <div class="paper-title">CounterVid: Counterfactual Video Generation for Mitigating Action and Temporal Hallucinations in Video-Language Models</div>
   <div class="paper-authors">T. Poppi, <span class="me">B. Uzkent</span>, A. Garg, L. Porto, G. Kessler, Y. Yang, M. Cornia, L. Baraldi, R. Cucchiara, F. Schiffers</div>
   <div class="paper-links"><a href="https://arxiv.org/pdf/2601.04778">arXiv</a></div>

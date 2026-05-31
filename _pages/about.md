@@ -54,6 +54,9 @@ redirect_from:
   }
   .timeline-item {
     position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.1rem;
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius);
@@ -61,6 +64,21 @@ redirect_from:
     margin-bottom: 1rem;
     box-shadow: var(--shadow);
     transition: transform .2s, box-shadow .2s;
+  }
+  .timeline-logo {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    flex-shrink: 0;
+    padding: 6px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-top: 0.1rem;
+  }
+  .timeline-content {
+    flex: 1;
+    min-width: 0;
   }
   .timeline-item:hover {
     transform: translateY(-2px);
@@ -224,52 +242,73 @@ redirect_from:
 <div class="timeline">
 
   <div class="timeline-item">
-    <span class="timeline-date">Apr 2026 – Present</span>
-    <div class="timeline-role">Principal Member of Staff</div>
-    <div class="timeline-org">AMD</div>
-    <div class="timeline-desc">Machine Learning &amp; AI</div>
+    <img class="timeline-logo" src="/images/logos/amd.svg" alt="AMD logo" width="52" height="52" loading="lazy">
+    <div class="timeline-content">
+      <span class="timeline-date">Apr 2026 – Present</span>
+      <div class="timeline-role">Principal Member of Staff</div>
+      <div class="timeline-org">AMD</div>
+      <div class="timeline-desc">Machine Learning &amp; AI</div>
+    </div>
   </div>
 
   <div class="timeline-item">
-    <span class="timeline-date">Apr 2022 – Mar 2026</span>
-    <div class="timeline-role">Machine Learning Scientist</div>
-    <div class="timeline-org">Amazon Prime Video</div>
-    <div class="timeline-desc">Video-Language Foundational Models</div>
+    <img class="timeline-logo" src="/images/logos/amazon.svg" alt="Amazon logo" width="52" height="52" loading="lazy">
+    <div class="timeline-content">
+      <span class="timeline-date">Apr 2022 – Mar 2026</span>
+      <div class="timeline-role">Machine Learning Scientist</div>
+      <div class="timeline-org">Amazon Prime Video</div>
+      <div class="timeline-desc">Video-Language Foundational Models</div>
+    </div>
   </div>
 
   <div class="timeline-item">
-    <span class="timeline-date">Nov 2020 – Apr 2022</span>
-    <div class="timeline-role">Sr. Research Scientist</div>
-    <div class="timeline-org">Samsung Research America</div>
-    <div class="timeline-desc">Vision Transformer Compression · Multimodal Understanding</div>
+    <img class="timeline-logo" src="/images/logos/samsung.svg" alt="Samsung logo" width="52" height="52" loading="lazy">
+    <div class="timeline-content">
+      <span class="timeline-date">Nov 2020 – Apr 2022</span>
+      <div class="timeline-role">Sr. Research Scientist</div>
+      <div class="timeline-org">Samsung Research America</div>
+      <div class="timeline-desc">Vision Transformer Compression · Multimodal Understanding</div>
+    </div>
   </div>
 
   <div class="timeline-item">
-    <span class="timeline-date">Jul 2018 – Oct 2020</span>
-    <div class="timeline-role">Postdoctoral Research Fellow</div>
-    <div class="timeline-org">Stanford University — Stanford AI Lab</div>
-    <div class="timeline-desc">Self-Supervised Learning · Dynamic Models · Generative Models · Computational Sustainability</div>
+    <img class="timeline-logo" src="/images/logos/stanford.png" alt="Stanford University logo" width="52" height="52" loading="lazy">
+    <div class="timeline-content">
+      <span class="timeline-date">Jul 2018 – Oct 2020</span>
+      <div class="timeline-role">Postdoctoral Research Fellow</div>
+      <div class="timeline-org">Stanford University — Stanford AI Lab</div>
+      <div class="timeline-desc">Self-Supervised Learning · Dynamic Models · Generative Models · Computational Sustainability</div>
+    </div>
   </div>
 
   <div class="timeline-item">
-    <span class="timeline-date">Jun 2017 – Jul 2018</span>
-    <div class="timeline-role">Computer Vision Engineer</div>
-    <div class="timeline-org">Planet Labs</div>
-    <div class="timeline-desc">Convolutional Object Detection in Low-Resolution Aerial Imagery</div>
+    <img class="timeline-logo" src="/images/logos/planet.png" alt="Planet Labs logo" width="52" height="52" loading="lazy">
+    <div class="timeline-content">
+      <span class="timeline-date">Jun 2017 – Jul 2018</span>
+      <div class="timeline-role">Computer Vision Engineer</div>
+      <div class="timeline-org">Planet Labs</div>
+      <div class="timeline-desc">Convolutional Object Detection in Low-Resolution Aerial Imagery</div>
+    </div>
   </div>
 
   <div class="timeline-item">
-    <span class="timeline-date">Aug 2016 – Jun 2017</span>
-    <div class="timeline-role">Computer Vision Engineer</div>
-    <div class="timeline-org">Autel Robotics</div>
-    <div class="timeline-desc">High-Speed Object Tracking on Low-End Embedded Systems</div>
+    <img class="timeline-logo" src="/images/logos/autel.png" alt="Autel Robotics logo" width="52" height="52" loading="lazy">
+    <div class="timeline-content">
+      <span class="timeline-date">Aug 2016 – Jun 2017</span>
+      <div class="timeline-role">Computer Vision Engineer</div>
+      <div class="timeline-org">Autel Robotics</div>
+      <div class="timeline-desc">High-Speed Object Tracking on Low-End Embedded Systems</div>
+    </div>
   </div>
 
   <div class="timeline-item">
-    <span class="timeline-date">Nov 2015 – May 2016</span>
-    <div class="timeline-role">Computer Vision Algorithm Engineer Intern</div>
-    <div class="timeline-org">Huawei R&amp;D</div>
-    <div class="timeline-desc">Unsupervised Semantic Role Assignment in Photo Albums</div>
+    <img class="timeline-logo" src="/images/logos/huawei.svg" alt="Huawei logo" width="52" height="52" loading="lazy">
+    <div class="timeline-content">
+      <span class="timeline-date">Nov 2015 – May 2016</span>
+      <div class="timeline-role">Computer Vision Algorithm Engineer Intern</div>
+      <div class="timeline-org">Huawei R&amp;D</div>
+      <div class="timeline-desc">Unsupervised Semantic Role Assignment in Photo Albums</div>
+    </div>
   </div>
 
 </div>

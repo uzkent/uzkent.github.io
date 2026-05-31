@@ -140,6 +140,10 @@ redirect_from:
 <!-- ==================== 2026 ==================== -->
 <div class="year-marker"><span>2026</span></div>
 
+<div class="news-item highlight">
+  <p class="news-text"><span class="news-tag tag-career">Career</span> Joined <strong>AMD</strong> as a Principal Member of Staff.</p>
+</div>
+
 <div class="news-item">
   <p class="news-text"><span class="news-tag tag-paper">Paper</span> One paper submitted to <strong>ACL 2026</strong>.</p>
   <div class="news-links"><a href="https://arxiv.org/pdf/2601.04778">arXiv</a></div>

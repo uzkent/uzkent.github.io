@@ -165,7 +165,10 @@ redirect_from:
 
 <div class="hero-card">
   <p>
-    I am a <strong>Machine Learning Scientist</strong> at <strong>Amazon Prime Video</strong>, where I develop <em>Video-Language Foundational Models</em> that bridge visual and linguistic understanding at scale.
+    I am a <strong>Principal Member of Staff</strong> at <strong>AMD</strong>, where I work on machine learning and AI since April 2026.
+  </p>
+  <p>
+    Previously, I was a <strong>Machine Learning Scientist</strong> at <strong>Amazon Prime Video</strong>, where I developed <em>Video-Language Foundational Models</em> that bridge visual and linguistic understanding at scale.
   </p>
   <p>
     Previously, I was a <strong>Postdoctoral Research Fellow</strong> at the
@@ -221,7 +224,14 @@ redirect_from:
 <div class="timeline">
 
   <div class="timeline-item">
-    <span class="timeline-date">Apr 2022 – Present</span>
+    <span class="timeline-date">Apr 2026 – Present</span>
+    <div class="timeline-role">Principal Member of Staff</div>
+    <div class="timeline-org">AMD</div>
+    <div class="timeline-desc">Machine Learning &amp; AI</div>
+  </div>
+
+  <div class="timeline-item">
+    <span class="timeline-date">Apr 2022 – Mar 2026</span>
     <div class="timeline-role">Machine Learning Scientist</div>
     <div class="timeline-org">Amazon Prime Video</div>
     <div class="timeline-desc">Video-Language Foundational Models</div>

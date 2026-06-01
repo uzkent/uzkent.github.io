@@ -162,6 +162,9 @@ redirect_from:
     margin: .6rem 0 2rem;
   }
   .edu-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-top: 4px solid var(--accent);
@@ -169,6 +172,20 @@ redirect_from:
     padding: 1.3rem 1.4rem;
     box-shadow: var(--shadow);
     transition: transform .2s, box-shadow .2s;
+  }
+  .edu-logo {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    flex-shrink: 0;
+    padding: 6px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+  .edu-card-body {
+    flex: 1;
+    min-width: 0;
   }
   .edu-card:hover {
     transform: translateY(-3px);
@@ -255,24 +272,33 @@ redirect_from:
 <div class="edu-grid">
 
   <div class="edu-card">
-    <div class="edu-degree">Ph.D.</div>
-    <div class="edu-inst">Chester F. Carlson Center for Imaging Science, RIT</div>
-    <div class="edu-years">2011 – 2016</div>
-    <div class="edu-focus"><em>Aerial Vehicle Detection and Tracking using a Multi-modal Adaptive Sensor</em></div>
+    <img class="edu-logo" src="/images/logos/rit.png" alt="RIT logo" width="52" height="52" loading="lazy">
+    <div class="edu-card-body">
+      <div class="edu-degree">Ph.D.</div>
+      <div class="edu-inst">Chester F. Carlson Center for Imaging Science, RIT</div>
+      <div class="edu-years">2011 – 2016</div>
+      <div class="edu-focus"><em>Aerial Vehicle Detection and Tracking using a Multi-modal Adaptive Sensor</em></div>
+    </div>
   </div>
 
   <div class="edu-card">
-    <div class="edu-degree">M.S.</div>
-    <div class="edu-inst">Electrical &amp; Computer Engineering, University of Bridgeport</div>
-    <div class="edu-years">2009 – 2011</div>
-    <div class="edu-focus"><em>Non-speech Environmental Sound Classification with Pitch Range-based Features</em></div>
+    <img class="edu-logo" src="/images/logos/bridgeport.png" alt="University of Bridgeport logo" width="52" height="52" loading="lazy">
+    <div class="edu-card-body">
+      <div class="edu-degree">M.S.</div>
+      <div class="edu-inst">Electrical &amp; Computer Engineering, University of Bridgeport</div>
+      <div class="edu-years">2009 – 2011</div>
+      <div class="edu-focus"><em>Non-speech Environmental Sound Classification with Pitch Range-based Features</em></div>
+    </div>
   </div>
 
   <div class="edu-card">
-    <div class="edu-degree">B.S.</div>
-    <div class="edu-inst">Electrical &amp; Electronics Engineering, Eskişehir Osmangazi University</div>
-    <div class="edu-years">2004 – 2009</div>
-    <div class="edu-focus"><em>Autonomous Parallel Parking of Non-holonomic Vehicles</em></div>
+    <img class="edu-logo" src="/images/logos/esogu.png" alt="Eskişehir Osmangazi University logo" width="52" height="52" loading="lazy">
+    <div class="edu-card-body">
+      <div class="edu-degree">B.S.</div>
+      <div class="edu-inst">Electrical &amp; Electronics Engineering, Eskişehir Osmangazi University</div>
+      <div class="edu-years">2004 – 2009</div>
+      <div class="edu-focus"><em>Autonomous Parallel Parking of Non-holonomic Vehicles</em></div>
+    </div>
   </div>
 
 </div>

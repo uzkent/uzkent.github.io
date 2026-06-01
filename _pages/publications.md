@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Publications"
 permalink: /publications/
 author_profile: true
 redirect_from:
@@ -253,6 +253,39 @@ redirect_from:
   color: #6b7280;
 }
 .scholar-metrics-foot a { color: #2563eb; font-weight: 600; }
+
+.hiring-banner {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.92rem;
+  color: #1e3a5f;
+  line-height: 1.5;
+}
+.selected-papers { margin-bottom: 2rem; }
+.selected-papers .paper {
+  border-color: #93c5fd;
+  background: #eff6ff;
+}
+.pub-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.pub-filters label { font-size: 0.82rem; font-weight: 600; color: #374151; }
+.pub-filters input, .pub-filters select {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+.pub-filters input { min-width: 200px; max-width: 100%; }
+.paper.is-hidden { display: none !important; }
+.year-marker.is-hidden { display: none !important; }
 </style>
 
 <div class="pub-header">
@@ -262,11 +295,19 @@ redirect_from:
 </div>
 
 <div class="pub-nav">
+  <a href="#selected">⭐ Selected</a>
   <a href="#scholar-metrics-title">📈 Citations</a>
   <a href="#conferences">🎤 Conference Papers (33)</a>
   <a href="#journals">📖 Journal Articles (9)</a>
   <a href="#preprints">📝 Preprints (2)</a>
+  <a href="/files/publications.bib">📥 BibTeX</a>
 </div>
+
+<div class="hiring-banner">
+  <strong>Hiring at AMD:</strong> We are hiring for full-time positions at all levels working on generative AI applications on AMD hardware.
+</div>
+
+{% include publications-selected.html %}
 
 {% include scholar-citations-chart.html %}
 
@@ -277,7 +318,23 @@ redirect_from:
 <h2 class="section-title" id="conferences"><span class="icon">🎤</span> Conference Papers <span class="section-count">(33)</span></h2>
 <div class="section-line"></div>
 
-<div class="timeline">
+<div class="pub-filters" id="pub-filters">
+  <label for="pub-search">Search</label>
+  <input type="search" id="pub-search" placeholder="Title or author…" autocomplete="off" />
+  <label for="pub-year">Year</label>
+  <select id="pub-year">
+    <option value="">All years</option>
+  </select>
+  <label for="pub-section">Section</label>
+  <select id="pub-section">
+    <option value="">All sections</option>
+    <option value="conference">Conferences</option>
+    <option value="journal">Journals</option>
+    <option value="preprint">Preprints</option>
+  </select>
+</div>
+
+<div class="timeline" id="timeline-conferences" data-section="conference">
 
 <div class="year-marker"><span>2026</span></div>
 
@@ -821,7 +878,7 @@ redirect_from:
 <h2 class="section-title" id="journals"><span class="icon">📖</span> Journal Articles <span class="section-count">(9)</span></h2>
 <div class="section-line"></div>
 
-<div class="timeline">
+<div class="timeline" id="timeline-journals" data-section="journal">
 
 <div class="paper">
   <div class="paper-inner">
@@ -949,7 +1006,7 @@ redirect_from:
 <h2 class="section-title" id="preprints"><span class="icon">📝</span> Preprints <span class="section-count">(2)</span></h2>
 <div class="section-line"></div>
 
-<div class="timeline">
+<div class="timeline" id="timeline-preprints" data-section="preprint">
 
 <div class="paper">
   <div class="paper-inner">
@@ -978,5 +1035,77 @@ redirect_from:
 </div>
 
 </div><!-- end timeline -->
+
+<script>
+(function () {
+  var timelines = document.querySelectorAll('.timeline[data-section]');
+  var papers = [];
+  var years = new Set();
+
+  timelines.forEach(function (tl) {
+    var section = tl.getAttribute('data-section');
+    var year = '';
+    Array.from(tl.children).forEach(function (node) {
+      if (node.classList.contains('year-marker')) {
+        year = (node.querySelector('span') || {}).textContent || '';
+        year = year.trim();
+        if (year) years.add(year);
+        return;
+      }
+      if (!node.classList.contains('paper')) return;
+      node.dataset.year = year;
+      node.dataset.section = section;
+      var text = (node.textContent || '').toLowerCase();
+      papers.push({ el: node, text: text, year: year, section: section });
+    });
+  });
+
+  var yearSelect = document.getElementById('pub-year');
+  Array.from(years).sort().reverse().forEach(function (y) {
+    var opt = document.createElement('option');
+    opt.value = y;
+    opt.textContent = y;
+    yearSelect.appendChild(opt);
+  });
+
+  function applyFilters() {
+    var q = (document.getElementById('pub-search').value || '').toLowerCase().trim();
+    var y = document.getElementById('pub-year').value;
+    var s = document.getElementById('pub-section').value;
+
+    papers.forEach(function (p) {
+      var show = true;
+      if (q && p.text.indexOf(q) === -1) show = false;
+      if (y && p.year !== y) show = false;
+      if (s && p.section !== s) show = false;
+      p.el.classList.toggle('is-hidden', !show);
+    });
+
+    timelines.forEach(function (tl) {
+      var section = tl.getAttribute('data-section');
+      if (s && section !== s) {
+        tl.style.display = 'none';
+        return;
+      }
+      tl.style.display = '';
+      var markers = tl.querySelectorAll('.year-marker');
+      markers.forEach(function (m) {
+        var yr = (m.querySelector('span') || {}).textContent.trim();
+        var any = false;
+        var next = m.nextElementSibling;
+        while (next && !next.classList.contains('year-marker')) {
+          if (next.classList.contains('paper') && !next.classList.contains('is-hidden')) any = true;
+          next = next.nextElementSibling;
+        }
+        m.classList.toggle('is-hidden', !any);
+      });
+    });
+  }
+
+  document.getElementById('pub-search').addEventListener('input', applyFilters);
+  document.getElementById('pub-year').addEventListener('change', applyFilters);
+  document.getElementById('pub-section').addEventListener('change', applyFilters);
+})();
+</script>
 
 <p style="text-align: center; color: #9ca3af; font-size: 0.85rem; margin-top: 3rem; font-style: italic;">* denotes equal contribution</p>

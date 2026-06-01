@@ -1,7 +1,10 @@
-# main links links
+# main links
 main:
-  - title: "CV"
-    url: /files/CV.BurakUzkent.pdf
+  - title: "About"
+    url: /
+
+  - title: "Research"
+    url: /research/
 
   - title: "Publications"
     url: /publications/
@@ -9,5 +12,11 @@ main:
   - title: "News"
     url: /news/
 
+  - title: "Talks"
+    url: /talks/
+
   - title: "Datasets"
-    url: /datasets/  
+    url: /datasets/
+
+  - title: "CV"
+    url: /files/Burak_Uzkent_Academic_CV.pdf

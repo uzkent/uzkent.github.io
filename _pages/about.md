@@ -1,7 +1,7 @@
 ---
 permalink: /
-title: ""
-excerpt: "About me"
+title: "About"
+excerpt: "Burak Uzkent — Principal Member of Technical Staff at AMD. Research in generative AI, video-language models, and efficient deep learning."
 author_profile: true
 redirect_from:
   - /about/

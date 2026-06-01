@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Academic Personal Website"
+title                    : "Burak Uzkent"
 title_separator          : "-"
 name                     : &name "Burak Uzkent"
-description              : &description "Generative AI applications on AMD hardware"
+description              : &description "Principal Member of Technical Staff at AMD. Research in generative AI, video-language models, efficient deep learning, and remote sensing."
 url                      : https://uzkent.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "uzkent.github.io"
@@ -60,7 +60,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Open Graph/Twitter default site image
+og_image                 : /images/profile.png
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:

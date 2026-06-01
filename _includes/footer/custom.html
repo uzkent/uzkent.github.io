@@ -1,3 +1,7 @@
 <!-- start custom footer snippets -->
 <a href="/sitemap/">Sitemap</a>
+&nbsp;·&nbsp;
+<a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}">RSS</a>
+&nbsp;·&nbsp;
+<a href="/files/publications.bib">BibTeX</a>
 <!-- end custom footer snippets -->

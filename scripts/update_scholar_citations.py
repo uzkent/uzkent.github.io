@@ -4,7 +4,9 @@
 from __future__ import annotations
 
 import re
+import subprocess
 import urllib.request
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,8 +20,19 @@ def fetch_html() -> str:
         URL,
         headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"},
     )
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return resp.read().decode("utf-8", errors="ignore")
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            return resp.read().decode("utf-8", errors="ignore")
+    except Exception:
+        # Fallback for environments with SSL interception (e.g. corporate proxy)
+        result = subprocess.run(
+            ["curl", "-sL", "-A", "Mozilla/5.0", URL],
+            capture_output=True,
+            text=True,
+            timeout=45,
+            check=True,
+        )
+        return result.stdout
 
 
 def parse(html: str) -> dict:
@@ -45,9 +58,18 @@ def parse(html: str) -> dict:
     }
 
 
-def write_yaml(data: dict) -> None:
-    from datetime import date
+def read_venues_block() -> str:
+    """Keep manually curated venues_by_year from existing YAML."""
+    if not OUT.exists():
+        return ""
+    text = OUT.read_text(encoding="utf-8")
+    idx = text.find("venues_by_year:")
+    if idx == -1:
+        return ""
+    return "\n" + text[idx:].rstrip() + "\n"
 
+
+def write_yaml(data: dict) -> None:
     years = ", ".join(str(y) for y in data["years"])
     counts = ", ".join(str(c) for c in data["counts"])
     lines = [
@@ -60,9 +82,16 @@ def write_yaml(data: dict) -> None:
         f'profile_url: "{URL}"',
         f"years: [{years}]",
         f"counts: [{counts}]",
+        "# Conference/workshop venues with publications that year (from publications page)",
     ]
-    OUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    venues = read_venues_block()
+    if venues:
+        body = "\n".join(lines) + venues
+    else:
+        body = "\n".join(lines) + "\n"
+    OUT.write_text(body, encoding="utf-8")
     print(f"Updated {OUT}")
+    print(f"  total={data['total']} h-index={data['h_index']} i10-index={data['i10_index']}")
 
 
 def main() -> None:

@@ -17,6 +17,8 @@ python3 scripts/update_scholar_citations.py
 
 Updates `_data/scholar_citations.yml` (used on the publications page).
 
+**Automatic refresh:** GitHub Actions runs this every **Monday at 09:00 UTC** (`.github/workflows/sync-scholar-citations.yml`). You can also trigger it manually under **Actions → Sync Google Scholar citations → Run workflow**.
+
 ## BibTeX export
 
 ```bash

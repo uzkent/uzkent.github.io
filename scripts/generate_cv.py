@@ -7,6 +7,7 @@ import fitz
 import re
 import unicodedata
 from fpdf import FPDF
+from matplotlib import get_data_path
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -16,6 +17,7 @@ ARCHIVE = FILES / "CV.BurakUzkent.pdf.bak"
 OUTPUTS = [FILES / "CV.BurakUzkent.pdf", FILES / "Burak_Uzkent_Academic_CV.pdf"]
 TEMP = FILES / "_cv_pages_1_2.pdf"
 PUBLICATIONS_TEMP = FILES / "_cv_publications.pdf"
+CM_FONT_DIR = Path(get_data_path()) / "fonts" / "ttf"
 
 
 class CVPDF(FPDF):
@@ -26,6 +28,21 @@ class CVPDF(FPDF):
         self.cell(0, 10, f"Page {self.page_no()}", align="C")
 
 
+class PublicationPDF(CVPDF):
+    def header(self):
+        self.set_y(18)
+        self.set_font("Helvetica", "B", 9)
+        self.set_text_color(120, 120, 120)
+        self.cell(0, 5, "Burak Uzkent - CV", new_x="LMARGIN", new_y="NEXT")
+        self.ln(2)
+
+    def footer(self):
+        self.set_y(-15)
+        self.set_font("Helvetica", "I", 9)
+        self.set_text_color(100, 100, 100)
+        self.cell(0, 10, f"Page {self.page_no() + 3}", align="C")
+
+
 def add_heading(pdf: CVPDF, title: str):
     pdf.ln(2)
     pdf.set_font("Helvetica", "B", 11)
@@ -34,6 +51,34 @@ def add_heading(pdf: CVPDF, title: str):
     pdf.set_draw_color(0, 80, 160)
     pdf.line(pdf.l_margin, pdf.get_y(), pdf.w - pdf.r_margin, pdf.get_y())
     pdf.ln(3)
+
+
+def register_publication_fonts(pdf: FPDF) -> None:
+    pdf.add_font("CM", "", CM_FONT_DIR / "cmr10.ttf")
+    pdf.add_font("CM", "B", CM_FONT_DIR / "cmb10.ttf")
+
+
+def add_publication_heading(pdf: FPDF, title: str) -> None:
+    pdf.ln(2)
+    x = pdf.l_margin
+    y = pdf.get_y() + 1
+    pdf.set_draw_color(0, 82, 155)
+    pdf.set_line_width(0.45)
+    pdf.rect(x, y, 4.5, 5.8)
+    pdf.line(x + 2.8, y, x + 4.5, y + 1.7)
+    pdf.line(x + 2.8, y, x + 2.8, y + 1.7)
+    pdf.line(x + 2.8, y + 1.7, x + 4.5, y + 1.7)
+    pdf.line(x + 0.9, y + 2.8, x + 3.6, y + 2.8)
+    pdf.line(x + 0.9, y + 3.8, x + 3.6, y + 3.8)
+    pdf.line(x + 0.9, y + 4.8, x + 3.6, y + 4.8)
+    pdf.set_font("CM", "B", 14.3)
+    pdf.set_text_color(0, 82, 155)
+    pdf.set_x(x + 7)
+    pdf.cell(pdf.epw, 8, title, new_x="LMARGIN", new_y="NEXT")
+    pdf.set_draw_color(0, 82, 155)
+    pdf.set_line_width(0.65)
+    pdf.line(pdf.l_margin, pdf.get_y(), pdf.w - pdf.r_margin, pdf.get_y())
+    pdf.ln(4)
 
 
 def write_wrapped(pdf: FPDF, text: str, line_h: float = 5, style: str = "") -> None:
@@ -77,6 +122,32 @@ def numbered_entries(text: str) -> list[str]:
 
 def emphasize_name(text: str) -> str:
     return text.replace("B. Uzkent", "**B. Uzkent**")
+
+
+def write_publication_entry(pdf: FPDF, number: int, text: str) -> None:
+    if pdf.h - pdf.b_margin - pdf.get_y() < 18:
+        pdf.add_page()
+
+    text = re.sub(r"\s+o$", "", text)
+    x = pdf.l_margin
+    y = pdf.get_y()
+    indent = 8
+
+    pdf.set_font("CM", "", 10)
+    pdf.set_text_color(0, 82, 155)
+    pdf.text(x, y + 3.8, f"[{number}]")
+
+    pdf.set_text_color(0, 0, 0)
+    pdf.set_xy(x + indent, y)
+    pdf.multi_cell(
+        pdf.epw - indent,
+        4.8,
+        emphasize_name(text),
+        markdown=True,
+        new_x="LMARGIN",
+        new_y="NEXT",
+    )
+    pdf.ln(1.2)
 
 
 def add_role(
@@ -309,38 +380,24 @@ def build_publication_pages(source_path: Path) -> Path:
         'CVPR Workshop-26 (Best Paper Candidate), 2026.',
     ]
 
-    pdf = CVPDF()
+    pdf = PublicationPDF()
     pdf.set_margins(18, 18, 18)
     pdf.set_auto_page_break(auto=True, margin=20)
+    register_publication_fonts(pdf)
     pdf.add_page()
-    pdf.set_font("Helvetica", "B", 9)
-    pdf.set_text_color(120, 120, 120)
-    pdf.cell(0, 5, "Burak Uzkent - CV", new_x="LMARGIN", new_y="NEXT")
-    pdf.ln(2)
 
-    add_heading(pdf, "REFEREED JOURNAL PUBLICATIONS (CONTINUED)")
-    pdf.set_text_color(0, 0, 0)
+    add_publication_heading(pdf, "REFEREED JOURNAL PUBLICATIONS (CONTINUED)")
     for entry in journal_entries:
-        pdf.set_font("Helvetica", "", 10)
-        pdf.set_x(pdf.l_margin)
-        pdf.multi_cell(pdf.epw, 4.8, emphasize_name(entry), markdown=True)
-        pdf.ln(0.8)
+        match = re.match(r"^\[(\d+)\]\s*(.*)", entry)
+        if match:
+            write_publication_entry(pdf, int(match.group(1)), match.group(2))
 
-    add_heading(pdf, conference_heading)
-    pdf.set_text_color(0, 0, 0)
+    add_publication_heading(pdf, conference_heading)
     conference_entries = accepted_entries + [
         re.sub(r"^\[\d+\]\s*", "", entry) for entry in prior_conference_entries
     ]
     for index, entry in enumerate(conference_entries, start=1):
-        pdf.set_font("Helvetica", "", 10)
-        pdf.set_x(pdf.l_margin)
-        pdf.multi_cell(
-            pdf.epw,
-            4.8,
-            emphasize_name(f"[{index}] {entry}"),
-            markdown=True,
-        )
-        pdf.ln(0.8)
+        write_publication_entry(pdf, index, entry)
 
     pdf.output(PUBLICATIONS_TEMP)
     return PUBLICATIONS_TEMP

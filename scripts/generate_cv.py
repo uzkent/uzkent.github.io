@@ -126,7 +126,7 @@ def build_pages_1_2() -> None:
             "Led development of Video LLMs for advanced video understanding and content moderation in long-form videos",
             "Designed and implemented multimodal foundation models for video summarization pipeline",
             "Developed transformer-based NLP models for subtitle analysis enabling automated content moderation at scale",
-            "Published papers (CVPR, WACV) and filed multiple patents; papers under review at EMNLP and ECCV",
+            "Published papers at CVPR, WACV, and EMNLP; ECCV workshop paper accepted; filed multiple patents",
         ],
     )
     add_role(
@@ -263,15 +263,15 @@ def build_page_6() -> Path:
     pdf.cell(0, 5, "Burak Uzkent - CV", new_x="LMARGIN", new_y="NEXT")
     pdf.ln(2)
 
-    add_heading(pdf, "PAPERS UNDER REVIEW")
+    add_heading(pdf, "RECENT PAPERS")
     pdf.set_font("Helvetica", "", 9)
     pdf.set_text_color(30, 30, 30)
     papers = [
         '[1] T. Poppi, B. Uzkent, A. Garg, L. Porto, G. Kessler, Y. Yang, M. Cornia, L. Baraldi, '
         'R. Cucchiara, F. Schiffers, "CounterVid: Counterfactual Video Generation for Mitigating Action '
-        'and Temporal Hallucinations in Video-Language Models", EMNLP-26.',
+        'and Temporal Hallucinations in Video-Language Models", EMNLP-26 (Accepted).',
         '[2] G. Sun, A. Singhal, B. Uzkent, M. Shah, C. Chen, G. Kessler, "From Frames to Clips: '
-        'Efficient Key Clip Selection for Long-form Video Understanding", ECCV-26.',
+        'Efficient Key Clip Selection for Long-form Video Understanding", ECCV Workshop-26 (Accepted).',
         '[3] A. Blume, B. Uzkent, G. Kessler, "Learning to Rank Caption Chains for Video-Text Alignment", ECCV-26.',
         '[4] R. Jain, K. Doshi, B. Uzkent, G. Kessler, "Narrative Aligned Long Form Video Question Answering", '
         'CVPR Workshop-26 (Best Paper Candidate).',

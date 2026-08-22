@@ -263,7 +263,7 @@ def build_page_6() -> Path:
     pdf.cell(0, 5, "Burak Uzkent - CV", new_x="LMARGIN", new_y="NEXT")
     pdf.ln(2)
 
-    add_heading(pdf, "RECENT ACCEPTED PUBLICATIONS")
+    add_heading(pdf, "REFEREED CONFERENCE PUBLICATIONS (CONTINUED)")
     pdf.set_font("Helvetica", "", 9)
     pdf.set_text_color(30, 30, 30)
     accepted_papers = [

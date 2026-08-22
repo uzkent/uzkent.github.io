@@ -75,6 +75,10 @@ def numbered_entries(text: str) -> list[str]:
     ]
 
 
+def emphasize_name(text: str) -> str:
+    return text.replace("B. Uzkent", "**B. Uzkent**")
+
+
 def add_role(
     pdf: CVPDF,
     role: str,
@@ -317,9 +321,9 @@ def build_publication_pages(source_path: Path) -> Path:
     add_heading(pdf, "REFEREED JOURNAL PUBLICATIONS (CONTINUED)")
     pdf.set_text_color(0, 0, 0)
     for entry in journal_entries:
-        pdf.set_font("Helvetica", "", 8.2)
+        pdf.set_font("Helvetica", "", 10)
         pdf.set_x(pdf.l_margin)
-        pdf.multi_cell(pdf.epw, 4.2, entry)
+        pdf.multi_cell(pdf.epw, 4.8, emphasize_name(entry), markdown=True)
         pdf.ln(0.8)
 
     add_heading(pdf, conference_heading)
@@ -328,9 +332,14 @@ def build_publication_pages(source_path: Path) -> Path:
         re.sub(r"^\[\d+\]\s*", "", entry) for entry in prior_conference_entries
     ]
     for index, entry in enumerate(conference_entries, start=1):
-        pdf.set_font("Helvetica", "", 8.2)
+        pdf.set_font("Helvetica", "", 10)
         pdf.set_x(pdf.l_margin)
-        pdf.multi_cell(pdf.epw, 4.2, f"[{index}] {entry}")
+        pdf.multi_cell(
+            pdf.epw,
+            4.8,
+            emphasize_name(f"[{index}] {entry}"),
+            markdown=True,
+        )
         pdf.ln(0.8)
 
     pdf.output(PUBLICATIONS_TEMP)
@@ -348,7 +357,7 @@ def build_page_6() -> Path:
     pdf.ln(2)
 
     add_heading(pdf, "RECENT PAPERS")
-    pdf.set_font("Helvetica", "", 9)
+    pdf.set_font("Helvetica", "", 10)
     pdf.set_text_color(30, 30, 30)
     recent_papers = [
         '[1] A. Blume, B. Uzkent, S. Chaudhuri, G. Kessler, '
@@ -356,7 +365,7 @@ def build_page_6() -> Path:
     ]
     for paper in recent_papers:
         pdf.set_x(pdf.l_margin)
-        pdf.multi_cell(pdf.epw, 5, paper)
+        pdf.multi_cell(pdf.epw, 5, emphasize_name(paper), markdown=True)
         pdf.ln(1)
 
     add_heading(pdf, "PROFESSIONAL SERVICE")

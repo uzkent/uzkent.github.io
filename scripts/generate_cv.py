@@ -263,20 +263,30 @@ def build_page_6() -> Path:
     pdf.cell(0, 5, "Burak Uzkent - CV", new_x="LMARGIN", new_y="NEXT")
     pdf.ln(2)
 
-    add_heading(pdf, "RECENT PAPERS")
+    add_heading(pdf, "RECENT ACCEPTED PUBLICATIONS")
     pdf.set_font("Helvetica", "", 9)
     pdf.set_text_color(30, 30, 30)
-    papers = [
+    accepted_papers = [
         '[1] T. Poppi, B. Uzkent, A. Garg, L. Porto, G. Kessler, Y. Yang, M. Cornia, L. Baraldi, '
         'R. Cucchiara, F. Schiffers, "CounterVid: Counterfactual Video Generation for Mitigating Action '
         'and Temporal Hallucinations in Video-Language Models", EMNLP-26 (Accepted).',
         '[2] G. Sun, A. Singhal, B. Uzkent, M. Shah, C. Chen, G. Kessler, "From Frames to Clips: '
         'Efficient Key Clip Selection for Long-form Video Understanding", ECCV Workshop-26 (Accepted).',
-        '[3] A. Blume, B. Uzkent, G. Kessler, "Learning to Rank Caption Chains for Video-Text Alignment", ECCV-26.',
-        '[4] R. Jain, K. Doshi, B. Uzkent, G. Kessler, "Narrative Aligned Long Form Video Question Answering", '
+        '[3] R. Jain, K. Doshi, B. Uzkent, G. Kessler, "Narrative Aligned Long Form Video Question Answering", '
         'CVPR Workshop-26 (Best Paper Candidate).',
     ]
-    for paper in papers:
+    for paper in accepted_papers:
+        pdf.set_x(pdf.l_margin)
+        pdf.multi_cell(pdf.epw, 5, paper)
+        pdf.ln(1)
+
+    add_heading(pdf, "RECENT PAPERS")
+    pdf.set_font("Helvetica", "", 9)
+    recent_papers = [
+        '[1] A. Blume, B. Uzkent, S. Chaudhuri, G. Kessler, '
+        '"Learning to Rank Caption Chains for Video-Text Alignment", ECCV-26.',
+    ]
+    for paper in recent_papers:
         pdf.set_x(pdf.l_margin)
         pdf.multi_cell(pdf.epw, 5, paper)
         pdf.ln(1)

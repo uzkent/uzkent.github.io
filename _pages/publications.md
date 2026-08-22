@@ -300,7 +300,6 @@ redirect_from:
 
 <div class="pub-nav">
   <a href="#selected">⭐ Selected</a>
-  <a href="#scholar-metrics-title">📈 Citations</a>
   <a href="#conferences">🎤 Conference Papers (33)</a>
   <a href="#journals">📖 Journal Articles (9)</a>
   <a href="#preprints">📝 Preprints (2)</a>
@@ -312,8 +311,6 @@ redirect_from:
 </div>
 
 {% include publications-selected.html %}
-
-{% include scholar-citations-chart.html %}
 
 <!-- ============================================================ -->
 <!--                     CONFERENCE PAPERS                        -->

@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import fitz
+import re
+import unicodedata
 from fpdf import FPDF
 from pathlib import Path
 
@@ -13,6 +15,7 @@ SOURCE = FILES / "CV.BurakUzkent.pdf"
 ARCHIVE = FILES / "CV.BurakUzkent.pdf.bak"
 OUTPUTS = [FILES / "CV.BurakUzkent.pdf", FILES / "Burak_Uzkent_Academic_CV.pdf"]
 TEMP = FILES / "_cv_pages_1_2.pdf"
+PUBLICATIONS_TEMP = FILES / "_cv_publications.pdf"
 
 
 class CVPDF(FPDF):
@@ -42,6 +45,34 @@ def write_wrapped(pdf: FPDF, text: str, line_h: float = 5, style: str = "") -> N
     else:
         pdf.set_font("Helvetica", "", 9.5)
     pdf.multi_cell(pdf.epw, line_h, text)
+
+
+def normalize_pdf_text(text: str) -> str:
+    replacements = str.maketrans(
+        {
+            "\u2013": "-",
+            "\u2014": "-",
+            "\u2018": "'",
+            "\u2019": "'",
+            "\u201c": '"',
+            "\u201d": '"',
+            "\u00bd": "",
+            "\u00cd": "",
+            "\x08": "",
+        }
+    )
+    normalized = unicodedata.normalize("NFKD", text.translate(replacements))
+    latin_text = normalized.encode("latin-1", "ignore").decode("latin-1")
+    return re.sub(r"\s+", " ", latin_text).strip()
+
+
+def numbered_entries(text: str) -> list[str]:
+    chunks = re.split(r"(?m)(?=^\[\d+\]\s)", text)
+    return [
+        normalize_pdf_text(chunk)
+        for chunk in chunks
+        if re.match(r"^\[\d+\]", chunk)
+    ]
 
 
 def add_role(
@@ -253,6 +284,58 @@ def build_pages_1_2() -> None:
     pdf.output(TEMP)
 
 
+def build_publication_pages(source_path: Path) -> Path:
+    source = fitz.open(source_path)
+    page4_text = source[3].get_text()
+    page5_text = source[4].get_text()
+    source.close()
+
+    conference_heading = "REFEREED CONFERENCE PUBLICATIONS"
+    journal_text, first_conference_text = page4_text.split(conference_heading, 1)
+    journal_entries = numbered_entries(journal_text)
+    prior_conference_entries = numbered_entries(first_conference_text) + numbered_entries(page5_text)
+
+    accepted_entries = [
+        'T. Poppi, B. Uzkent, A. Garg, L. Porto, G. Kessler, Y. Yang, M. Cornia, L. Baraldi, '
+        'R. Cucchiara, F. Schiffers, "CounterVid: Counterfactual Video Generation for Mitigating Action '
+        'and Temporal Hallucinations in Video-Language Models", EMNLP-26, 2026.',
+        'G. Sun, A. Singhal, B. Uzkent, M. Shah, C. Chen, G. Kessler, "From Frames to Clips: '
+        'Efficient Key Clip Selection for Long-form Video Understanding", ECCV Workshop-26, 2026.',
+        'R. Jain, K. Doshi, B. Uzkent, G. Kessler, "Narrative Aligned Long Form Video Question Answering", '
+        'CVPR Workshop-26 (Best Paper Candidate), 2026.',
+    ]
+
+    pdf = CVPDF()
+    pdf.set_margins(18, 18, 18)
+    pdf.set_auto_page_break(auto=True, margin=20)
+    pdf.add_page()
+    pdf.set_font("Helvetica", "B", 9)
+    pdf.set_text_color(120, 120, 120)
+    pdf.cell(0, 5, "Burak Uzkent - CV", new_x="LMARGIN", new_y="NEXT")
+    pdf.ln(2)
+
+    add_heading(pdf, "REFEREED JOURNAL PUBLICATIONS (CONTINUED)")
+    pdf.set_text_color(30, 30, 30)
+    for entry in journal_entries:
+        pdf.set_font("Helvetica", "", 8.2)
+        pdf.set_x(pdf.l_margin)
+        pdf.multi_cell(pdf.epw, 4.2, entry)
+        pdf.ln(0.8)
+
+    add_heading(pdf, conference_heading)
+    conference_entries = accepted_entries + [
+        re.sub(r"^\[\d+\]\s*", "", entry) for entry in prior_conference_entries
+    ]
+    for index, entry in enumerate(conference_entries, start=1):
+        pdf.set_font("Helvetica", "", 8.2)
+        pdf.set_x(pdf.l_margin)
+        pdf.multi_cell(pdf.epw, 4.2, f"[{index}] {entry}")
+        pdf.ln(0.8)
+
+    pdf.output(PUBLICATIONS_TEMP)
+    return PUBLICATIONS_TEMP
+
+
 def build_page_6() -> Path:
     pdf = FPDF()
     pdf.set_margins(18, 18, 18)
@@ -263,25 +346,9 @@ def build_page_6() -> Path:
     pdf.cell(0, 5, "Burak Uzkent - CV", new_x="LMARGIN", new_y="NEXT")
     pdf.ln(2)
 
-    add_heading(pdf, "REFEREED CONFERENCE PUBLICATIONS (CONTINUED)")
-    pdf.set_font("Helvetica", "", 9)
-    pdf.set_text_color(30, 30, 30)
-    accepted_papers = [
-        '[1] T. Poppi, B. Uzkent, A. Garg, L. Porto, G. Kessler, Y. Yang, M. Cornia, L. Baraldi, '
-        'R. Cucchiara, F. Schiffers, "CounterVid: Counterfactual Video Generation for Mitigating Action '
-        'and Temporal Hallucinations in Video-Language Models", EMNLP-26 (Accepted).',
-        '[2] G. Sun, A. Singhal, B. Uzkent, M. Shah, C. Chen, G. Kessler, "From Frames to Clips: '
-        'Efficient Key Clip Selection for Long-form Video Understanding", ECCV Workshop-26 (Accepted).',
-        '[3] R. Jain, K. Doshi, B. Uzkent, G. Kessler, "Narrative Aligned Long Form Video Question Answering", '
-        'CVPR Workshop-26 (Best Paper Candidate).',
-    ]
-    for paper in accepted_papers:
-        pdf.set_x(pdf.l_margin)
-        pdf.multi_cell(pdf.epw, 5, paper)
-        pdf.ln(1)
-
     add_heading(pdf, "RECENT PAPERS")
     pdf.set_font("Helvetica", "", 9)
+    pdf.set_text_color(30, 30, 30)
     recent_papers = [
         '[1] A. Blume, B. Uzkent, S. Chaudhuri, G. Kessler, '
         '"Learning to Rank Caption Chains for Video-Text Alignment", ECCV-26.',
@@ -331,23 +398,27 @@ def merge_and_write() -> None:
     build_pages_1_2()
     new_part = fitz.open(TEMP)
     old = fitz.open(tail_source)
+    publications = fitz.open(build_publication_pages(tail_source))
     out = fitz.open()
 
     out.insert_pdf(new_part, from_page=0, to_page=1)
     if old.page_count > 2:
-        out.insert_pdf(old, from_page=2, to_page=old.page_count - 2)
+        out.insert_pdf(old, from_page=2, to_page=2)
+    out.insert_pdf(publications)
 
-    page6 = fitz.open(build_page_6())
-    out.insert_pdf(page6)
-    page6.close()
+    final_page = fitz.open(build_page_6())
+    out.insert_pdf(final_page)
+    final_page.close()
 
     for path in OUTPUTS:
         out.save(path, garbage=4, deflate=True)
 
     new_part.close()
     old.close()
+    publications.close()
     out.close()
     TEMP.unlink(missing_ok=True)
+    PUBLICATIONS_TEMP.unlink(missing_ok=True)
     (FILES / "_cv_page_6.pdf").unlink(missing_ok=True)
     print(f"Wrote: {', '.join(str(p) for p in OUTPUTS)}")
 

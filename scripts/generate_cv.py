@@ -1,294 +1,129 @@
 #!/usr/bin/env python3
-"""Regenerate Burak Uzkent academic CV PDF (pages 1-2) and merge with prior pages 3-6."""
+"""Regenerate Burak Uzkent's academic CV from the archived LaTeX-typeset PDF.
+
+files/CV.BurakUzkent.pdf.bak is the last CV produced from the original LaTeX
+source. Rather than imitating its look, this script lifts the typeset blocks out
+of that PDF, reflows them across pages, and sets only the parts that changed
+using the Computer Modern fonts embedded in the same document.
+"""
 
 from __future__ import annotations
 
-import fitz
 import re
-from fpdf import FPDF
 from pathlib import Path
+
+import fitz
 
 ROOT = Path(__file__).resolve().parents[1]
 FILES = ROOT / "files"
-SOURCE = FILES / "CV.BurakUzkent.pdf"
 ARCHIVE = FILES / "CV.BurakUzkent.pdf.bak"
 OUTPUTS = [FILES / "CV.BurakUzkent.pdf", FILES / "Burak_Uzkent_Academic_CV.pdf"]
-TEMP = FILES / "_cv_pages_1_2.pdf"
 
-
-class CVPDF(FPDF):
-    def footer(self):
-        self.set_y(-15)
-        self.set_font("Helvetica", "I", 9)
-        self.set_text_color(100, 100, 100)
-        self.cell(0, 10, f"Page {self.page_no()}", align="C")
-
-
-def add_heading(pdf: CVPDF, title: str):
-    pdf.ln(2)
-    pdf.set_font("Helvetica", "B", 11)
-    pdf.set_text_color(0, 80, 160)
-    pdf.cell(pdf.epw, 7, title, new_x="LMARGIN", new_y="NEXT")
-    pdf.set_draw_color(0, 80, 160)
-    pdf.line(pdf.l_margin, pdf.get_y(), pdf.w - pdf.r_margin, pdf.get_y())
-    pdf.ln(3)
-
-
-def write_wrapped(pdf: FPDF, text: str, line_h: float = 5, style: str = "") -> None:
-    pdf.set_x(pdf.l_margin)
-    if style == "bold":
-        pdf.set_font("Helvetica", "B", 10.5)
-    elif style == "italic":
-        pdf.set_font("Helvetica", "I", 9.5)
-    else:
-        pdf.set_font("Helvetica", "", 9.5)
-    pdf.multi_cell(pdf.epw, line_h, text)
-
-
-def add_role(
-    pdf: CVPDF,
-    role: str,
-    dates: str,
-    org: str,
-    location: str,
-    bullets: list[str],
-):
-    pdf.set_text_color(20, 20, 20)
-    write_wrapped(pdf, role, line_h=5.5, style="bold")
-    pdf.set_text_color(80, 80, 80)
-    write_wrapped(pdf, dates, line_h=4.8, style="italic")
-    pdf.set_font("Helvetica", "", 10)
-    pdf.set_text_color(0, 80, 160)
-    write_wrapped(pdf, f"{org}  |  {location}", line_h=5)
-    pdf.set_text_color(30, 30, 30)
-    pdf.set_font("Helvetica", "", 9.5)
-    for bullet in bullets:
-        pdf.set_x(pdf.l_margin)
-        pdf.multi_cell(pdf.epw, 4.8, f"- {bullet}")
-    pdf.ln(1.5)
-
-
-def build_pages_1_2() -> None:
-    pdf = CVPDF()
-    pdf.set_margins(18, 18, 18)
-    pdf.set_auto_page_break(auto=True, margin=20)
-    pdf.add_page()
-
-    pdf.set_font("Helvetica", "B", 16)
-    pdf.set_text_color(0, 0, 0)
-    pdf.cell(pdf.epw, 9, "BURAK UZKENT, Ph.D.", new_x="LMARGIN", new_y="NEXT")
-    pdf.set_font("Helvetica", "", 9.5)
-    pdf.set_text_color(50, 50, 50)
-    pdf.set_x(pdf.l_margin)
-    pdf.multi_cell(
-        pdf.epw,
-        4.8,
-        "Santa Clara, CA  |  +1-650-861-8068  |  uzkent.burak@gmail.com  |  uzkent.github.io",
-    )
-    pdf.ln(2)
-
-    add_heading(pdf, "PROFESSIONAL SUMMARY")
-    pdf.set_font("Helvetica", "", 9.8)
-    pdf.set_text_color(30, 30, 30)
-    pdf.set_x(pdf.l_margin)
-    pdf.multi_cell(
-        pdf.epw,
-        5,
-        (
-            "Principal Member of Technical Staff with 10+ years of experience developing and deploying "
-            "large-scale machine learning systems. Specialized in generative AI, computer vision, "
-            "multimodal and video-language modeling, and efficient transformer architectures. "
-            "Published 40+ papers in top-tier venues (CVPR, ICCV, ICLR, NeurIPS, AAAI, EMNLP) "
-            "with extensive experience in both academic research and industrial applications. "
-            "Proven track record of leading research initiatives at AMD, Amazon, Samsung, and Stanford University."
-        ),
-    )
-
-    add_heading(pdf, "PROFESSIONAL EXPERIENCE")
-    add_role(
-        pdf,
-        "Principal Member of Technical Staff",
-        "April 2026 - Present",
-        "AMD",
-        "Santa Clara, CA",
-        [
-            "Work on applications of Generative AI on AMD hardware",
-            "Develop and evaluate ML systems optimized for AMD accelerators and platforms",
-            "Hiring for full-time positions at all levels",
-        ],
-    )
-    add_role(
-        pdf,
-        "Machine Learning Scientist",
-        "April 2022 - March 2026",
-        "Amazon Prime Video",
-        "Sunnyvale, CA",
-        [
-            "Led development of Video LLMs for advanced video understanding and content moderation in long-form videos",
-            "Designed and implemented multimodal foundation models for video summarization pipeline",
-            "Developed transformer-based NLP models for subtitle analysis enabling automated content moderation at scale",
-            "Published papers at CVPR, WACV, and EMNLP; ECCV workshop paper accepted; filed multiple patents",
-        ],
-    )
-    add_role(
-        pdf,
-        "Senior Research Scientist",
-        "November 2020 - April 2022",
-        "Samsung Research America",
-        "Mountain View, CA",
-        [
-            "Optimized vision transformer architectures achieving significant model compression while maintaining accuracy",
-            "Developed efficient multi-modal transformers for on-device applications with reduced inference latency",
-            "Led team of 3 researchers in developing novel computer vision and multimodal ML models",
-            "Published 4 papers in top-tier conferences (CVPR, ICLR, AAAI) and filed 6 patents",
-        ],
-    )
-    add_role(
-        pdf,
-        "Postdoctoral Fellow",
-        "July 2018 - October 2020",
-        "Stanford University, Department of Computer Science",
-        "Stanford, CA",
-        [
-            "Published 15+ papers in top-tier conferences (ICCV, CVPR, ICLR, AAAI, IJCAI, KDD)",
-            "Developed novel self-supervised and weakly supervised learning approaches for remote sensing",
-            "Created efficient deep learning models using reinforcement learning for adaptive computation",
-            "Built ML models for sustainability applications including poverty mapping and farmland delineation",
-        ],
-    )
-
-    pdf.add_page()
-    pdf.set_font("Helvetica", "B", 9)
-    pdf.set_text_color(120, 120, 120)
-    pdf.cell(0, 5, "Burak Uzkent - CV", new_x="LMARGIN", new_y="NEXT")
-    pdf.ln(1)
-
-    add_role(
-        pdf,
-        "Computer Vision Engineer",
-        "June 2017 - July 2018",
-        "Planet Labs",
-        "San Francisco, CA",
-        [
-            "Built large-scale object detection dataset with 100K+ annotated satellite images",
-            "Improved small object detection accuracy in low-resolution aerial imagery using convolutional detectors",
-            "Conducted research to tackle unique challenges of satellite image object detection",
-        ],
-    )
-    add_role(
-        pdf,
-        "Computer Vision Engineer",
-        "August 2016 - June 2017",
-        "Autel Robotics",
-        "San Ramon, CA",
-        [
-            "Designed long-term target following system for next-generation drones",
-            "Implemented online learning method for real-time single object tracking on embedded platforms",
-            "Deployed and optimized tracking algorithms on low-end embedded systems",
-        ],
-    )
-    add_role(
-        pdf,
-        "Computer Vision Algorithm Engineer Intern",
-        "November 2015 - May 2016",
-        "Futurewei Technologies (Huawei R&D)",
-        "Bridgewater, NJ",
-        [
-            "Designed subspace learning method for stranger detection in family photo albums using deep CNNs",
-            "Developed probabilistic graph-based approach for semantic role assignment in family photos",
-        ],
-    )
-
-    add_heading(pdf, "EDUCATION")
-    entries = [
-        (
-            "Rochester Institute of Technology",
-            "August 2011 - May 2016",
-            "Ph.D. in Imaging Science, Chester F. Carlson Center for Imaging Science",
-            "Thesis: Aerial visual vehicle detection and tracking using an adaptive, multi-modal sensor",
-            "Advisor: Matthew J. Hoffman, Ph.D.",
-        ),
-        (
-            "University of Bridgeport",
-            "August 2009 - May 2011",
-            "M.S. in Electrical Engineering",
-            "Thesis: Environmental non-speech sound classification with a new set of time-domain features",
-            "Advisor: Buket D. Barkana, Ph.D.",
-        ),
-        (
-            "Eskisehir Osmangazi University",
-            "September 2004 - May 2009",
-            "B.S. in Electrical and Electronics Engineering",
-            "Thesis: Autonomous parallel parking of non-holonomic vehicles",
-            "Advisor: Osman Parlaktuna, Ph.D.",
-        ),
-    ]
-    for inst, years, degree, thesis, advisor in entries:
-        pdf.set_text_color(20, 20, 20)
-        write_wrapped(pdf, inst, line_h=5, style="bold")
-        pdf.set_text_color(80, 80, 80)
-        write_wrapped(pdf, years, line_h=4.5, style="italic")
-        pdf.set_text_color(30, 30, 30)
-        write_wrapped(pdf, degree, line_h=4.5)
-        pdf.set_font("Helvetica", "I", 9)
-        pdf.set_x(pdf.l_margin)
-        pdf.multi_cell(pdf.epw, 4.5, thesis)
-        write_wrapped(pdf, advisor, line_h=4.5)
-        pdf.ln(1)
-
-    add_heading(pdf, "RESEARCH EXPERIENCE")
-    add_role(
-        pdf,
-        "Graduate Research Assistant",
-        "April 2012 - July 2016",
-        "RIT, Chester F. Carlson Center for Imaging Science",
-        "Rochester, NY",
-        [
-            "Conducted research on aerial vehicle detection and tracking using adaptive, multi-modal sensors",
-            "Developed computer vision and ML methods for vehicle detection, association, and tracking in aerial video",
-            "Addressed challenges of medium-to-high altitude tracking through efficient use of hyperspectral data",
-        ],
-    )
-
-    TEMP.parent.mkdir(parents=True, exist_ok=True)
-    pdf.output(TEMP)
-
-
-# Geometry, colours and fonts below are measured from the archived LaTeX CV so
-# that regenerated publication pages reuse its typesetting instead of imitating it.
+# --- geometry, all measured from the archived CV ---------------------------
 PAGE_W, PAGE_H = 612.0, 792.0
 SIZE = 9.96
+TITLE_SIZE = 11.96
 LEADING = 11.9533
-ASCENT = 0.75 * SIZE
-SPACE = 0.3333 * SIZE
-TEXT_LEFT = 58.70
-TEXT_RIGHT = 568.80
-TEXT_WIDTH = TEXT_RIGHT - TEXT_LEFT
+SPACE_RATIO = 0.3333
+ASCENT_RATIO = 0.75
+LEFT, RIGHT = 43.20, 568.80
 LABEL_RIGHT = 53.72
-CLIP_LEFT = 55.0
-CLIP_RIGHT = 570.0
+ENTRY_LEFT = 58.70
+FULL_LEFT, CLIP_LEFT, CLIP_RIGHT = 30.0, 55.0, 570.0
 CLIP_PAD = 3.0
-BODY_TOP = 38.18
-BODY_BOTTOM = 726.5
-BLUE = (0.0, 0.32158, 0.60783)
-GRAY = (0.50980, 0.50980, 0.50980)
+BODY_BOTTOM = 741.0
+GROUP_GAP = 13.0
+BULLET_ICON_X, BULLET_TEXT_X, BULLET_STEP = 40.50, 51.50, 19.92
+BULLET_ICON_RISE = -0.40  # the stamp is clipped 0.5pt above the glyph
+ROLE_BODY_GAP = 19.94
+GAP_SECTION, GAP_ROLE, GAP_ENTRY = 23.39, 18.45, 13.95
+TOP_HEADING, TOP_TITLE, TOP_TEXT = 36.25, 35.20, 38.18
 
-JOURNAL_PAGE = 3
-REVIEW_PAGE = 5
-JOURNAL_CLIP = fitz.Rect(30, 33.0, CLIP_RIGHT, 208.0)
-CONFERENCE_HEADING_CLIP = fitz.Rect(30, 220.0, CLIP_RIGHT, 249.0)
-CONFERENCE_TOP = 261.74
-REVIEW_HEADING_CLIP = fitz.Rect(30, 30.0, CLIP_RIGHT, 58.0)
-REVIEW_ENTRY_TOP = 71.05
-REVIEW_TAIL_CLIP = fitz.Rect(30, 172.0, CLIP_RIGHT, 540.0)
-REVIEW_TAIL_ANCHOR = 164.70
+BLUE = (0.0, 0.32158, 0.60783)
+TITLE_BLUE = (0.0, 0.2, 0.4)
+GRAY = (0.50980, 0.50980, 0.50980)
+DARK = (0.23529, 0.23529, 0.23529)
+LINK_BLUE = (0.0, 0.47060, 0.78432)
+BOX_GRAY = (0.96078, 0.96078, 0.96078)
+
+MASTHEAD_CLIP = fitz.Rect(0, 0, PAGE_W, 70.0)
+CONTACT_TOP, CONTACT_TEXT_TOP, CONTACT_ICON_TOP = 73.658, 84.47, 83.72
+CONTACT_BOTTOM_PAD, CONTACT_ITEM_GAP = 10.57, 13.27
+SUMMARY_GAP = 34.06
 HEADER_CLIP = fitz.Rect(470, 0, 580, 14)
 FOOTER_CLIP = fitz.Rect(270, 770, 342, PAGE_H)
 
-# The archived CMBX10 subset carries no capital N, so bold falls back to CMBX12.
-STYLE_FONTS = {"r": ("CMR10",), "b": ("CMBX10", "CMBX12"), "i": ("CMTI10", "CMR10")}
+# Small glyph stamps copied from the archive; FontAwesome's subset cannot be
+# addressed by character code, so its icons are reused as clipped artwork.
+ICONS = {
+    "calendar": (0, fitz.Rect(466.32, 326.60, 475.60, 337.40)),
+    "marker": (0, fitz.Rect(495.03, 338.60, 500.75, 349.20)),
+    "bullet": (0, fitz.Rect(40.50, 369.30, 48.20, 379.30)),
+    "contact_marker": (0, fitz.Rect(80.09, 83.30, 85.80, 94.40)),
+    "contact_phone": (0, fitz.Rect(291.37, 83.30, 299.21, 94.40)),
+    "contact_mail": (0, fitz.Rect(388.30, 83.30, 398.28, 94.40)),
+    "contact_globe": (0, fitz.Rect(523.38, 83.30, 531.93, 94.40)),
+}
+
+# The archived subsets are incomplete: CMBX10 has no capital N and CMBX12 no
+# lowercase b or f, so each style falls back to its closest sibling.
+STYLE_FONTS = {
+    "r": ("CMR10",),
+    "b": ("CMBX10", "CMBX12"),
+    "i": ("CMTI10", "CMR10"),
+    "t": ("CMBX12", "CMBX10"),
+}
 LIGATURES = (("ffi", "\ufb03"), ("ffl", "\ufb04"), ("ff", "\ufb00"), ("fi", "\ufb01"), ("fl", "\ufb02"))
 LABEL_RE = re.compile(r"^\[\d+\]$")
+
+CONTACT = [
+    ("contact_marker", "Santa Clara, CA", None),
+    ("contact_phone", "+1-650-861-8068", None),
+    ("contact_mail", "uzkent.burak@gmail.com", "mailto:uzkent.burak@gmail.com"),
+    ("contact_globe", "uzkent.github.io", "https://uzkent.github.io"),
+]
+
+SUMMARY = [
+    ("Principal Member of Technical Staff with", "r"),
+    (" 10+ years", "b"),
+    (" of experience developing and deploying large-scale machine learning systems. Specialized in", "r"),
+    (" generative AI", "b"),
+    (",", "r"),
+    (" computer vision", "b"),
+    (",", "r"),
+    (" multi-modal and video-language modeling", "b"),
+    (", and efficient", "r"),
+    (" transformer architectures", "b"),
+    (". Published", "r"),
+    (" 40+ papers", "b"),
+    (
+        " in top-tier venues (CVPR, ICCV, ICLR, NeurIPS, EMNLP, AAAI) across academic research and "
+        "industrial applications. Proven track record of leading research initiatives at AMD, Amazon, "
+        "Samsung, and Stanford University.",
+        "r",
+    ),
+]
+
+AMD_ROLE = {
+    "title": "Principal Member of Technical Staff",
+    "dates": "April 2026 \u2013 Present",
+    "organisation": "AMD",
+    "location": "Santa Clara, CA",
+    "bullets": [
+        [("Work on applications of", "r"), (" generative AI", "b"), (" on AMD hardware", "r")],
+        [("Develop and evaluate ML systems optimized for AMD accelerators and platforms", "r")],
+        [("Hiring for full-time positions at all levels", "r")],
+    ],
+}
+
+AMAZON_DATES = "April 2022 \u2013 March 2026"
+AMAZON_LAST_BULLET = [
+    ("Published", "r"),
+    (" 6 papers", "b"),
+    (" (CVPR, WACV, EMNLP, ECCV Workshop) and filed", "r"),
+    (" 2 patents", "b"),
+    ("; 1 additional paper under review", "r"),
+]
 
 ACCEPTED_ENTRIES = [
     [
@@ -344,6 +179,7 @@ REVIEW_ENTRY = [
 ]
 
 
+# --- fonts and typesetting -------------------------------------------------
 def load_cm_fonts(source: fitz.Document) -> dict[str, tuple[bytes, fitz.Font]]:
     fonts: dict[str, tuple[bytes, fitz.Font]] = {}
     for number in range(source.page_count):
@@ -360,21 +196,29 @@ def register_fonts(page: fitz.Page, fonts: dict) -> None:
         page.insert_font(fontname=name, fontbuffer=fonts[name][0])
 
 
-def ligate(word: str) -> str:
-    for plain, ligature in LIGATURES:
-        word = word.replace(plain, ligature)
-    return word
+def ligate(word: str, fonts: dict, candidates: tuple[str, ...]) -> str:
+    def available(char: str) -> bool:
+        return any(fonts[name][1].has_glyph(ord(char)) for name in candidates)
+
+    result: list[str] = []
+    index = 0
+    while index < len(word):
+        for plain, ligature in LIGATURES:
+            if word.startswith(plain, index) and available(ligature):
+                result.append(ligature)
+                index += len(plain)
+                break
+        else:
+            result.append(word[index])
+            index += 1
+    return "".join(result)
 
 
 def style_runs(word: str, style: str, fonts: dict) -> list[tuple[str, str]]:
-    """Split a word into runs per font, since the archived subsets lack some glyphs."""
     candidates = STYLE_FONTS[style]
     runs: list[list[str]] = []
-    for char in word:
-        chosen = next(
-            (name for name in candidates if fonts[name][1].has_glyph(ord(char))),
-            candidates[0],
-        )
+    for char in ligate(word, fonts, candidates):
+        chosen = next((n for n in candidates if fonts[n][1].has_glyph(ord(char))), candidates[0])
         if runs and runs[-1][1] == chosen:
             runs[-1][0] += char
         else:
@@ -382,7 +226,7 @@ def style_runs(word: str, style: str, fonts: dict) -> list[tuple[str, str]]:
     return [(text, name) for text, name in runs]
 
 
-def tokenize(fragments: list[tuple[str, str]], fonts: dict) -> list[dict]:
+def tokenize(fragments, fonts: dict, size: float = SIZE) -> list[dict]:
     tokens: list[dict] = []
     pending_space = False
     for text, style in fragments:
@@ -392,15 +236,16 @@ def tokenize(fragments: list[tuple[str, str]], fonts: dict) -> list[dict]:
         words = text.split()
         for index, word in enumerate(words):
             spaced = True if index else (pending_space or leading_space)
-            runs = style_runs(ligate(word), style, fonts)
-            width = sum(fonts[name][1].text_length(run, SIZE) for run, name in runs)
+            runs = style_runs(word, style, fonts)
+            width = sum(fonts[name][1].text_length(run, size) for run, name in runs)
             tokens.append({"runs": runs, "width": width, "space": spaced})
         pending_space = text.endswith(" ") if words else pending_space
     return tokens
 
 
-def wrap_tokens(tokens: list[dict], width: float = TEXT_WIDTH) -> list[list[dict]]:
+def wrap_tokens(tokens: list[dict], width: float, size: float = SIZE) -> list[list[dict]]:
     """Break tokens into lines, minimising stretched word spacing as TeX does."""
+    space = SPACE_RATIO * size
     count = len(tokens)
     cost = [float("inf")] * (count + 1)
     follow = [count] * (count + 1)
@@ -411,54 +256,108 @@ def wrap_tokens(tokens: list[dict], width: float = TEXT_WIDTH) -> list[list[dict
         for end in range(start, count):
             token = tokens[end]
             if end > start and token["space"]:
-                used += SPACE
+                used += space
                 gaps += 1
             used += token["width"]
             if used > width and end > start:
                 break
-            slack = width - used
             if end == count - 1:
                 penalty = 0.0
             elif not gaps:
                 penalty = float("inf")
             else:
-                penalty = (slack / gaps) ** 3
+                penalty = ((width - used) / gaps) ** 3
             total = cost[end + 1] + penalty
             if total < cost[start]:
                 cost[start] = total
                 follow[start] = end + 1
-
     lines: list[list[dict]] = []
     start = 0
     while start < count:
-        end = follow[start]
-        lines.append(tokens[start:end])
-        start = end
+        lines.append(tokens[start:follow[start]])
+        start = follow[start]
     return lines
 
 
-def draw_label(page: fitz.Page, fonts: dict, number: int, top: float) -> None:
-    label = f"[{number}]"
-    width = fonts["CMR10"][1].text_length(label, SIZE)
-    page.insert_text(
-        (LABEL_RIGHT - width, top + ASCENT), label, fontname="CMR10", fontsize=SIZE, color=BLUE
-    )
+def compose(fragments, fonts: dict, width: float, size: float = SIZE) -> list[list[dict]]:
+    return wrap_tokens(tokenize(fragments, fonts, size), width, size)
 
 
-def draw_entry(page: fitz.Page, fonts: dict, number: int, lines: list[list[dict]], top: float) -> None:
-    draw_label(page, fonts, number, top)
+def text_width(fragments, fonts: dict, size: float = SIZE) -> float:
+    tokens = tokenize(fragments, fonts, size)
+    space = SPACE_RATIO * size
+    return sum(t["width"] for t in tokens) + space * sum(1 for t in tokens[1:] if t["space"])
+
+
+def draw_lines(page, fonts, lines, left, width, top, size=SIZE, color=(0, 0, 0)) -> None:
+    space = SPACE_RATIO * size
     for index, line in enumerate(lines):
-        baseline = top + index * LEADING + ASCENT
+        baseline = top + index * LEADING + ASCENT_RATIO * size
         gaps = sum(1 for token in line[1:] if token["space"])
         ink = sum(token["width"] for token in line)
-        space = (TEXT_WIDTH - ink) / gaps if gaps and index < len(lines) - 1 else SPACE
-        x = TEXT_LEFT
+        gap = (width - ink) / gaps if gaps and index < len(lines) - 1 else space
+        x = left
         for position, token in enumerate(line):
             if position and token["space"]:
-                x += space
+                x += gap
             for run, name in token["runs"]:
-                page.insert_text((x, baseline), run, fontname=name, fontsize=SIZE)
-                x += fonts[name][1].text_length(run, SIZE)
+                page.insert_text((x, baseline), run, fontname=name, fontsize=size, color=color)
+                x += fonts[name][1].text_length(run, size)
+
+
+# --- block model -----------------------------------------------------------
+def copy_element(source_page: int, clip: fitz.Rect, top: float) -> dict:
+    return {"kind": "copy", "page": source_page, "clip": clip, "rel": clip.y0 - top}
+
+
+def place_block(page: fitz.Page, source: fitz.Document, fonts: dict, block: dict, top: float) -> None:
+    for element in block["elements"]:
+        y = top + element["rel"]
+        kind = element["kind"]
+        if kind == "copy":
+            clip = element["clip"]
+            dy = y - clip.y0
+            page.show_pdf_page(clip + (0, dy, 0, dy), source, element["page"], clip=clip)
+            for link in source[element["page"]].get_links():
+                box = link["from"]
+                if link.get("uri") and clip.y0 <= box.y0 and box.y1 <= clip.y1:
+                    page.insert_link({"kind": link["kind"], "uri": link["uri"], "from": box + (0, dy, 0, dy)})
+        elif kind == "stamp":
+            clip = ICONS[element["icon"]][1]
+            page.show_pdf_page(
+                fitz.Rect(element["x"], y, element["x"] + clip.width, y + clip.height),
+                source,
+                ICONS[element["icon"]][0],
+                clip=clip,
+            )
+        elif kind == "lines":
+            draw_lines(
+                page,
+                fonts,
+                element["lines"],
+                element["left"],
+                element["width"],
+                y,
+                element.get("size", SIZE),
+                element.get("color", (0, 0, 0)),
+            )
+        elif kind == "text":
+            size = element.get("size", SIZE)
+            width = text_width(element["fragments"], fonts, size)
+            left = element["x"] - width if element.get("align") == "right" else element["x"]
+            draw_lines(page, fonts, compose(element["fragments"], fonts, width + 1, size),
+                       left, width, y, size, element.get("color", (0, 0, 0)))
+        elif kind == "label":
+            label = f"[{element['number']}]"
+            width = fonts["CMR10"][1].text_length(label, SIZE)
+            page.insert_text((LABEL_RIGHT - width, y + ASCENT_RATIO * SIZE), label,
+                             fontname="CMR10", fontsize=SIZE, color=BLUE)
+        elif kind == "rect":
+            page.draw_rect(fitz.Rect(element["x0"], y, element["x1"], y + element["height"]),
+                           color=None, fill=element["fill"])
+        elif kind == "link":
+            page.insert_link({"kind": fitz.LINK_URI, "uri": element["uri"],
+                              "from": fitz.Rect(element["x0"], y, element["x1"], y + element["height"])})
 
 
 def page_lines(page: fitz.Page) -> list[dict]:
@@ -473,95 +372,323 @@ def page_lines(page: fitz.Page) -> list[dict]:
     return lines
 
 
-def conference_entries(source: fitz.Document) -> list[dict]:
-    entries: list[dict] = []
-    collecting = False
-    for number in (JOURNAL_PAGE, JOURNAL_PAGE + 1):
-        for line in page_lines(source[number]):
-            spans = line["spans"]
-            if spans[0]["size"] > 13:
-                title = "".join(span["text"] for span in spans).upper()
-                collecting = "CONFERENCE" in title
-                continue
-            if not collecting:
-                continue
-            _, top, _, bottom = line["bbox"]
-            is_label = LABEL_RE.match(spans[0]["text"].strip()) and spans[0]["bbox"][2] <= LABEL_RIGHT + 1
-            if is_label:
-                entries.append({"page": number, "top": top, "bottom": bottom, "count": 1})
-            elif entries:
-                entries[-1]["bottom"] = max(entries[-1]["bottom"], bottom)
-                entries[-1]["count"] += 1
-    if not entries:
-        raise SystemExit("Could not read conference publications from the archived CV")
-    return entries
+def block_kind(lines: list[dict]) -> str:
+    first = lines[0]["spans"][0]
+    if first["size"] > 13:
+        return "heading"
+    if LABEL_RE.match(first["text"].strip()) and first["bbox"][2] <= LABEL_RIGHT + 1:
+        return "entry"
+    return "other"
 
 
-def copy_block(page: fitz.Page, source: fitz.Document, number: int, clip: fitz.Rect, dy: float = 0.0) -> None:
-    page.show_pdf_page(clip + (0, dy, 0, dy), source, number, clip=clip)
-    for link in source[number].get_links():
-        box = link["from"]
-        if link.get("uri") and clip.y0 <= box.y0 and box.y1 <= clip.y1:
-            page.insert_link({"kind": link["kind"], "uri": link["uri"], "from": box + (0, dy, 0, dy)})
+def parse_blocks(source: fitz.Document) -> list[dict]:
+    """Group each archived page into blocks that can be moved as a unit."""
+    blocks: list[dict] = []
+    for number in range(source.page_count):
+        lines = [line for line in page_lines(source[number])
+                 if not (number == 0 and line["bbox"][1] < 120)]
+        groups: list[dict] = []
+        for line in lines:
+            top, bottom = line["bbox"][1], line["bbox"][3]
+            if groups and top - groups[-1]["bottom"] <= GROUP_GAP:
+                groups[-1]["lines"].append(line)
+                groups[-1]["bottom"] = max(groups[-1]["bottom"], bottom)
+            else:
+                groups.append({"lines": [line], "top": top, "bottom": bottom})
+
+        for drawing in source[number].get_drawings():
+            rect = drawing["rect"]
+            if number == 0 and rect.y1 < 130:
+                continue
+            distances = [
+                (max(group["top"] - rect.y1, rect.y0 - group["bottom"], 0.0), group)
+                for group in groups
+            ]
+            distance, group = min(distances, key=lambda item: item[0])
+            if distance <= 20:
+                group["top"] = min(group["top"], rect.y0)
+                group["bottom"] = max(group["bottom"], rect.y1)
+
+        for index, group in enumerate(groups):
+            top, bottom = group["top"], group["bottom"]
+            text = " ".join("".join(s["text"] for s in line["spans"]) for line in group["lines"])
+            clip = fitz.Rect(FULL_LEFT, top - CLIP_PAD, CLIP_RIGHT, bottom + CLIP_PAD)
+            blocks.append({
+                "kind": block_kind(group["lines"]),
+                "text": text,
+                "height": bottom - top,
+                "gap": top - groups[index - 1]["bottom"] if index else None,
+                "keep": any(span["size"] >= 11.9 for line in group["lines"] for span in line["spans"]),
+                "top_size": max(span["size"] for span in group["lines"][0]["spans"]),
+                "elements": [copy_element(number, clip, top)],
+            })
+    return blocks
+
+
+def find_block(blocks: list[dict], needle: str, start: int = 0) -> int:
+    for index in range(start, len(blocks)):
+        if needle in blocks[index]["text"]:
+            return index
+    raise SystemExit(f"Could not find {needle!r} in the archived CV")
+
+
+# --- the parts of the CV that changed --------------------------------------
+def summary_block(fonts: dict) -> dict:
+    left, width = 56.99, 498.07
+    inset_top, inset_bottom, border = 10.94, 11.56, 0.996
+    lines = compose(SUMMARY, fonts, width)
+    height = inset_top + (len(lines) - 1) * LEADING + SIZE + inset_bottom
+    return {
+        "kind": "other",
+        "text": "professional summary",
+        "height": height,
+        "gap": 15.94,
+        "keep": False,
+        "top_size": SIZE,
+        "elements": [
+            {"kind": "rect", "rel": 0.0, "x0": LEFT, "x1": 568.806, "height": height, "fill": BLUE},
+            {"kind": "rect", "rel": border, "x0": LEFT + border, "x1": 568.806 - border,
+             "height": height - 2 * border, "fill": BOX_GRAY},
+            {"kind": "lines", "rel": inset_top, "lines": lines, "left": left, "width": width},
+        ],
+    }
+
+
+def role_header_block(fonts: dict, role: dict) -> dict:
+    return {
+        "kind": "other",
+        "text": role["title"],
+        "height": 23.48,
+        "gap": GAP_ROLE,
+        "keep": True,
+        "top_size": TITLE_SIZE,
+        "elements": [
+            {"kind": "text", "rel": 0.0, "x": LEFT, "size": TITLE_SIZE, "color": TITLE_BLUE,
+             "fragments": [(role["title"], "t")]},
+            {"kind": "stamp", "rel": 0.32, "icon": "calendar",
+             "x": RIGHT - text_width([(role["dates"], "r")], fonts) - SPACE_RATIO * SIZE
+                  - ICONS["calendar"][1].width},
+            {"kind": "text", "rel": 1.56, "x": RIGHT, "align": "right", "color": GRAY,
+             "fragments": [(role["dates"], "r")]},
+            {"kind": "text", "rel": 13.52, "x": LEFT, "color": DARK,
+             "fragments": [(role["organisation"], "i")]},
+            {"kind": "stamp", "rel": 12.32, "icon": "marker",
+             "x": RIGHT - text_width([(role["location"], "r")], fonts) - SPACE_RATIO * SIZE
+                  - ICONS["marker"][1].width},
+            {"kind": "text", "rel": 13.52, "x": RIGHT, "align": "right", "color": GRAY,
+             "fragments": [(role["location"], "r")]},
+        ],
+    }
+
+
+def bullets_block(fonts: dict, bullets: list) -> dict:
+    elements = []
+    top = 0.0
+    for fragments in bullets:
+        lines = compose(fragments, fonts, RIGHT - BULLET_TEXT_X)
+        elements.append({"kind": "stamp", "rel": top + BULLET_ICON_RISE, "icon": "bullet", "x": BULLET_ICON_X})
+        elements.append({
+            "kind": "lines", "rel": top, "left": BULLET_TEXT_X, "width": RIGHT - BULLET_TEXT_X,
+            "lines": lines,
+        })
+        top += (len(lines) - 1) * LEADING + BULLET_STEP
+    return {
+        "kind": "other",
+        "text": "bullets",
+        "height": top - BULLET_STEP + SIZE,
+        "gap": ROLE_BODY_GAP,
+        "keep": False,
+        "top_size": SIZE,
+        "elements": elements,
+    }
+
+
+def entry_block(fonts: dict, fragments: list, number: int) -> dict:
+    lines = compose(fragments, fonts, RIGHT - ENTRY_LEFT)
+    return {
+        "kind": "entry",
+        "text": "".join(text for text, _ in fragments),
+        "height": (len(lines) - 1) * LEADING + SIZE,
+        "gap": GAP_ENTRY,
+        "keep": False,
+        "top_size": SIZE,
+        "elements": [
+            {"kind": "label", "rel": 0.0, "number": number},
+            {"kind": "lines", "rel": 0.0, "lines": lines, "left": ENTRY_LEFT,
+             "width": RIGHT - ENTRY_LEFT},
+        ],
+    }
+
+
+def patch_amazon(blocks: list[dict], fonts: dict) -> None:
+    """Amazon's dates and publication tally changed; the rest is reused as set."""
+    header = find_block(blocks, "Amazon Prime Video")
+    top = 326.28
+    blocks[header]["elements"] = [
+        copy_element(0, fitz.Rect(FULL_LEFT, top - CLIP_PAD, 440.0, 352.8), top),
+        copy_element(0, fitz.Rect(440.0, 338.4, CLIP_RIGHT, 352.8), top),
+        {"kind": "stamp", "rel": 0.32, "icon": "calendar",
+         "x": RIGHT - text_width([(AMAZON_DATES, "r")], fonts) - SPACE_RATIO * SIZE
+              - ICONS["calendar"][1].width},
+        {"kind": "text", "rel": 1.56, "x": RIGHT, "align": "right", "color": GRAY,
+         "fragments": [(AMAZON_DATES, "r")]},
+    ]
+
+    bullets = header + 1
+    bullet_top, last_top = 369.70, 429.47
+    lines = compose(AMAZON_LAST_BULLET, fonts, RIGHT - BULLET_TEXT_X)
+    blocks[bullets]["elements"] = [
+        copy_element(0, fitz.Rect(FULL_LEFT, bullet_top - CLIP_PAD, CLIP_RIGHT, 419.51 + CLIP_PAD), bullet_top),
+        {"kind": "stamp", "rel": last_top - bullet_top + BULLET_ICON_RISE, "icon": "bullet",
+         "x": BULLET_ICON_X},
+        {"kind": "lines", "rel": last_top - bullet_top, "left": BULLET_TEXT_X,
+         "width": RIGHT - BULLET_TEXT_X, "lines": lines},
+    ]
+    blocks[bullets]["height"] = (last_top - bullet_top) + (len(lines) - 1) * LEADING + SIZE
+
+
+def renumber_conference(blocks: list[dict], fonts: dict) -> None:
+    """Accepted papers join the conference list, so every entry is renumbered."""
+    start = find_block(blocks, "REFEREED CONFERENCE PUBLICATIONS") + 1
+    end = start
+    while end < len(blocks) and blocks[end]["kind"] == "entry":
+        end += 1
+
+    number = len(ACCEPTED_ENTRIES)
+    for block in blocks[start:end]:
+        number += 1
+        element = block["elements"][0]
+        element["clip"] = fitz.Rect(CLIP_LEFT, element["clip"].y0, CLIP_RIGHT, element["clip"].y1)
+        block["elements"] = [{"kind": "label", "rel": 0.0, "number": number}] + block["elements"]
+
+    accepted = [entry_block(fonts, fragments, index + 1)
+                for index, fragments in enumerate(ACCEPTED_ENTRIES)]
+    accepted[0]["gap"] = blocks[start]["gap"]
+    blocks[start]["gap"] = GAP_ENTRY
+    blocks[start:start] = accepted
+
+
+def patch_review_entries(blocks: list[dict], fonts: dict) -> None:
+    """Two of the three papers under review were accepted and moved up."""
+    start = find_block(blocks, "PAPERS UNDER REVIEW") + 1
+    end = start
+    while end < len(blocks) and blocks[end]["kind"] == "entry":
+        end += 1
+    replacement = entry_block(fonts, REVIEW_ENTRY, 1)
+    replacement["gap"] = blocks[start]["gap"]
+    blocks[start:end] = [replacement]
+
+
+def apply_updates(blocks: list[dict], fonts: dict) -> list[dict]:
+    summary = find_block(blocks, "Senior Machine Learning Scientist with")
+    blocks[summary] = summary_block(fonts)
+
+    patch_amazon(blocks, fonts)
+    amazon = find_block(blocks, "Amazon Prime Video")
+    header = role_header_block(fonts, AMD_ROLE)
+    header["gap"], blocks[amazon]["gap"] = blocks[amazon]["gap"], GAP_ROLE
+    blocks[amazon:amazon] = [header, bullets_block(fonts, AMD_ROLE["bullets"])]
+
+    renumber_conference(blocks, fonts)
+    patch_review_entries(blocks, fonts)
+    return blocks
+
+
+# --- page assembly ---------------------------------------------------------
+def place_masthead(page: fitz.Page, source: fitz.Document, fonts: dict) -> float:
+    page.show_pdf_page(MASTHEAD_CLIP, source, 0, clip=MASTHEAD_CLIP)
+
+    widths = [text_width([(label, "r")], fonts) for _, label, _ in CONTACT]
+    icons = [ICONS[name][1].width for name, _, _ in CONTACT]
+    space = SPACE_RATIO * SIZE
+    total = sum(widths) + sum(icons) + len(CONTACT) * space + (len(CONTACT) - 1) * CONTACT_ITEM_GAP
+    bottom = CONTACT_TEXT_TOP + SIZE + CONTACT_BOTTOM_PAD
+    page.draw_rect(fitz.Rect(LEFT, CONTACT_TOP, 568.806, bottom), color=None, fill=BOX_GRAY)
+
+    x = (PAGE_W - total) / 2
+    for (icon, label, uri), width, icon_width in zip(CONTACT, widths, icons):
+        clip = ICONS[icon][1]
+        page.show_pdf_page(
+            fitz.Rect(x, CONTACT_ICON_TOP - 0.42, x + icon_width, CONTACT_ICON_TOP - 0.42 + clip.height),
+            source, ICONS[icon][0], clip=clip,
+        )
+        x += icon_width + space
+        colour = LINK_BLUE if uri else DARK
+        draw_lines(page, fonts, compose([(label, "r")], fonts, width + 1), x, width,
+                   CONTACT_TEXT_TOP, SIZE, colour)
+        if uri:
+            page.insert_link({"kind": fitz.LINK_URI, "uri": uri,
+                              "from": fitz.Rect(x, CONTACT_ICON_TOP, x + width, CONTACT_TEXT_TOP + SIZE)})
+        x += width + CONTACT_ITEM_GAP
+    return bottom
 
 
 def decorate(page: fitz.Page, source: fitz.Document, fonts: dict, number: int) -> None:
-    page.show_pdf_page(HEADER_CLIP, source, JOURNAL_PAGE, clip=HEADER_CLIP)
+    if number > 1:
+        page.show_pdf_page(HEADER_CLIP, source, 1, clip=HEADER_CLIP)
     if number <= source.page_count:
         page.show_pdf_page(FOOTER_CLIP, source, number - 1, clip=FOOTER_CLIP)
     else:
         label = f"Page {number}"
         width = fonts["CMR10"][1].text_length(label, 8.97)
-        page.insert_text(
-            ((PAGE_W - width) / 2, 778.88 + 0.75 * 8.97),
-            label,
-            fontname="CMR10",
-            fontsize=8.97,
-            color=GRAY,
-        )
+        page.insert_text(((PAGE_W - width) / 2, 778.88 + ASCENT_RATIO * 8.97), label,
+                         fontname="CMR10", fontsize=8.97, color=GRAY)
 
 
-def build_publication_pages(source: fitz.Document, fonts: dict, first_number: int) -> fitz.Document:
-    items = [
-        {"kind": "text", "lines": lines, "count": len(lines)}
-        for lines in (wrap_tokens(tokenize(fragments, fonts)) for fragments in ACCEPTED_ENTRIES)
-    ]
-    items += [{"kind": "copy", "entry": entry, "count": entry["count"]} for entry in conference_entries(source)]
+def gap_before(previous: dict, block: dict) -> float:
+    if block["gap"] is not None:
+        return block["gap"]
+    if block["kind"] == "heading":
+        return GAP_SECTION
+    if block["kind"] == "entry" and previous["kind"] == "entry":
+        return GAP_ENTRY
+    return GAP_ROLE
 
-    placements: list[dict] = []
-    index, top = 0, CONFERENCE_TOP
-    for position, item in enumerate(items, start=1):
-        height = (item["count"] - 1) * LEADING + SIZE
-        if top + height > BODY_BOTTOM:
-            index += 1
-            top = BODY_TOP
-        placements.append({"page": index, "top": top, "item": item, "number": position})
-        top += (item["count"] + 1) * LEADING
+
+def page_top(block: dict) -> float:
+    if block["kind"] == "heading":
+        return TOP_HEADING
+    return TOP_TITLE if block["top_size"] >= 11.0 else TOP_TEXT
+
+
+def chain_height(blocks: list[dict], index: int) -> float:
+    """Height of a block plus everything that must stay with it."""
+    height = blocks[index]["height"]
+    position = index
+    while blocks[position]["keep"] and position + 1 < len(blocks):
+        height += gap_before(blocks[position], blocks[position + 1]) + blocks[position + 1]["height"]
+        position += 1
+    return height
+
+
+def build_document() -> fitz.Document:
+    source = fitz.open(ARCHIVE)
+    fonts = load_cm_fonts(source)
+    blocks = apply_updates(parse_blocks(source), fonts)
 
     out = fitz.open()
-    for _ in range(placements[-1]["page"] + 1):
-        out.new_page(width=PAGE_W, height=PAGE_H)
-    pages = [out[index] for index in range(out.page_count)]
-    for offset, page in enumerate(pages):
-        register_fonts(page, fonts)
-        decorate(page, source, fonts, first_number + offset)
+    out.new_page(width=PAGE_W, height=PAGE_H)
+    layout: list[tuple[int, dict, float]] = []
 
-    copy_block(pages[0], source, JOURNAL_PAGE, JOURNAL_CLIP)
-    copy_block(pages[0], source, JOURNAL_PAGE, CONFERENCE_HEADING_CLIP)
+    index_page = 0
+    register_fonts(out[0], fonts)
+    cursor = place_masthead(out[0], source, fonts) + SUMMARY_GAP
+    for index, block in enumerate(blocks):
+        top = cursor if not index else cursor + gap_before(blocks[index - 1], block)
+        if index and top + chain_height(blocks, index) > BODY_BOTTOM:
+            index_page += 1
+            out.new_page(width=PAGE_W, height=PAGE_H)
+            register_fonts(out[index_page], fonts)
+            top = page_top(block)
+        layout.append((index_page, block, top))
+        cursor = top + block["height"]
 
-    # Archived entries keep their original typesetting; each is copied right
-    # after its (renumbered) label so the text still reads in order.
-    for placement in placements:
-        page = pages[placement["page"]]
-        item = placement["item"]
-        if item["kind"] == "text":
-            draw_entry(page, fonts, placement["number"], item["lines"], placement["top"])
-            continue
-        entry = item["entry"]
-        draw_label(page, fonts, placement["number"], placement["top"])
-        clip = fitz.Rect(CLIP_LEFT, entry["top"] - CLIP_PAD, CLIP_RIGHT, entry["bottom"] + CLIP_PAD)
-        copy_block(page, source, entry["page"], clip, placement["top"] - entry["top"])
+    for number in range(out.page_count):
+        decorate(out[number], source, fonts, number + 1)
+    for index_page, block, top in layout:
+        place_block(out[index_page], source, fonts, block, top)
 
+    source.close()
     return out
 
 
@@ -575,49 +702,16 @@ def fix_hyphen_mapping(document: fitz.Document) -> None:
             document.update_stream(xref, stream.replace(b"<00ad>", b"<002d>"))
 
 
-def build_final_page(source: fitz.Document, fonts: dict, number: int) -> fitz.Document:
-    out = fitz.open()
-    page = out.new_page(width=PAGE_W, height=PAGE_H)
-    register_fonts(page, fonts)
-    decorate(page, source, fonts, number)
-
-    copy_block(page, source, REVIEW_PAGE, REVIEW_HEADING_CLIP)
-    lines = wrap_tokens(tokenize(REVIEW_ENTRY, fonts))
-    draw_entry(page, fonts, 1, lines, REVIEW_ENTRY_TOP)
-
-    bottom = REVIEW_ENTRY_TOP + (len(lines) - 1) * LEADING + SIZE
-    copy_block(page, source, REVIEW_PAGE, REVIEW_TAIL_CLIP, bottom - REVIEW_TAIL_ANCHOR)
-    return out
-
-
-def merge_and_write() -> None:
-    tail_source = ARCHIVE if ARCHIVE.exists() else SOURCE
-    if not tail_source.exists():
-        raise SystemExit(f"Missing source CV: {SOURCE}")
-
-    build_pages_1_2()
-    intro = fitz.open(TEMP)
-    old = fitz.open(tail_source)
-    fonts = load_cm_fonts(old)
-    out = fitz.open()
-
-    out.insert_pdf(intro, from_page=0, to_page=1)
-    out.insert_pdf(old, from_page=2, to_page=2)
-
-    publications = build_publication_pages(old, fonts, out.page_count + 1)
-    out.insert_pdf(publications)
-    final_page = build_final_page(old, fonts, out.page_count + 1)
-    out.insert_pdf(final_page)
-    fix_hyphen_mapping(out)
-
+def main() -> None:
+    if not ARCHIVE.exists():
+        raise SystemExit(f"Missing archived CV: {ARCHIVE}")
+    document = build_document()
+    fix_hyphen_mapping(document)
     for path in OUTPUTS:
-        out.save(path, garbage=4, deflate=True)
-
-    for document in (intro, old, publications, final_page, out):
-        document.close()
-    TEMP.unlink(missing_ok=True)
-    print(f"Wrote: {', '.join(str(p) for p in OUTPUTS)}")
+        document.save(path, garbage=4, deflate=True)
+    document.close()
+    print(f"Wrote: {', '.join(str(path) for path in OUTPUTS)}")
 
 
 if __name__ == "__main__":
-    merge_and_write()
+    main()

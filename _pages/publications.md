@@ -168,6 +168,10 @@ redirect_from:
   font-weight: 600;
   font-style: italic;
 }
+.paper-venue .accepted-tag {
+  color: #15803d;
+  font-weight: 700;
+}
 .paper-title {
   font-size: 0.95rem;
   font-weight: 700;
@@ -344,7 +348,7 @@ redirect_from:
       <img src="/images/papers/countervid-counterfactual-video-generation-for-m-425fd303.jpg" alt="CounterVid: Counterfactual Video Generation for Mitigating Action and Temporal Hallucinations in Video-Language Models" width="128" loading="lazy" />
     </a>
     <div class="paper-body">
-<div class="paper-venue">EMNLP 2026 · <span class="under-review-tag">Under Review</span></div>
+<div class="paper-venue">EMNLP 2026 · <span class="accepted-tag">Accepted</span></div>
   <div class="paper-title">CounterVid: Counterfactual Video Generation for Mitigating Action and Temporal Hallucinations in Video-Language Models</div>
   <div class="paper-authors">T. Poppi, <span class="me">B. Uzkent</span>, A. Garg, L. Porto, G. Kessler, Y. Yang, M. Cornia, L. Baraldi, R. Cucchiara, F. Schiffers</div>
   <div class="paper-links"><a href="https://arxiv.org/pdf/2601.04778">arXiv</a></div>
@@ -358,7 +362,7 @@ redirect_from:
       <img src="/images/papers/from-frames-to-clips-efficient-key-clip-selectio-8d8523eb.jpg" alt="From Frames to Clips: Efficient Key Clip Selection for Long-Form Video Understanding" width="128" loading="lazy" />
     </a>
     <div class="paper-body">
-<div class="paper-venue">ECCV 2026 · <span class="under-review-tag">Under Review</span></div>
+<div class="paper-venue">ECCV 2026 Workshop · <span class="accepted-tag">Accepted</span></div>
   <div class="paper-title">From Frames to Clips: Efficient Key Clip Selection for Long-Form Video Understanding</div>
   <div class="paper-authors">G. Sun, A. Singhal, <span class="me">B. Uzkent</span>, M. Shah, C. Chen, G. Kessler</div>
   <div class="paper-links">

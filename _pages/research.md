@@ -83,9 +83,9 @@ author_profile: true
     <h2>🎥 Video-Language &amp; Long-Form Video</h2>
     <p>Foundational models and systems for long-form video understanding, captioning, ranking, and mitigating hallucinations in video-language models.</p>
     <ul class="theme-papers">
-      <li><a href="https://arxiv.org/pdf/2510.02262">From Frames to Clips</a> <span class="venue">· ECCV 2026</span></li>
+      <li><a href="https://arxiv.org/pdf/2510.02262">From Frames to Clips</a> <span class="venue">· ECCV 2026 Workshop (Accepted)</span></li>
       <li><a href="https://arxiv.org/pdf/2603.25145">Learning to Rank Caption Chains</a> <span class="venue">· ECCV 2026</span></li>
-      <li><a href="https://arxiv.org/pdf/2601.04778">CounterVid</a> <span class="venue">· EMNLP 2026</span></li>
+      <li><a href="https://arxiv.org/pdf/2601.04778">CounterVid</a> <span class="venue">· EMNLP 2026 (Accepted)</span></li>
       <li><a href="https://arxiv.org/pdf/2603.19481">Narrative Aligned Long Form Video QA</a> <span class="venue">· CVPR Workshop 2026</span></li>
     </ul>
   </div>
@@ -124,7 +124,7 @@ author_profile: true
     <h2>🎨 Generative Models</h2>
     <p>Generative modeling for satellite imagery, data augmentation, and counterfactual video generation for robust VLM evaluation.</p>
     <ul class="theme-papers">
-      <li><a href="https://arxiv.org/pdf/2601.04778">CounterVid: Counterfactual Video Generation</a> <span class="venue">· EMNLP 2026</span></li>
+      <li><a href="https://arxiv.org/pdf/2601.04778">CounterVid: Counterfactual Video Generation</a> <span class="venue">· EMNLP 2026 (Accepted)</span></li>
       <li><a href="https://openreview.net/forum?id=Ovp8dvB8IBH">Negative Data Augmentation</a> <span class="venue">· ICLR 2021</span></li>
       <li><a href="https://openaccess.thecvf.com/content_WACV_2020/papers/Sarukkai_Cloud_Removal_from_Satellite_Images_using_Spatiotemporal_Generator_Networks_WACV_2020_paper.pdf">Cloud Removal (Spatiotemporal GAN)</a> <span class="venue">· WACV 2020</span></li>
       <li><a href="https://github.com/VSAnimator/stgan">Cloud removal code</a> <span class="venue">· GitHub</span></li>

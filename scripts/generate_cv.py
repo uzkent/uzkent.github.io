@@ -315,7 +315,7 @@ def build_publication_pages(source_path: Path) -> Path:
     pdf.ln(2)
 
     add_heading(pdf, "REFEREED JOURNAL PUBLICATIONS (CONTINUED)")
-    pdf.set_text_color(30, 30, 30)
+    pdf.set_text_color(0, 0, 0)
     for entry in journal_entries:
         pdf.set_font("Helvetica", "", 8.2)
         pdf.set_x(pdf.l_margin)
@@ -323,6 +323,7 @@ def build_publication_pages(source_path: Path) -> Path:
         pdf.ln(0.8)
 
     add_heading(pdf, conference_heading)
+    pdf.set_text_color(0, 0, 0)
     conference_entries = accepted_entries + [
         re.sub(r"^\[\d+\]\s*", "", entry) for entry in prior_conference_entries
     ]

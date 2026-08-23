@@ -10,9 +10,15 @@ using the Computer Modern fonts embedded in the same document.
 from __future__ import annotations
 
 import re
+import struct
 from pathlib import Path
 
 import fitz
+from fontTools import t1Lib
+from fontTools.agl import toUnicode
+from fontTools.fontBuilder import FontBuilder
+from fontTools.pens.recordingPen import RecordingPen
+from fontTools.pens.t2CharStringPen import T2CharStringPen
 
 ROOT = Path(__file__).resolve().parents[1]
 FILES = ROOT / "files"
@@ -180,19 +186,108 @@ REVIEW_ENTRY = [
 
 
 # --- fonts and typesetting -------------------------------------------------
+CID_FONTS = ("CMR10", "CMBX10", "CMBX12", "CMTI10")
+LIGATURE_CODEPOINTS = {"ff": 0xFB00, "fi": 0xFB01, "fl": 0xFB02, "ffi": 0xFB03, "ffl": 0xFB04}
+
+
+def _type1_to_pfb(buffer: bytes) -> bytes:
+    """Wrap MuPDF's raw Type1 program (binary eexec, no trailer) as a PFB."""
+    cut = buffer.find(b"eexec") + len("eexec")
+    while cut < len(buffer) and buffer[cut] in b"\r\n\t ":
+        cut += 1
+    ascii_part, binary_part = buffer[:cut], buffer[cut:]
+    trailer = b"\n" + (b"0" * 64 + b"\n") * 8 + b"cleartomark\n"
+
+    def segment(marker: int, data: bytes) -> bytes:
+        return b"\x80" + bytes([marker]) + struct.pack("<I", len(data)) + data
+
+    return segment(1, ascii_part) + segment(2, binary_part) + segment(1, trailer) + b"\x80\x03"
+
+
+def _to_opentype(buffer: bytes, family: str) -> bytes:
+    """Convert an extracted Type1 subset to a CFF OpenType font.
+
+    MuPDF embeds fonts inserted from a Type1 buffer as Identity-H CID fonts that
+    only MuPDF reads back; other viewers (Preview, browsers) scramble the glyphs.
+    Re-expressing the same outlines as an OpenType font with a real Unicode cmap
+    makes the text render and copy correctly everywhere.
+    """
+    import io
+    import tempfile
+
+    with tempfile.NamedTemporaryFile(suffix=".pfb", delete=False) as handle:
+        handle.write(_type1_to_pfb(buffer))
+        pfb_path = handle.name
+    try:
+        font = t1Lib.T1Font(pfb_path)
+        font.parse()
+        glyphs = font.getGlyphSet()
+        order = [".notdef"] + [name for name in glyphs.keys() if name != ".notdef"]
+
+        charstrings: dict[str, object] = {}
+        widths: dict[str, int] = {}
+        for name in order:
+            glyph = glyphs[name]
+            record = RecordingPen()
+            try:
+                glyph.draw(record)
+            except Exception:
+                record.value = []
+            width = int(getattr(glyph, "width", 0) or 0)
+            pen = T2CharStringPen(width, glyphs)
+            record.replay(pen)
+            charstrings[name] = pen.getCharString()
+            widths[name] = width
+
+        cmap: dict[int, str] = {}
+        for name in order:
+            text = toUnicode(name)
+            if len(text) == 1:
+                cmap.setdefault(ord(text), name)
+        for ligature, codepoint in LIGATURE_CODEPOINTS.items():
+            if ligature in glyphs:
+                cmap[codepoint] = ligature
+
+        builder = FontBuilder(1000, isTTF=False)
+        builder.setupGlyphOrder(order)
+        builder.setupCharacterMap(cmap)
+        builder.setupCFF(family, {"FullName": family, "Weight": "Regular"}, charstrings, {})
+        builder.setupHorizontalMetrics({name: (widths[name], 0) for name in order})
+        builder.setupHorizontalHeader(ascent=750, descent=-250)
+        builder.setupNameTable({"familyName": family, "styleName": "Regular"})
+        builder.setupOS2(sTypoAscender=750, sTypoDescender=-250)
+        builder.setupPost()
+        with io.BytesIO() as out:
+            builder.font.save(out)
+            return out.getvalue()
+    finally:
+        Path(pfb_path).unlink(missing_ok=True)
+
+
 def load_cm_fonts(source: fitz.Document) -> dict[str, tuple[bytes, fitz.Font]]:
-    fonts: dict[str, tuple[bytes, fitz.Font]] = {}
+    """Extract the Computer Modern fonts, converting the ones we typeset with.
+
+    Fonts used only as copied artwork keep their raw Type1 buffer; the four we
+    feed to insert_text are converted to OpenType so every PDF viewer renders
+    the freshly typeset text.
+    """
+    raw: dict[str, bytes] = {}
     for number in range(source.page_count):
         for item in source.get_page_fonts(number, full=True):
             name = item[3].split("+")[-1]
-            if name not in fonts:
-                buffer = source.extract_font(item[0])[3]
-                fonts[name] = (buffer, fitz.Font(fontbuffer=buffer))
+            if name not in raw:
+                raw[name] = source.extract_font(item[0])[3]
+
+    fonts: dict[str, tuple[bytes, fitz.Font]] = {}
+    for name, buffer in raw.items():
+        if name in CID_FONTS:
+            buffer = _to_opentype(buffer, name)
+        fonts[name] = (buffer, fitz.Font(fontbuffer=buffer))
     return fonts
 
 
 def register_fonts(page: fitz.Page, fonts: dict) -> None:
-    for name in ("CMR10", "CMBX10", "CMBX12", "CMTI10"):
+    for name in CID_FONTS:
         page.insert_font(fontname=name, fontbuffer=fonts[name][0])
 
 

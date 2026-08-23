@@ -185,6 +185,81 @@ REVIEW_ENTRY = [
 ]
 
 
+# --- paper PDF links -------------------------------------------------------
+PUBLICATIONS_MD = ROOT / "_pages" / "publications.md"
+LIGATURE_TEXT = {"\ufb00": "ff", "\ufb01": "fi", "\ufb02": "fl", "\ufb03": "ffi", "\ufb04": "ffl"}
+TITLE_RE = re.compile(r"\u201c(.+?)\u201d")
+PDF_LABEL_PRIORITY = ("PDF", "arXiv")
+PDF_MATCH_THRESHOLD = 0.6
+
+# A few CV entries were retitled after the website listing; these map the CV
+# title to the website record for the same paper (verified by author list).
+PDF_TITLE_ALIASES = {
+    "efficientpovertymappingfromhighresolutionremotesensingimages":
+        "efficienthighresolutionimageprocessingusingdeepreinforcementlearning",
+    "predictinglivelihoodindicatorsfromcommunitygeneratedstreetlevelimagery":
+        "predictinggeoattributesusingdeeplearningandpubliclyavailablestreetlevelimages",
+}
+
+
+def _normalize_title(text: str) -> str:
+    for ligature, plain in LIGATURE_TEXT.items():
+        text = text.replace(ligature, plain)
+    return re.sub(r"[^a-z0-9]", "", text.lower())
+
+
+def _title_tokens(text: str) -> set:
+    for ligature, plain in LIGATURE_TEXT.items():
+        text = text.replace(ligature, plain)
+    return set(re.sub(r"[^a-z0-9 ]", " ", text.lower()).split())
+
+
+def load_pdf_records() -> list[dict]:
+    """Read the website publication list into (title, tokens, url) records.
+
+    The CV reuses the same links the website exposes; for each paper we take the
+    PDF link, falling back to arXiv, so every entry points at a readable copy.
+    """
+    if not PUBLICATIONS_MD.exists():
+        return []
+    markup = PUBLICATIONS_MD.read_text(encoding="utf-8")
+    records: list[dict] = []
+    for chunk in markup.split('<div class="paper">')[1:]:
+        title_match = re.search(r'<div class="paper-title">(.*?)</div>', chunk, re.S)
+        if not title_match:
+            continue
+        title = re.sub(r"<.*?>", "", title_match.group(1)).strip()
+        links_match = re.search(r'<div class="paper-links">(.*?)</div>', chunk, re.S)
+        pairs = re.findall(r'<a href="([^"]+)"[^>]*>([^<]+)</a>', links_match.group(1)) if links_match else []
+        labelled: dict[str, str] = {}
+        for url, label in pairs:
+            labelled.setdefault(label.strip(), url)
+        url = next((labelled[label] for label in PDF_LABEL_PRIORITY if label in labelled), None)
+        if url:
+            records.append({"key": _normalize_title(title), "tokens": _title_tokens(title), "url": url})
+    return records
+
+
+def resolve_pdf_url(title: str, records: list[dict]) -> str | None:
+    key = _normalize_title(title)
+    key = PDF_TITLE_ALIASES.get(key, key)
+    for record in records:
+        if record["key"] == key:
+            return record["url"]
+    wanted = _title_tokens(title)
+    best, score = None, 0.0
+    for record in records:
+        overlap = len(wanted & record["tokens"]) / max(1, len(wanted | record["tokens"]))
+        if overlap > score:
+            best, score = record, overlap
+    return best["url"] if best and score >= PDF_MATCH_THRESHOLD else None
+
+
+def entry_title(text: str) -> str:
+    match = TITLE_RE.search(text)
+    return match.group(1) if match else ""
+
+
 # --- fonts and typesetting -------------------------------------------------
 CID_FONTS = ("CMR10", "CMBX10", "CMBX12", "CMTI10")
 LIGATURE_CODEPOINTS = {"ff": 0xFB00, "fi": 0xFB01, "fl": 0xFB02, "ffi": 0xFB03, "ffl": 0xFB04}
@@ -508,7 +583,7 @@ def parse_blocks(source: fitz.Document) -> list[dict]:
             top, bottom = group["top"], group["bottom"]
             text = " ".join("".join(s["text"] for s in line["spans"]) for line in group["lines"])
             clip = fitz.Rect(FULL_LEFT, top - CLIP_PAD, CLIP_RIGHT, bottom + CLIP_PAD)
-            blocks.append({
+            block = {
                 "kind": block_kind(group["lines"]),
                 "text": text,
                 "height": bottom - top,
@@ -516,7 +591,16 @@ def parse_blocks(source: fitz.Document) -> list[dict]:
                 "keep": any(span["size"] >= 11.9 for line in group["lines"] for span in line["spans"]),
                 "top_size": max(span["size"] for span in group["lines"][0]["spans"]),
                 "elements": [copy_element(number, clip, top)],
-            })
+            }
+            if block["kind"] == "entry":
+                last = group["lines"][-1]["spans"]
+                block["pdf_src"] = {
+                    "page": number,
+                    "src_top": top,
+                    "right": max(span["bbox"][2] for span in last),
+                    "baseline": max(span["origin"][1] for span in last),
+                }
+            blocks.append(block)
     return blocks
 
 
@@ -607,6 +691,7 @@ def entry_block(fonts: dict, fragments: list, number: int) -> dict:
         "gap": GAP_ENTRY,
         "keep": False,
         "top_size": SIZE,
+        "pdf_typeset": True,
         "elements": [
             {"kind": "label", "rel": 0.0, "number": number},
             {"kind": "lines", "rel": 0.0, "lines": lines, "left": ENTRY_LEFT,
@@ -686,6 +771,18 @@ def apply_updates(blocks: list[dict], fonts: dict) -> list[dict]:
 
     renumber_conference(blocks, fonts)
     patch_review_entries(blocks, fonts)
+
+    records = load_pdf_records()
+    width = fonts["CMBX10"][1].text_length("[PDF]", SIZE)
+    space = SPACE_RATIO * SIZE
+    for block in blocks:
+        if block["kind"] != "entry":
+            continue
+        block["pdf_url"] = resolve_pdf_url(entry_title(block["text"]), records)
+        if block["pdf_url"]:
+            block["pdf_newline"] = entry_last_right(block, fonts) + space + width > RIGHT + 1.0
+            if block["pdf_newline"]:
+                block["height"] += LEADING
     return blocks
 
 
@@ -756,6 +853,51 @@ def chain_height(blocks: list[dict], index: int) -> float:
     return height
 
 
+def entry_last_right(block: dict, fonts: dict) -> float:
+    """Right edge of an entry's last typeset line, in its own coordinate frame."""
+    if block.get("pdf_typeset"):
+        element = next(item for item in block["elements"] if item["kind"] == "lines")
+        line = element["lines"][-1]
+        gaps = sum(1 for token in line[1:] if token["space"])
+        ink = sum(token["width"] for token in line)
+        return element["left"] + ink + SPACE_RATIO * SIZE * gaps
+    return block["pdf_src"]["right"]
+
+
+def draw_pdf_link(page: fitz.Page, fonts: dict, block: dict, top: float) -> None:
+    """Append a blue "[PDF]" hyperlink to a paper entry.
+
+    Styled like the archived "[Code]" links (CMBX10 at body size, link blue).
+    It follows the last line where there is room, otherwise sits right-aligned on
+    its own line just beneath the entry.
+    """
+    if block.get("pdf_typeset"):
+        element = next(item for item in block["elements"] if item["kind"] == "lines")
+        last_baseline = top + (len(element["lines"]) - 1) * LEADING + ASCENT_RATIO * SIZE
+    else:
+        source = block["pdf_src"]
+        last_baseline = source["baseline"] + (top - source["src_top"])
+
+    label = "[PDF]"
+    width = fonts["CMBX10"][1].text_length(label, SIZE)
+    if block.get("pdf_newline"):
+        start = RIGHT - width
+        baseline = last_baseline + LEADING
+    else:
+        start = entry_last_right(block, fonts) + SPACE_RATIO * SIZE
+        baseline = last_baseline
+
+    x = start
+    for run, name in style_runs(label, "b", fonts):
+        page.insert_text((x, baseline), run, fontname=name, fontsize=SIZE, color=LINK_BLUE)
+        x += fonts[name][1].text_length(run, SIZE)
+    page.insert_link({
+        "kind": fitz.LINK_URI,
+        "uri": block["pdf_url"],
+        "from": fitz.Rect(start - 1.0, baseline - ASCENT_RATIO * SIZE - 0.7, x + 1.0, baseline + 2.5),
+    })
+
+
 def build_document() -> fitz.Document:
     source = fitz.open(ARCHIVE)
     fonts = load_cm_fonts(source)
@@ -782,6 +924,8 @@ def build_document() -> fitz.Document:
         decorate(out[number], source, fonts, number + 1)
     for index_page, block, top in layout:
         place_block(out[index_page], source, fonts, block, top)
+        if block.get("pdf_url"):
+            draw_pdf_link(out[index_page], fonts, block, top)
 
     source.close()
     return out

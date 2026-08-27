@@ -105,15 +105,19 @@ def main() -> None:
             if not tm:
                 continue
             title = strip_html(tm.group(1))
-            venue = strip_html(vm.group(1)) if vm else ""
-            venue = re.sub(r"·.*", "", venue).strip()
+            raw_venue = strip_html(vm.group(1)) if vm else ""
+            # Journals and preprints sit after the last year marker, so they would
+            # all inherit its year; prefer a "Venue · YYYY" year when one is given.
+            stamped = re.search(r"·\s*(\d{4})", raw_venue)
+            entry_year = stamped.group(1) if stamped else year
+            venue = re.sub(r"·.*", "", raw_venue).strip()
             authors = authors_to_bib(am.group(1) if am else "")
-            key = bib_key(title, year)
+            key = bib_key(title, entry_year)
             entry_type, field = venue_type(venue)
             lines = [f"@{entry_type}{{{key},"]
             lines.append(f"  title = {{{{{title}}}}},")
             lines.append(f"  author = {{{{{authors}}}}},")
-            lines.append(f"  year = {{{{{year}}}}},")
+            lines.append(f"  year = {{{{{entry_year}}}}},")
             if entry_type == "article":
                 lines.append(f"  journal = {{{{{venue}}}}},")
             else:

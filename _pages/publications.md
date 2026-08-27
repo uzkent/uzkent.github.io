@@ -300,9 +300,9 @@ redirect_from:
 
 <div class="pub-nav">
   <a href="#selected">⭐ Selected</a>
-  <a href="#conferences">🎤 Conference Papers (33)</a>
+  <a href="#conferences">🎤 Conference Papers (32)</a>
   <a href="#journals">📖 Journal Articles (9)</a>
-  <a href="#preprints">📝 Preprints (2)</a>
+  <a href="#preprints">📝 Preprints (3)</a>
   <a href="/files/publications.bib">📥 BibTeX</a>
 </div>
 
@@ -316,7 +316,7 @@ redirect_from:
 <!--                     CONFERENCE PAPERS                        -->
 <!-- ============================================================ -->
 
-<h2 class="section-title" id="conferences"><span class="icon">🎤</span> Conference Papers <span class="section-count">(33)</span></h2>
+<h2 class="section-title" id="conferences"><span class="icon">🎤</span> Conference Papers <span class="section-count">(32)</span></h2>
 <div class="section-line"></div>
 
 <div class="pub-filters" id="pub-filters">
@@ -366,20 +366,6 @@ redirect_from:
     <a href="https://arxiv.org/pdf/2510.02262">arXiv</a>
     <a href="https://guangyusun.com/f2c/">Project</a>
   </div>
-    </div>
-  </div>
-</div>
-
-<div class="paper">
-  <div class="paper-inner">
-    <a class="paper-thumb" href="https://arxiv.org/pdf/2603.25145" target="_blank" rel="noopener">
-      <img src="/images/papers/learning-to-rank-caption-chains-for-video-text-a-ee3459e5.jpg" alt="Learning to Rank Caption Chains for Video-Text Alignment" width="128" loading="lazy" />
-    </a>
-    <div class="paper-body">
-<div class="paper-venue">ECCV 2026 · <span class="under-review-tag">Under Review</span></div>
-  <div class="paper-title">Learning to Rank Caption Chains for Video-Text Alignment</div>
-  <div class="paper-authors">A. Blume, <span class="me">B. Uzkent</span>, S. Chaudhuri, G. Kessler</div>
-  <div class="paper-links"><a href="https://arxiv.org/pdf/2603.25145">arXiv</a></div>
     </div>
   </div>
 </div>
@@ -1004,10 +990,24 @@ redirect_from:
 <!--                  PREPRINTS & TECH REPORTS                    -->
 <!-- ============================================================ -->
 
-<h2 class="section-title" id="preprints"><span class="icon">📝</span> Preprints <span class="section-count">(2)</span></h2>
+<h2 class="section-title" id="preprints"><span class="icon">📝</span> Preprints <span class="section-count">(3)</span></h2>
 <div class="section-line"></div>
 
 <div class="timeline" id="timeline-preprints" data-section="preprint">
+
+<div class="paper">
+  <div class="paper-inner">
+    <a class="paper-thumb" href="https://arxiv.org/pdf/2603.25145" target="_blank" rel="noopener">
+      <img src="/images/papers/learning-to-rank-caption-chains-for-video-text-a-ee3459e5.jpg" alt="Learning to Rank Caption Chains for Video-Text Alignment" width="128" loading="lazy" />
+    </a>
+    <div class="paper-body">
+<div class="paper-venue">arXiv · 2026</div>
+  <div class="paper-title">Learning to Rank Caption Chains for Video-Text Alignment</div>
+  <div class="paper-authors">A. Blume, <span class="me">B. Uzkent</span>, S. Chaudhuri, G. Kessler</div>
+  <div class="paper-links"><a href="https://arxiv.org/pdf/2603.25145">arXiv</a></div>
+    </div>
+  </div>
+</div>
 
 <div class="paper">
   <div class="paper-inner">

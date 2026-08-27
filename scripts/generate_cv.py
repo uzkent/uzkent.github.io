@@ -70,7 +70,13 @@ ICONS = {
     "contact_phone": (0, fitz.Rect(291.37, 83.30, 299.21, 94.40)),
     "contact_mail": (0, fitz.Rect(388.30, 83.30, 398.28, 94.40)),
     "contact_globe": (0, fitz.Rect(523.38, 83.30, 531.93, 94.40)),
+    "section": (5, fitz.Rect(43.20, 36.25, 55.49, 50.60)),
 }
+
+# Section headings: icon at the left, label on the same baseline, blue rule under.
+HEADING_SIZE = 14.35
+HEADING_TEXT_REL = 1.5375
+HEADING_RULE_REL, HEADING_RULE_H = 17.68, 1.50
 
 # The archived subsets are incomplete: CMBX10 has no capital N and CMBX12 no
 # lowercase b or f, so each style falls back to its closest sibling.
@@ -129,7 +135,7 @@ AMAZON_LAST_BULLET = [
     (" 6 papers", "b"),
     (" (CVPR, WACV, EMNLP, ECCV Workshop) and filed", "r"),
     (" 2 patents", "b"),
-    ("; 1 additional paper under review", "r"),
+    ("; 1 additional preprint", "r"),
 ]
 
 ACCEPTED_ENTRIES = [
@@ -180,10 +186,9 @@ REVIEW_ENTRY = [
         "Video-Text Alignment\u201d,",
         "r",
     ),
-    (" European Conference on Computer Vision", "i"),
-    (",", "r"),
-    (" ECCV-26", "b"),
-    (".", "r"),
+    (" arXiv preprint", "i"),
+    (" arXiv:2603.25145", "b"),
+    (", 2026.", "r"),
 ]
 
 
@@ -753,15 +758,40 @@ def renumber_conference(blocks: list[dict], fonts: dict) -> None:
     blocks[start:start] = accepted
 
 
+def heading_block(fonts: dict, label: str, icon: str = "section") -> dict:
+    """A section heading: archived icon, freshly set label, and the blue rule."""
+    return {
+        "kind": "heading",
+        "text": label,
+        "height": HEADING_RULE_REL + HEADING_RULE_H,
+        "gap": None,
+        "keep": True,
+        "top_size": HEADING_SIZE,
+        "elements": [
+            {"kind": "stamp", "rel": 0.0, "icon": icon, "x": LEFT},
+            {"kind": "text", "rel": HEADING_TEXT_REL, "size": HEADING_SIZE, "color": BLUE,
+             "x": LEFT + ICONS[icon][1].width + SPACE_RATIO * HEADING_SIZE,
+             "fragments": [(label, "t")]},
+            {"kind": "rect", "rel": HEADING_RULE_REL, "x0": LEFT, "x1": RIGHT,
+             "height": HEADING_RULE_H, "fill": BLUE},
+        ],
+    }
+
+
 def patch_review_entries(blocks: list[dict], fonts: dict) -> None:
-    """Two of the three papers under review were accepted and moved up."""
-    start = find_block(blocks, "PAPERS UNDER REVIEW") + 1
+    """The last paper under review is now an arXiv-only preprint."""
+    heading = find_block(blocks, "PAPERS UNDER REVIEW")
+    start = heading + 1
     end = start
     while end < len(blocks) and blocks[end]["kind"] == "entry":
         end += 1
     replacement = entry_block(fonts, REVIEW_ENTRY, 1)
     replacement["gap"] = blocks[start]["gap"]
     blocks[start:end] = [replacement]
+
+    section = heading_block(fonts, "PREPRINTS")
+    section["gap"] = blocks[heading]["gap"]
+    blocks[heading] = section
 
 
 def apply_updates(blocks: list[dict], fonts: dict) -> list[dict]:

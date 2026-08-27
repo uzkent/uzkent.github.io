@@ -84,7 +84,7 @@ author_profile: true
     <p>Foundational models and systems for long-form video understanding, captioning, ranking, and mitigating hallucinations in video-language models.</p>
     <ul class="theme-papers">
       <li><a href="https://arxiv.org/pdf/2510.02262">From Frames to Clips</a> <span class="venue">· ECCV 2026 Workshop (Accepted)</span></li>
-      <li><a href="https://arxiv.org/pdf/2603.25145">Learning to Rank Caption Chains</a> <span class="venue">· ECCV 2026</span></li>
+      <li><a href="https://arxiv.org/pdf/2603.25145">Learning to Rank Caption Chains</a> <span class="venue">· arXiv</span></li>
       <li><a href="https://arxiv.org/pdf/2601.04778">CounterVid</a> <span class="venue">· EMNLP 2026 (Accepted)</span></li>
       <li><a href="https://arxiv.org/pdf/2603.19481">Narrative Aligned Long Form Video QA</a> <span class="venue">· CVPR Workshop 2026</span></li>
     </ul>

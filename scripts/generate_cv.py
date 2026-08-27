@@ -51,6 +51,7 @@ GRAY = (0.50980, 0.50980, 0.50980)
 DARK = (0.23529, 0.23529, 0.23529)
 LINK_BLUE = (0.0, 0.47060, 0.78432)
 BOX_GRAY = (0.96078, 0.96078, 0.96078)
+ACCENT = (0.70588, 0.54902, 0.07843)
 
 MASTHEAD_CLIP = fitz.Rect(0, 0, PAGE_W, 70.0)
 CONTACT_TOP, CONTACT_TEXT_TOP, CONTACT_ICON_TOP = 73.658, 84.47, 83.72
@@ -145,6 +146,7 @@ ACCEPTED_ENTRIES = [
         (",", "r"),
         (" EMNLP-26", "b"),
         (", 2026.", "r"),
+        (" (Main Track)", "b", ACCENT),
     ],
     [
         ("G. Sun, A. Singhal,", "r"),
@@ -399,7 +401,9 @@ def style_runs(word: str, style: str, fonts: dict) -> list[tuple[str, str]]:
 def tokenize(fragments, fonts: dict, size: float = SIZE) -> list[dict]:
     tokens: list[dict] = []
     pending_space = False
-    for text, style in fragments:
+    for fragment in fragments:
+        text, style = fragment[0], fragment[1]
+        colour = fragment[2] if len(fragment) > 2 else None
         if not text:
             continue
         leading_space = text.startswith(" ")
@@ -408,7 +412,7 @@ def tokenize(fragments, fonts: dict, size: float = SIZE) -> list[dict]:
             spaced = True if index else (pending_space or leading_space)
             runs = style_runs(word, style, fonts)
             width = sum(fonts[name][1].text_length(run, size) for run, name in runs)
-            tokens.append({"runs": runs, "width": width, "space": spaced})
+            tokens.append({"runs": runs, "width": width, "space": spaced, "color": colour})
         pending_space = text.endswith(" ") if words else pending_space
     return tokens
 
@@ -470,8 +474,9 @@ def draw_lines(page, fonts, lines, left, width, top, size=SIZE, color=(0, 0, 0))
         for position, token in enumerate(line):
             if position and token["space"]:
                 x += gap
+            ink = token.get("color") or color
             for run, name in token["runs"]:
-                page.insert_text((x, baseline), run, fontname=name, fontsize=size, color=color)
+                page.insert_text((x, baseline), run, fontname=name, fontsize=size, color=ink)
                 x += fonts[name][1].text_length(run, size)
 
 
@@ -686,7 +691,7 @@ def entry_block(fonts: dict, fragments: list, number: int) -> dict:
     lines = compose(fragments, fonts, RIGHT - ENTRY_LEFT)
     return {
         "kind": "entry",
-        "text": "".join(text for text, _ in fragments),
+        "text": "".join(fragment[0] for fragment in fragments),
         "height": (len(lines) - 1) * LEADING + SIZE,
         "gap": GAP_ENTRY,
         "keep": False,
